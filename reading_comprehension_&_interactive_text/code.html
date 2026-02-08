@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Japanese Learning App - Reading Comprehension</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#137fec",
+                "background-light": "#f8f9fa",
+                "background-dark": "#101922",
+                "surface-light": "#ffffff",
+                "surface-dark": "#1a2632",
+                },
+                fontFamily: {
+                "display": ["Lexend", "sans-serif"],
+                "body": ["Lexend", "sans-serif"],
+                "japanese": ["Noto Sans JP", "sans-serif"],
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: #334155;
+        }
+        
+        /* Furigana toggle logic simulation */
+        .furigana-hidden rt {
+            display: none;
+        }
+        
+        /* Highlighting interactive words */
+        .interactive-word {
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            padding: 2px 0;
+        }
+        .interactive-word:hover {
+            background-color: rgba(19, 127, 236, 0.1);
+            color: #137fec;
+        }
+        .dark .interactive-word:hover {
+            background-color: rgba(19, 127, 236, 0.2);
+            color: #60a5fa;
+        }
+
+        /* Popover animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.2s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-surface-light dark:bg-surface-dark px-6 py-3 sticky top-0 z-40">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-3xl">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight hidden sm:block">Japanese Learning App</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-6">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-sm font-medium text-primary" href="#">Lessons</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">SRS</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Community</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<div class="size-10 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden ml-2 ring-2 ring-white dark:ring-slate-800 shadow-sm" data-alt="User profile avatar">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJYnilMhJcwogOaBZ8864PEKgdf3bNbOYdSbUhZUMJGMuTXtD4PpLhrU4-C2kpGEZATd4hhq_8tL8BPCBnQ2PO8IHmT0_rwhVpZQhB_TaLrOsHS9Rn6ilfKSbDUcuBRdAJN5447XgyieE6QQCZPquJqlHAD0UatDI__Oifb5VImHe_bxqqdhwet-qSouOnFVdc_mhBjmUAnju5vk6_zc7tA5OWeZIsbUkDfDJFbFWOodzf88NRyHLXc293bVm2KQDrxvKs46sSUg"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col lg:flex-row max-w-[1440px] mx-auto w-full p-4 lg:p-6 gap-6 relative">
+<!-- Left Column: Reading Pane -->
+<div class="flex-1 flex flex-col min-w-0">
+<!-- Article Header & Metadata -->
+<div class="mb-6">
+<div class="flex flex-wrap items-center gap-2 mb-3">
+<span class="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">JLPT N3</span>
+<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined !text-[14px]">schedule</span> 15 min read
+                    </span>
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-medium px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined !text-[14px]">check_circle</span> Read
+                    </span>
+</div>
+<h1 class="text-3xl md:text-4xl font-bold mb-2 text-slate-900 dark:text-white leading-tight">History of Tea: From Medicine to Culture</h1>
+<p class="text-slate-500 dark:text-slate-400">Learn about how tea transformed Japanese society through the ages.</p>
+</div>
+<!-- Reading Toolbar -->
+<div class="sticky top-[76px] z-30 mb-8 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm p-2 flex flex-wrap items-center justify-between gap-3 transition-all">
+<div class="flex items-center gap-1">
+<button class="p-2 text-slate-500 hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Decrease Font Size">
+<span class="material-symbols-outlined">text_decrease</span>
+</button>
+<span class="text-sm font-medium w-8 text-center">Aa</span>
+<button class="p-2 text-slate-500 hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Increase Font Size">
+<span class="material-symbols-outlined">text_increase</span>
+</button>
+<div class="w-px h-6 bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="p-2 text-slate-500 hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" title="Line Height">
+<span class="material-symbols-outlined">format_line_spacing</span>
+</button>
+</div>
+<div class="flex items-center gap-3">
+<label class="inline-flex items-center cursor-pointer group">
+<span class="mr-3 text-sm font-medium text-slate-700 dark:text-slate-300 group-hover:text-primary transition-colors">Furigana</span>
+<div class="relative">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</div>
+</label>
+<div class="w-px h-6 bg-slate-200 dark:bg-slate-700 mx-2 hidden sm:block"></div>
+<button class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[18px]">translate</span>
+                        Translation
+                    </button>
+</div>
+</div>
+<!-- Reading Content with Popover Logic -->
+<div class="relative bg-surface-light dark:bg-surface-dark rounded-2xl p-6 md:p-10 shadow-sm border border-slate-100 dark:border-slate-800/50">
+<!-- Dictionary Popover (Positioned absolutely for demo purposes, would be dynamic in real app) -->
+<div class="absolute top-[28%] left-[10%] z-50 animate-fade-in w-72 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden transform transition-all">
+<div class="p-4">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="text-2xl font-japanese font-bold text-slate-900 dark:text-white">勉強</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 font-japanese">べんきょう (benkyou)</p>
+</div>
+<span class="bg-slate-100 dark:bg-slate-700 text-xs font-bold px-2 py-1 rounded text-slate-600 dark:text-slate-300">Noun</span>
+</div>
+<div class="mb-4">
+<p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                                1. study; diligence<br/>
+                                2. discount; reduction (of price)
+                            </p>
+</div>
+<button class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg text-sm font-bold transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+                            Add to SRS
+                        </button>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900/50 px-4 py-2 border-t border-slate-100 dark:border-slate-700 flex justify-between items-center">
+<button class="text-xs text-slate-500 hover:text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">volume_up</span> Audio
+                        </button>
+<button class="text-xs text-slate-500 hover:text-primary">More details →</button>
+</div>
+</div>
+<!-- Text Content -->
+<article class="font-japanese text-xl md:text-2xl leading-loose tracking-wide text-slate-800 dark:text-slate-200 max-w-prose mx-auto">
+<p class="mb-8">
+<span class="interactive-word"><ruby>日本<rt>にほん</rt></ruby></span>の<span class="interactive-word"><ruby>お茶<rt>おちゃ</rt></ruby></span>の<span class="interactive-word"><ruby>歴史<rt>れきし</rt></ruby></span>は<span class="interactive-word"><ruby>古<rt>ふる</rt></ruby></span>く、<span class="interactive-word"><ruby>奈良時代<rt>ならじだい</rt></ruby></span>に<span class="interactive-word"><ruby>遣唐使<rt>けんとうし</rt></ruby></span>によってもたらされたと<span class="interactive-word"><ruby>言<rt>い</rt></ruby></span>われています。
+                    </p>
+<p class="mb-8">
+<span class="interactive-word"><ruby>当初<rt>とうしょ</rt></ruby></span>は<span class="interactive-word"><ruby>薬<rt>くすり</rt></ruby></span>として<span class="interactive-word"><ruby>珍重<rt>ちんちょう</rt></ruby></span>されましたが、<span class="interactive-word"><ruby>鎌倉時代<rt>かまくらじだい</rt></ruby></span>には<span class="interactive-word"><ruby>禅宗<rt>ぜんしゅう</rt></ruby></span>の<span class="interactive-word"><ruby>広<rt>ひろ</rt></ruby></span>まりとともに<span class="interactive-word"><ruby>喫茶<rt>きっさ</rt></ruby></span>の<span class="interactive-word"><ruby>習慣<rt>しゅうかん</rt></ruby></span>が<span class="interactive-word"><ruby>定着<rt>ていちゃく</rt></ruby></span>しました。
+                    </p>
+<p class="mb-8 bg-blue-50/50 dark:bg-blue-900/10 -mx-2 px-2 rounded">
+<span class="interactive-word"><ruby>安土桃山時代<rt>あづちももやまじだい</rt></ruby></span>には<span class="interactive-word text-primary bg-blue-100/50 dark:bg-blue-900/30 rounded px-1 border-b-2 border-primary border-dotted"><ruby>千利休<rt>せんのりきゅう</rt></ruby></span>によって<span class="interactive-word"><ruby>茶道<rt>さどう</rt></ruby></span>が<span class="interactive-word"><ruby>大成<rt>たいせい</rt></ruby></span>され、<span class="interactive-word"><ruby>精神性<rt>せいしんせい</rt></ruby></span>を<span class="interactive-word"><ruby>重<rt>おも</rt></ruby></span>んじる<span class="interactive-word"><ruby>文化<rt>ぶんか</rt></ruby></span>として<span class="interactive-word"><ruby>発展<rt>はってん</rt></ruby></span>しました。
+                    </p>
+<p class="mb-8">
+<span class="interactive-word">現代</span>では、<span class="interactive-word">ペットボトル</span>の<span class="interactive-word">普及</span>により、より<span class="interactive-word">手軽</span>に<span class="interactive-word">楽</span>しまれるようになりましたが、<span class="interactive-word text-primary bg-blue-100/50 dark:bg-blue-900/30 rounded px-1"><ruby>勉強<rt>べんきょう</rt></ruby></span>の<span class="interactive-word">合間</span>に<span class="interactive-word">飲</span>むお<span class="interactive-word">茶</span>は<span class="interactive-word">格別</span>です。
+                    </p>
+</article>
+</div>
+<!-- Bottom Navigation for Chapters -->
+<div class="mt-8 flex justify-between items-center">
+<button class="flex items-center gap-2 text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span> Previous Chapter
+                </button>
+<button class="flex items-center gap-2 text-primary font-bold hover:text-blue-700 dark:hover:text-blue-400 transition-colors">
+                    Next Chapter <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Sidebar (Sticky) -->
+<aside class="w-full lg:w-[380px] flex-shrink-0">
+<div class="sticky top-[88px] flex flex-col gap-4 max-h-[calc(100vh-120px)] overflow-y-auto pr-1 custom-scrollbar">
+<!-- Progress Card -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center mb-2">
+<h3 class="font-bold text-slate-800 dark:text-white">Comprehension</h3>
+<span class="text-sm font-bold text-primary">2/5 Done</span>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 40%"></div>
+</div>
+</div>
+<!-- Questions List -->
+<div class="flex flex-col gap-4">
+<!-- Question 1: Correctly Answered -->
+<div class="bg-green-50 dark:bg-green-900/10 rounded-xl p-5 border border-green-200 dark:border-green-800/30 shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 p-2 opacity-10">
+<span class="material-symbols-outlined text-6xl text-green-600">check_circle</span>
+</div>
+<h4 class="font-bold text-slate-800 dark:text-slate-100 mb-3 pr-8 text-sm">1. When was tea introduced to Japan?</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 p-2 rounded-lg border border-transparent hover:bg-white/50 dark:hover:bg-black/20 cursor-pointer opacity-60">
+<div class="size-4 rounded-full border border-slate-400"></div>
+<span class="text-sm text-slate-600 dark:text-slate-400">Heian Period</span>
+</label>
+<label class="flex items-center gap-3 p-2 rounded-lg bg-green-100 dark:bg-green-900/40 border border-green-300 dark:border-green-700 cursor-pointer">
+<div class="size-4 rounded-full border-4 border-green-600 bg-white"></div>
+<span class="text-sm font-medium text-green-800 dark:text-green-200">Nara Period</span>
+</label>
+<label class="flex items-center gap-3 p-2 rounded-lg border border-transparent hover:bg-white/50 dark:hover:bg-black/20 cursor-pointer opacity-60">
+<div class="size-4 rounded-full border border-slate-400"></div>
+<span class="text-sm text-slate-600 dark:text-slate-400">Edo Period</span>
+</label>
+</div>
+</div>
+<!-- Question 2: Active -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-5 border-2 border-primary shadow-md relative">
+<span class="absolute -top-3 -right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded shadow-sm">Current</span>
+<h4 class="font-bold text-slate-800 dark:text-white mb-4 text-sm">2. Why was tea originally valued?</h4>
+<div class="space-y-2">
+<label class="flex items-start gap-3 p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer group">
+<input class="mt-0.5 size-4 text-primary border-slate-300 focus:ring-primary dark:bg-slate-800 dark:border-slate-600" name="q2" type="radio"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white">As a luxury item for the rich</span>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg border border-primary bg-blue-50/50 dark:bg-blue-900/20 dark:border-blue-700 transition-all cursor-pointer">
+<input checked="" class="mt-0.5 size-4 text-primary border-slate-300 focus:ring-primary dark:bg-slate-800 dark:border-slate-600" name="q2" type="radio"/>
+<span class="text-sm font-medium text-slate-900 dark:text-white">As medicine</span>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer group">
+<input class="mt-0.5 size-4 text-primary border-slate-300 focus:ring-primary dark:bg-slate-800 dark:border-slate-600" name="q2" type="radio"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white">For religious ceremonies only</span>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer group">
+<input class="mt-0.5 size-4 text-primary border-slate-300 focus:ring-primary dark:bg-slate-800 dark:border-slate-600" name="q2" type="radio"/>
+<span class="text-sm text-slate-700 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white">It was a gift from the Emperor</span>
+</label>
+</div>
+<div class="mt-4 flex justify-end">
+<button class="bg-primary text-white text-sm font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors shadow-sm shadow-blue-200 dark:shadow-none">Check Answer</button>
+</div>
+</div>
+<!-- Question 3: Pending -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-5 border border-slate-200 dark:border-slate-800 shadow-sm opacity-60 hover:opacity-100 transition-opacity">
+<h4 class="font-bold text-slate-800 dark:text-white mb-3 text-sm">3. Who perfected the tea ceremony?</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 p-2 rounded-lg border border-transparent cursor-pointer">
+<div class="size-4 rounded-full border border-slate-300 dark:border-slate-600"></div>
+<span class="text-sm text-slate-600 dark:text-slate-400">Oda Nobunaga</span>
+</label>
+<label class="flex items-center gap-3 p-2 rounded-lg border border-transparent cursor-pointer">
+<div class="size-4 rounded-full border border-slate-300 dark:border-slate-600"></div>
+<span class="text-sm text-slate-600 dark:text-slate-400">Sen no Rikyu</span>
+</label>
+<label class="flex items-center gap-3 p-2 rounded-lg border border-transparent cursor-pointer">
+<div class="size-4 rounded-full border border-slate-300 dark:border-slate-600"></div>
+<span class="text-sm text-slate-600 dark:text-slate-400">Toyotomi Hideyoshi</span>
+</label>
+</div>
+</div>
+</div>
+<!-- SRS Widget -->
+<div class="bg-yellow-50 dark:bg-yellow-900/10 rounded-xl p-5 border border-yellow-200 dark:border-yellow-800/30 shadow-sm mt-2">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-2 bg-yellow-100 dark:bg-yellow-800/30 rounded-lg text-yellow-700 dark:text-yellow-400">
+<span class="material-symbols-outlined">style</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white text-sm">Session SRS</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">4 words added</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-white dark:bg-slate-800 border border-yellow-100 dark:border-yellow-900 px-2 py-1 rounded text-slate-600 dark:text-slate-300">歴史 (History)</span>
+<span class="text-xs bg-white dark:bg-slate-800 border border-yellow-100 dark:border-yellow-900 px-2 py-1 rounded text-slate-600 dark:text-slate-300">珍重 (Prized)</span>
+<span class="text-xs bg-white dark:bg-slate-800 border border-yellow-100 dark:border-yellow-900 px-2 py-1 rounded text-slate-600 dark:text-slate-300">定着 (Establish)</span>
+<span class="text-xs bg-white dark:bg-slate-800 border border-yellow-100 dark:border-yellow-900 px-2 py-1 rounded text-slate-600 dark:text-slate-300">...</span>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</body></html>

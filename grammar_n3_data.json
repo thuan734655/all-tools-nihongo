@@ -1,0 +1,1087 @@
+[
+  {
+    "id": "n3_grammar_001",
+    "order": 1,
+    "level": "N3",
+    "pattern": "うちに",
+    "meaning": "",
+    "examples": [
+      "毎日話しているうちに、好きになりました。",
+      "熱いうちに食べてください。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_002",
+    "order": 2,
+    "level": "N3",
+    "pattern": "間・間に",
+    "meaning": "",
+    "examples": [
+      "留守の間にどろぼうが入った\n彼は会議の間ずっと眠りをしていた。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_003",
+    "order": 3,
+    "level": "N3",
+    "pattern": "最中に",
+    "meaning": "",
+    "examples": [
+      "面接の最中におなかが鳴ってしまった。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_004",
+    "order": 4,
+    "level": "N3",
+    "pattern": "〜てからでないと・〜てからでなければ",
+    "meaning": "",
+    "examples": [
+      "娘を渡してもらってからでないと、お金は渡さない！"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_005",
+    "order": 5,
+    "level": "N3",
+    "pattern": "〜ところ",
+    "meaning": "",
+    "examples": [
+      "部長はお客さんと話をしているところに声をかけて、あとで注意されてしまった。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_006",
+    "order": 6,
+    "level": "N3",
+    "pattern": "〜とおりに・〜とおりだ",
+    "meaning": "",
+    "examples": [
+      "天気情報の通りに、今日はとても暑い。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_007",
+    "order": 7,
+    "level": "N3",
+    "pattern": "〜によって",
+    "meaning": "",
+    "examples": [
+      "日本は地震により大きな被害を受けました。",
+      "アメリカ大陸はコロンブスによって発見されました",
+      "日本は選挙によって首相を決める。",
+      "行くかどうかは、明日の天気によって決めるつもりだ。",
+      "人によって考え方が違う。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_008",
+    "order": 8,
+    "level": "N3",
+    "pattern": "〜たびに",
+    "meaning": "",
+    "examples": [
+      "父は出張のたびにお土産を買ってきてくれる。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_009",
+    "order": 9,
+    "level": "N3",
+    "pattern": "〜ば〜ほど",
+    "meaning": "",
+    "examples": [
+      "言葉を勉強すればするほどその国への理解も深まると言われている。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_010",
+    "order": 10,
+    "level": "N3",
+    "pattern": "ついでに〜",
+    "meaning": "",
+    "examples": [
+      "買い物のついでに、前から一度行ってみたかったカフェに寄った。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_011",
+    "order": 11,
+    "level": "N3",
+    "pattern": "ぐらい",
+    "meaning": "",
+    "examples": [
+      "日曜日ぐらい休ませてください"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_012",
+    "order": 12,
+    "level": "N3",
+    "pattern": "くらい・ほど",
+    "meaning": "",
+    "examples": [
+      "口から火が出るくらい辛いです。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_013",
+    "order": 13,
+    "level": "N3",
+    "pattern": "〜くらい〜はない\n〜ほど〜はない",
+    "meaning": "",
+    "examples": [
+      "彼女ほどきれいな女の子がいない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_014",
+    "order": 14,
+    "level": "N3",
+    "pattern": "くらいなら",
+    "meaning": "",
+    "examples": [
+      "あいつに助けてもらうくらいなら、死んだほうがました。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_015",
+    "order": 15,
+    "level": "N3",
+    "pattern": "〜にかぎる",
+    "meaning": "",
+    "examples": [
+      "やっぱり映画は映画館で見るに限る"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_016",
+    "order": 16,
+    "level": "N3",
+    "pattern": "〜に対して",
+    "meaning": "",
+    "examples": [
+      "お店の人はお客さんに対して親切です。",
+      "大阪は大雨なのに対して、京都は晴れている。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_017",
+    "order": 17,
+    "level": "N3",
+    "pattern": "〜にとって",
+    "meaning": "",
+    "examples": [
+      "このテストは学生にとって難しいですが、先生にとって簡単です。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_018",
+    "order": 18,
+    "level": "N3",
+    "pattern": "〜反面",
+    "meaning": "",
+    "examples": [
+      "都会の生活は面白いことが多い反面、ストレスも多い"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_019",
+    "order": 19,
+    "level": "N3",
+    "pattern": "〜一方で",
+    "meaning": "",
+    "examples": [
+      "会議では自分の意見を言う一方で、他の人の話もよく聞いてください。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_020",
+    "order": 20,
+    "level": "N3",
+    "pattern": "〜というより",
+    "meaning": "",
+    "examples": [
+      "みちこは歩くのが速い。歩くというより走るという感じだ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_021",
+    "order": 21,
+    "level": "N3",
+    "pattern": "〜かわりに",
+    "meaning": "",
+    "examples": [
+      "車で来たので、ビールのかわりにジュースをください。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_022",
+    "order": 22,
+    "level": "N3",
+    "pattern": "〜ため",
+    "meaning": "",
+    "examples": [
+      "合格するために、一所懸命勉強しています。",
+      "大雨のため、試合は中止された。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_023",
+    "order": 23,
+    "level": "N3",
+    "pattern": "〜から・〜ことから",
+    "meaning": "",
+    "examples": [
+      "顔がよく似ていることから、二人は親子だとすぐに分かった。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_024",
+    "order": 24,
+    "level": "N3",
+    "pattern": "〜おかげで",
+    "meaning": "",
+    "examples": [
+      "薬を飲んだおかげで頭痛が治った。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_025",
+    "order": 25,
+    "level": "N3",
+    "pattern": "〜せいで",
+    "meaning": "",
+    "examples": [
+      "薬を飲んだせいで眠くなってきた。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_026",
+    "order": 26,
+    "level": "N3",
+    "pattern": "〜なら",
+    "meaning": "",
+    "examples": [
+      "真相を知っているのなら、私に教えてほしい。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_027",
+    "order": 27,
+    "level": "N3",
+    "pattern": "〜さえ",
+    "meaning": "",
+    "examples": [
+      "冷蔵庫には卵さえ入っていない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_028",
+    "order": 28,
+    "level": "N3",
+    "pattern": "〜さえ〜ば・〜さえ〜なら",
+    "meaning": "",
+    "examples": [
+      "謝ってさえすれば、許してあげるよ。\n君さえいれば、何もいらないよ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_029",
+    "order": 29,
+    "level": "N3",
+    "pattern": "たとえ〜ても",
+    "meaning": "",
+    "examples": [
+      "例え、周りの人がどんなに反対されても、僕はプロの歌手になりたい。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_030",
+    "order": 30,
+    "level": "N3",
+    "pattern": "〜ということだ・〜とのことだ",
+    "meaning": "",
+    "examples": [
+      "新聞によると、先日起きた事件の犯人が捕まったということだ。",
+      "「禁煙」と言うのはたばこを吸うなと言うことだ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_031",
+    "order": 31,
+    "level": "N3",
+    "pattern": "〜と言われている",
+    "meaning": "",
+    "examples": [
+      "この泉の水を飲めば、若返ると言われている。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_032",
+    "order": 32,
+    "level": "N3",
+    "pattern": "〜とか",
+    "meaning": "",
+    "examples": [
+      "隣の娘さんは来月結婚式をあげるとか。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_033",
+    "order": 33,
+    "level": "N3",
+    "pattern": "って",
+    "meaning": "",
+    "examples": [
+      "きららって日本語センターで日本語を勉強しています。",
+      "N2の文法って難しい。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_034",
+    "order": 34,
+    "level": "N3",
+    "pattern": "〜わけだ",
+    "meaning": "",
+    "examples": [
+      "ここから東京駅まで1時半だ。じゃ、今から出れば9時に着くわけだ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_035",
+    "order": 35,
+    "level": "N3",
+    "pattern": "〜わけがない",
+    "meaning": "",
+    "examples": [
+      "こんなに高いところから落ちて、死なないわけがないだろう。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_036",
+    "order": 36,
+    "level": "N3",
+    "pattern": "〜わけではない・というわけではない・〜のではない",
+    "meaning": "",
+    "examples": [
+      "このレストランはいつも客が一杯いたが、だからと言って特別においしいわけではない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_037",
+    "order": 37,
+    "level": "N3",
+    "pattern": "〜わけにはいかない",
+    "meaning": "",
+    "examples": [
+      "ちょっと熱があるが、今日は大事な会議があるので、仕事を休むわけにはいかない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_038",
+    "order": 38,
+    "level": "N3",
+    "pattern": "〜ないわけにはいかない",
+    "meaning": "",
+    "examples": [
+      "この町では自転車がないとやはり困る。買わないわけにはいかない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_039",
+    "order": 39,
+    "level": "N3",
+    "pattern": "〜とは限らない",
+    "meaning": "",
+    "examples": [
+      "高いものが、いいものとは限らない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_040",
+    "order": 40,
+    "level": "N3",
+    "pattern": "〜ないことはない",
+    "meaning": "",
+    "examples": [
+      "これから駅まで歩かないことはないが、かなり時間がかかりますよ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_040",
+    "order": 40,
+    "level": "N3",
+    "pattern": "〜ことは〜が〜",
+    "meaning": "",
+    "examples": [
+      "読んだことは読んだが、全然分からない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_041",
+    "order": 41,
+    "level": "N3",
+    "pattern": "〜てもらいたい・〜ていただきたい・〜てほしい",
+    "meaning": "",
+    "examples": [
+      "この資料をちょっと見っていただきたいんですが、"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_041",
+    "order": 41,
+    "level": "N3",
+    "pattern": "〜させてもらいたい・〜させていただきたい・〜させてほしい",
+    "meaning": "",
+    "examples": [
+      "私にいかせて欲しいんです。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_042",
+    "order": 42,
+    "level": "N3",
+    "pattern": "〜といい・〜ばいい・〜たらいい",
+    "meaning": "",
+    "examples": [
+      "生まれていく子が男の子だったらいいのだが。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_042",
+    "order": 42,
+    "level": "N3",
+    "pattern": "〜こと",
+    "meaning": "",
+    "examples": [
+      "休む時、必ず学校に連絡すること。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_043",
+    "order": 43,
+    "level": "N3",
+    "pattern": "〜べきだ・〜べきではない",
+    "meaning": "",
+    "examples": [
+      "電車の中では、若者はお年寄りに席を譲るべきです"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_043",
+    "order": 43,
+    "level": "N3",
+    "pattern": "〜たらどうか",
+    "meaning": "",
+    "examples": [
+      "体のことが心配なら、一度健康診断を受けたらどうですか。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_044",
+    "order": 44,
+    "level": "N3",
+    "pattern": "〜ことにする・〜ことにしている",
+    "meaning": "",
+    "examples": [
+      "冷蔵庫が壊れたので、新しいのを買うことにした。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_044",
+    "order": 44,
+    "level": "N3",
+    "pattern": "〜ようにする・〜ようにしている",
+    "meaning": "",
+    "examples": [
+      "私はなるべく自分で料理を作って食べるようにしている。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_045",
+    "order": 45,
+    "level": "N3",
+    "pattern": "V（よう）とする",
+    "meaning": "",
+    "examples": [
+      "昔の友達の名前を思い出そうとしたが、どうしても思い出せない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_045",
+    "order": 45,
+    "level": "N3",
+    "pattern": "〜つもりだ",
+    "meaning": "",
+    "examples": [
+      "私は今年77歳ですが、まだまだ若いつもりです。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_046",
+    "order": 46,
+    "level": "N3",
+    "pattern": "〜からこそ",
+    "meaning": "",
+    "examples": [
+      "友達だからこそ、相手の悪いところは悪いと伝えなければならない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_047",
+    "order": 47,
+    "level": "N3",
+    "pattern": "など・なんか・なんて",
+    "meaning": "",
+    "examples": [
+      "りんごやバナナなどのフルーツが好きです。",
+      "彼女などに負けてしまった",
+      "私なんか上手じゃないよ〜"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_048",
+    "order": 48,
+    "level": "N3",
+    "pattern": "〜について",
+    "meaning": "",
+    "examples": [
+      "兄は大学院で、アジアの経済について研究しています"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_049",
+    "order": 49,
+    "level": "N3",
+    "pattern": "〜として",
+    "meaning": "",
+    "examples": [
+      "私はコーヒーカップを花瓶として使っています。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_049",
+    "order": 49,
+    "level": "N3",
+    "pattern": "〜ことがある・〜こともある",
+    "meaning": "",
+    "examples": [
+      "N3に合格できて、うれしくてしょうがない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_050",
+    "order": 50,
+    "level": "N3",
+    "pattern": "〜ことはない",
+    "meaning": "",
+    "examples": [
+      "面接の質問は簡単です。そんなに心配することはありません。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_051",
+    "order": 51,
+    "level": "N3",
+    "pattern": "〜よう",
+    "meaning": "",
+    "examples": [
+      "今日は暖かくて、まるで春が来たかのようだ。",
+      "私たちはあなたが想像しているような関係ではありませんよ。",
+      "とうもろこしのような形をしている建物は、ダナン市役所のビルです。",
+      "インフルエンザのような他の人にうつる病気になったら、治るまで学校へ来てはいけない。",
+      "どうもかぜをひいたようだ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_052",
+    "order": 52,
+    "level": "N3",
+    "pattern": "〜ように",
+    "meaning": "",
+    "examples": [
+      "よく眠れるようにワインを少しのんだ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_053",
+    "order": 53,
+    "level": "N3",
+    "pattern": "〜ようにいう・注意する・・・",
+    "meaning": "",
+    "examples": [
+      "先生に授業中にしゃべらないように注意された。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_054",
+    "order": 54,
+    "level": "N3",
+    "pattern": "〜ばかり",
+    "meaning": "",
+    "examples": [
+      "最近雨ばかりで、洗濯物が乾かなくて困っています。",
+      "彼は寝てばかりいる。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_055",
+    "order": 55,
+    "level": "N3",
+    "pattern": "〜ばかりか・〜ばかりでなく",
+    "meaning": "",
+    "examples": [
+      "山田さんは英語ばかりでなく、中国語も話せる。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_056",
+    "order": 56,
+    "level": "N3",
+    "pattern": "〜ばかりだ",
+    "meaning": "",
+    "examples": [
+      "さっき着いたばかりだ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_057",
+    "order": 57,
+    "level": "N3",
+    "pattern": "〜ばかりだ",
+    "meaning": "",
+    "examples": [
+      "手術は終わってからも、父の病気は悪くなるばかりでした。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_058",
+    "order": 58,
+    "level": "N3",
+    "pattern": "っけ？",
+    "meaning": "",
+    "examples": [
+      "家の鍵を掛けたっけ？"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_059",
+    "order": 59,
+    "level": "N3",
+    "pattern": "〜がる・〜たがる",
+    "meaning": "",
+    "examples": [
+      "寒い日は猫も外へ出たがらない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_060",
+    "order": 60,
+    "level": "N3",
+    "pattern": "〜てたまらない・〜てならない・〜てしょうがない",
+    "meaning": "",
+    "examples": [
+      "エアコン使えないと暑くてたまらない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_061",
+    "order": 61,
+    "level": "N3",
+    "pattern": "〜とたん",
+    "meaning": "",
+    "examples": [
+      "窓を開けたとたん、風が入ってきた。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_062",
+    "order": 62,
+    "level": "N3",
+    "pattern": "〜から〜にかけて",
+    "meaning": "",
+    "examples": [
+      "このブドウは8月から9月にかけて収穫されます。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_063",
+    "order": 63,
+    "level": "N3",
+    "pattern": "〜（んだ）もの・もん",
+    "meaning": "",
+    "examples": [
+      "今日の試験できなかった。勉強しなかったんだもん。仕方がない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_064",
+    "order": 64,
+    "level": "N3",
+    "pattern": "〜に決まっている",
+    "meaning": "",
+    "examples": [
+      "私の頭じゃどんなに頑張ってもハーバード大学には入れないに決まっているよ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_065",
+    "order": 65,
+    "level": "N3",
+    "pattern": "〜に違いない",
+    "meaning": "",
+    "examples": [
+      "黒い服の男がうちのドアを開けようとしていた。あの男は泥棒に違いいない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_066",
+    "order": 66,
+    "level": "N3",
+    "pattern": "〜おそれがある",
+    "meaning": "",
+    "examples": [
+      "大きい地震が起きたから、この建物が倒れる恐れがある。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_067",
+    "order": 67,
+    "level": "N3",
+    "pattern": "〜にすぎない",
+    "meaning": "",
+    "examples": [
+      "彼はただ子供にすぎないから、一人で暮らすことができないよ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_068",
+    "order": 68,
+    "level": "N3",
+    "pattern": "〜ことか",
+    "meaning": "",
+    "examples": [
+      "合格できたら、どんなに嬉しいことか。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_069",
+    "order": 69,
+    "level": "N3",
+    "pattern": "〜ものか",
+    "meaning": "",
+    "examples": [
+      "こんなにたくさんの仕事、明日までに終わるものか。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_070",
+    "order": 70,
+    "level": "N3",
+    "pattern": "〜としたら・〜とすれば",
+    "meaning": "",
+    "examples": [
+      "その話が本当だとしたら、嬉しいです。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_071",
+    "order": 71,
+    "level": "N3",
+    "pattern": "〜を通じて・〜を通して",
+    "meaning": "",
+    "examples": [
+      "１ヶ月を通して、暑い日が続く。",
+      "現在はインターネットを通して、すぐに世界中にニュースが広まる。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_072",
+    "order": 72,
+    "level": "N3",
+    "pattern": "〜しかない・〜ほか（は）ない",
+    "meaning": "",
+    "examples": [
+      "エレベーターが壊れているから、階段で行くしかない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_073",
+    "order": 73,
+    "level": "N3",
+    "pattern": "〜をこめて",
+    "meaning": "",
+    "examples": [
+      "平和へのお願いを込めて、この歌を作りました。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_074",
+    "order": 74,
+    "level": "N3",
+    "pattern": "〜まま",
+    "meaning": "",
+    "examples": [
+      "すぐに戻ってきますから、机の上はこのままにしておいてください。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_075",
+    "order": 75,
+    "level": "N3",
+    "pattern": "〜っぱなし",
+    "meaning": "",
+    "examples": [
+      "水を出しっぱなしにしないでください。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_076",
+    "order": 76,
+    "level": "N3",
+    "pattern": "〜きり",
+    "meaning": "",
+    "examples": [
+      "二人きりで話たいです。",
+      "ひろしさんは本屋に行ったきり、まだ戻ってこない。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_077",
+    "order": 77,
+    "level": "N3",
+    "pattern": "〜ふりをする",
+    "meaning": "",
+    "examples": [
+      "彼は政治についてよく知っているふりをするが、本当は知らないと思う。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_078",
+    "order": 78,
+    "level": "N3",
+    "pattern": "〜くせに",
+    "meaning": "",
+    "examples": [
+      "山田って、本当は彼女が好きなくせに、いつも彼女に意地悪を言うんだよ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_079",
+    "order": 79,
+    "level": "N3",
+    "pattern": "〜はもちろん、〜も",
+    "meaning": "",
+    "examples": [
+      "父はゴルフが趣味で、週末はもちろん平日も仕事の後で練習しています。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_080",
+    "order": 80,
+    "level": "N3",
+    "pattern": "〜はじめる",
+    "meaning": "",
+    "examples": [
+      "日本語を習い始めたのは半年前です。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_081",
+    "order": 81,
+    "level": "N3",
+    "pattern": "〜てはじめて",
+    "meaning": "",
+    "examples": [
+      "一人暮らしをして初めて、家族の大切さを分かってきた。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_082",
+    "order": 82,
+    "level": "N3",
+    "pattern": "〜たて",
+    "meaning": "",
+    "examples": [
+      "焼きたてのパンは美味しいですね。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_083",
+    "order": 83,
+    "level": "N3",
+    "pattern": "〜をはじめ（として）",
+    "meaning": "",
+    "examples": [
+      "今年は富士山をはじめ、各地の有名な山に登りましょう。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_084",
+    "order": 84,
+    "level": "N3",
+    "pattern": "〜かけ",
+    "meaning": "",
+    "examples": [
+      "図書館で借りた本、まだ読みかけだったのに返却日になってしまった。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_085",
+    "order": 85,
+    "level": "N3",
+    "pattern": "〜上がる・あげる",
+    "meaning": "",
+    "examples": [
+      "やっとレポートを書き上げました。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_086",
+    "order": 86,
+    "level": "N3",
+    "pattern": "〜だらけ",
+    "meaning": "",
+    "examples": [
+      "彼女の部屋はゴミだらけだ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_087",
+    "order": 87,
+    "level": "N3",
+    "pattern": "〜きる・きれる",
+    "meaning": "",
+    "examples": [
+      "こんなたくさんの荷物、寮の部屋に入りきらないよ。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_088",
+    "order": 88,
+    "level": "N3",
+    "pattern": "〜出す",
+    "meaning": "",
+    "examples": [
+      "さっきまで笑っていた赤ちゃんが急に泣き出した。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_089",
+    "order": 89,
+    "level": "N3",
+    "pattern": "〜通す",
+    "meaning": "",
+    "examples": [
+      "彼は何を聞かれても、黙り通した。"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "n3_grammar_090",
+    "order": 90,
+    "level": "N3",
+    "pattern": "〜がち",
+    "meaning": "",
+    "examples": [
+      "最近忘れがちだ。"
+    ],
+    "notes": ""
+  }
+]

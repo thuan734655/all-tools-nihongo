@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Japanese Learning Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-light": "#e0f0ff", // Very light blue for Zen feel
+                        "primary-hover": "#0b6bcb",
+                        "sakura": "#fce4ec", // Gentle pink for accents if needed
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2632",
+                        "text-main": "#111418",
+                        "text-sub": "#617589",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans JP", "sans-serif"],
+                        "body": ["Lexend", "Noto Sans JP", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'seigaiha': "url(\"data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 10 12c1.654 0 3.153-.669 4.27-1.785A5.998 5.998 0 0 0 14 12h2a7.99 7.99 0 0 1-16 0h2zm4-3.748V8.25c-1.654 0-3.153.669-4.27 1.785A5.982 5.982 0 0 1 10 8.252zM10 5C4.477 5 0 9.477 0 15h2c0-4.418 3.582-8 8-8s8 3.582 8 8h2c0-5.523-4.477-10-10-10z' fill='%23137fec' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E\")",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', 'Noto Sans JP', sans-serif;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white h-screen overflow-hidden flex font-display">
+<!-- Sidebar -->
+<aside class="w-64 bg-surface-light dark:bg-surface-dark border-r border-gray-200 dark:border-gray-800 flex flex-col justify-between h-full hidden md:flex shrink-0">
+<div class="p-6">
+<!-- User Profile / Branding -->
+<div class="flex items-center gap-3 mb-8">
+<div class="relative size-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile picture showing a smiling student" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8dJPeC9o8eo2D17kXPfKIHWdzrmqMAIKubSoCiZyCu2rSyWmp48B0PYAkc5CkArtt6o0BaM75zmtIThtSkFsftH9BmbO6vFRsU1qCzQxDIpe9mjI5NFpHlJSHWQ6zl0eFEC4Oo-WYrOE7rxkuH6VH5A233fyUYrm5BEvLPVELcpVeed7P_aiah3k5Un2pD5MQmfaOTtNiImespNlRluwMwpUDiLcq6aXkhg4At2J1kg4foxHnHa1tYsh9UoBWuKc-Jrn7Cy3qSQ"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+</div>
+<div>
+<h1 class="text-sm font-bold text-gray-900 dark:text-white leading-tight">Alex-san</h1>
+<p class="text-xs text-primary font-medium">JLPT N4 Student</p>
+</div>
+</div>
+<!-- Navigation -->
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px] fill-1">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">style</span>
+<span class="text-sm">Flashcards</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+<span class="text-sm">Grammar</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+<span class="text-sm">Speaking</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+<span class="text-sm">Reading</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+<span class="text-sm">Custom Notes</span>
+</a>
+</nav>
+</div>
+<div class="p-4 border-t border-gray-100 dark:border-gray-800">
+<button class="flex items-center gap-3 px-3 py-2.5 w-full rounded-lg text-gray-500 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-sm font-medium">Log Out</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark relative">
+<!-- Top Mobile Header -->
+<header class="md:hidden flex items-center justify-between p-4 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<span class="font-bold text-gray-900 dark:text-white">NihongoDash</span>
+</div>
+<button class="p-2 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-10 scrollbar-hide">
+<div class="max-w-6xl mx-auto space-y-8">
+<!-- Welcome Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">Today is Tuesday, Oct 24th</p>
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+                            こんにちは, <span class="text-primary">Alex-san!</span>
+</h1>
+<p class="text-gray-600 dark:text-gray-400 mt-2 max-w-lg">
+                            Ready to continue your journey? "Consistency is the power to change the ordinary into the extraordinary."
+                        </p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 shadow-sm flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Level N4</span>
+</div>
+</div>
+<!-- Action Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Start Review Card -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-6 md:p-8 shadow-sm border border-gray-200 dark:border-gray-700 relative overflow-hidden group hover:shadow-md transition-all duration-300">
+<div class="absolute top-0 right-0 w-64 h-64 bg-seigaiha opacity-30 transform rotate-12 -translate-y-10 translate-x-10 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col h-full justify-between gap-6">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-2xl">update</span>
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">SRS Reviews</h2>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Don't let your knowledge fade.</p>
+</div>
+<span class="bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300 px-3 py-1 rounded-full text-xs font-bold">142 Pending</span>
+</div>
+<div class="mt-auto">
+<div class="text-4xl font-bold text-gray-900 dark:text-white mb-4">142 <span class="text-lg font-normal text-gray-500">items</span></div>
+<button class="w-full bg-primary hover:bg-primary-hover text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined">play_circle</span>
+                                    Start Review Session
+                                </button>
+</div>
+</div>
+</div>
+<!-- New Lessons Card -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-6 md:p-8 shadow-sm border border-gray-200 dark:border-gray-700 relative overflow-hidden group hover:shadow-md transition-all duration-300">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-100 to-transparent rounded-full blur-2xl opacity-50 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col h-full justify-between gap-6">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-purple-500 text-2xl">school</span>
+<h2 class="text-lg font-bold text-gray-900 dark:text-white">New Lessons</h2>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Expand your vocabulary &amp; grammar.</p>
+</div>
+<span class="bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 px-3 py-1 rounded-full text-xs font-bold">20 Available</span>
+</div>
+<div class="mt-auto">
+<div class="flex items-baseline gap-2 mb-4">
+<span class="text-4xl font-bold text-gray-900 dark:text-white">3</span>
+<span class="text-lg font-normal text-gray-500">Kanji</span>
+<span class="text-gray-300 px-2">|</span>
+<span class="text-4xl font-bold text-gray-900 dark:text-white">5</span>
+<span class="text-lg font-normal text-gray-500">Vocab</span>
+</div>
+<button class="w-full bg-white dark:bg-surface-dark border-2 border-gray-200 dark:border-gray-600 hover:border-primary text-gray-700 dark:text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+                                    Learn New Content
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Row -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-white dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col gap-1">
+<div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 mb-1">
+<span class="material-symbols-outlined text-orange-500 text-xl">local_fire_department</span>
+<span class="text-sm font-medium">Daily Streak</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-bold text-gray-900 dark:text-white">12</span>
+<span class="text-sm text-gray-500">days</span>
+</div>
+<span class="text-xs text-green-600 font-medium">+1 from yesterday</span>
+</div>
+<div class="bg-white dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col gap-1">
+<div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 mb-1">
+<span class="material-symbols-outlined text-blue-500 text-xl">menu_book</span>
+<span class="text-sm font-medium">Grammar Progress</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-bold text-gray-900 dark:text-white">45%</span>
+<span class="text-sm text-gray-500">N4 Level</span>
+</div>
+<div class="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-1.5 mt-2">
+<div class="bg-blue-500 h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex flex-col gap-1">
+<div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 mb-1">
+<span class="material-symbols-outlined text-pink-500 text-xl">edit</span>
+<span class="text-sm font-medium">Kanji Learned</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-bold text-gray-900 dark:text-white">650</span>
+<span class="text-sm text-gray-500">/ 2000</span>
+</div>
+<span class="text-xs text-green-600 font-medium">+15 this week</span>
+</div>
+</div>
+<!-- Weekly Activity & Focus -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Heatmap Section -->
+<div class="lg:col-span-2 bg-white dark:bg-surface-dark p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="font-bold text-lg text-gray-900 dark:text-white">Weekly Study Activity</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">15.5 Hours total study time</p>
+</div>
+<select class="text-sm border-gray-200 dark:border-gray-700 dark:bg-surface-dark dark:text-white rounded-lg p-2 focus:ring-primary focus:border-primary">
+<option>This Week</option>
+<option>Last Week</option>
+</select>
+</div>
+<!-- Heatmap Grid (Visualized as Columns for Week View) -->
+<div class="flex items-end justify-between h-48 gap-2 md:gap-4 px-2">
+<!-- Mon -->
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-primary/20 dark:bg-primary/10 rounded-t-lg relative group-hover:bg-primary/30 transition-all h-[40%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded whitespace-nowrap transition-opacity">1.5 hrs</div>
+</div>
+<span class="text-xs font-medium text-gray-400">Mon</span>
+</div>
+<!-- Tue -->
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-primary/40 dark:bg-primary/30 rounded-t-lg relative group-hover:bg-primary/50 transition-all h-[65%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded whitespace-nowrap transition-opacity">3.2 hrs</div>
+</div>
+<span class="text-xs font-medium text-gray-400">Tue</span>
+</div>
+<!-- Wed -->
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-primary/20 dark:bg-primary/10 rounded-t-lg relative group-hover:bg-primary/30 transition-all h-[30%]"></div>
+<span class="text-xs font-medium text-gray-400">Wed</span>
+</div>
+<!-- Thu -->
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-primary rounded-t-lg relative group-hover:bg-primary-hover transition-all h-[85%]">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs py-1 px-2 rounded whitespace-nowrap transition-opacity">5.0 hrs</div>
+</div>
+<span class="text-xs font-bold text-primary">Thu</span>
+</div>
+<!-- Fri -->
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-gray-100 dark:bg-gray-800 rounded-t-lg relative h-[5%]"></div>
+<span class="text-xs font-medium text-gray-400">Fri</span>
+</div>
+<!-- Sat -->
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-gray-100 dark:bg-gray-800 rounded-t-lg relative h-[5%]"></div>
+<span class="text-xs font-medium text-gray-400">Sat</span>
+</div>
+<!-- Sun -->
+<div class="flex flex-col items-center gap-2 flex-1 group">
+<div class="w-full bg-gray-100 dark:bg-gray-800 rounded-t-lg relative h-[5%]"></div>
+<span class="text-xs font-medium text-gray-400">Sun</span>
+</div>
+</div>
+</div>
+<!-- Today's Focus / Todo -->
+<div class="bg-primary-light dark:bg-primary/10 p-6 rounded-2xl border border-primary/10 dark:border-primary/20 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<h3 class="font-bold text-lg text-gray-900 dark:text-white">Daily Tip</h3>
+</div>
+<p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                                "The particle <span class="font-bold text-primary">に (ni)</span> marks the target of an action or direction. Think of it as an arrow pointing to a destination."
+                            </p>
+</div>
+<div class="space-y-3">
+<h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider">Up Next</h4>
+<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center justify-between shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-orange-100 text-orange-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">translate</span>
+</div>
+<div>
+<p class="text-sm font-bold text-gray-900 dark:text-white">Verb Conjugation</p>
+<p class="text-xs text-gray-500">Te-form practice</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-sm">chevron_right</span>
+</div>
+<div class="bg-white dark:bg-surface-dark p-3 rounded-lg flex items-center justify-between shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">record_voice_over</span>
+</div>
+<div>
+<p class="text-sm font-bold text-gray-900 dark:text-white">Shadowing</p>
+<p class="text-xs text-gray-500">Unit 4 Dialogue</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-sm">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Quote -->
+<div class="text-center pt-8 pb-4">
+<p class="text-xs text-gray-400 italic">"Fall down seven times, stand up eight." - Japanese Proverb</p>
+</div>
+</div>
+</div>
+</main>
+</body></html>

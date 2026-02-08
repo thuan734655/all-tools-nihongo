@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nihongo Master - AI Speaking Practice</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans JP", "sans-serif"],
+                        "body": ["Lexend", "Noto Sans JP", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white overflow-x-hidden min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#2a3642] px-10 py-3 bg-white dark:bg-[#1a2632]">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Nihongo Master</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#637588] dark:text-[#9ba8b8] hover:text-primary text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-[#637588] dark:text-[#9ba8b8] hover:text-primary text-sm font-medium leading-normal" href="#">Grammar</a>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Speaking</a>
+<a class="text-[#637588] dark:text-[#9ba8b8] hover:text-primary text-sm font-medium leading-normal" href="#">Kanji</a>
+<a class="text-[#637588] dark:text-[#9ba8b8] hover:text-primary text-sm font-medium leading-normal" href="#">Settings</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#e5e7eb] dark:border-[#2a3642]" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4GxgFPZLVpvxQwHhkCWHVJWqTpeYD6tILUAHMgMw_kYQHVQlYj3a5WUHBSkgQpW042tbaieHKHks_gefuS3JZCPbL3C5LzFOVnuBGEUYAYp870AFuloVcPbalafpORUDnrDQ7uzstKnHy_dwl9qWdQ7cp_fH3ShGRSX89r7q111i_aiU-ZrfP9SHHzxlPGyoSrquLnLg5xfyrCGfzQeCqH4cp-a8dQMXm5Tt4KlKlWVqvfCS2YSZcBycFmcU6TVfLBWYP4qud1g");'></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center py-8 px-4 md:px-10">
+<div class="w-full max-w-[960px] flex flex-col gap-6">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Lesson 14</span>
+<span class="text-[#637588] dark:text-[#9ba8b8] text-xs font-medium">Daily Conversation</span>
+</div>
+<h1 class="text-3xl font-bold leading-tight text-[#111418] dark:text-white">Speaking Practice</h1>
+<p class="text-[#637588] dark:text-[#9ba8b8] mt-1">Read the sentence aloud to improve your pronunciation.</p>
+</div>
+<button class="flex items-center gap-2 text-[#637588] dark:text-[#9ba8b8] hover:text-primary transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                    Exit Practice
+                </button>
+</div>
+<!-- Practice Card Container -->
+<div class="bg-white dark:bg-[#1a2632] rounded-xl shadow-sm border border-[#e5e7eb] dark:border-[#2a3642] overflow-hidden flex flex-col md:flex-row">
+<!-- Left: Prompt & Visuals -->
+<div class="flex-1 p-8 flex flex-col justify-between relative min-h-[400px]">
+<!-- Context Image/Background -->
+<div class="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(#137fec 1px, transparent 1px); background-size: 20px 20px;"></div>
+<!-- Prompt Text -->
+<div class="z-10 flex flex-col gap-6 items-center text-center mt-4">
+<div class="bg-background-light dark:bg-[#23303e] px-4 py-2 rounded-lg inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">volume_up</span>
+<span class="text-sm font-medium text-[#637588] dark:text-[#9ba8b8]">Listen to native speaker</span>
+</div>
+<div class="space-y-2">
+<p class="text-4xl md:text-5xl font-bold text-[#111418] dark:text-white leading-tight font-display tracking-tight">
+                                明日の天気はどうですか？
+                            </p>
+<p class="text-lg text-primary font-medium opacity-80">Ashita no tenki wa dou desu ka?</p>
+</div>
+<div class="w-16 h-1 bg-[#e5e7eb] dark:bg-[#2a3642] rounded-full"></div>
+<p class="text-xl text-[#637588] dark:text-[#9ba8b8]">How is the weather tomorrow?</p>
+</div>
+<!-- Interactive Area: Microphone -->
+<div class="z-10 flex flex-col items-center justify-center mt-12 mb-4">
+<div class="relative group">
+<!-- Ripple Effect Ring (Static for design, would animate in code) -->
+<div class="absolute -inset-4 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<button class="relative flex items-center justify-center size-24 rounded-full bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/30 transition-all transform active:scale-95 cursor-pointer">
+<span class="material-symbols-outlined text-[40px]">mic</span>
+</button>
+</div>
+<p class="mt-6 text-[#637588] dark:text-[#9ba8b8] text-sm font-medium">Click to start recording</p>
+</div>
+</div>
+<!-- Right: Analysis & Feedback (Visible state) -->
+<div class="w-full md:w-[380px] border-t md:border-t-0 md:border-l border-[#e5e7eb] dark:border-[#2a3642] bg-[#fafafa] dark:bg-[#15202b] p-6 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-[#111418] dark:text-white text-lg">Feedback</h3>
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold px-2 py-1 rounded">COMPLETED</span>
+</div>
+<!-- Score Ring -->
+<div class="flex flex-col items-center justify-center py-2">
+<div class="relative size-32">
+<svg class="size-full -rotate-90" viewbox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+<path class="text-[#e5e7eb] dark:text-[#2a3642]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-[#111418] dark:text-white">85</span>
+<span class="text-xs text-[#637588] dark:text-[#9ba8b8] font-medium uppercase">Score</span>
+</div>
+</div>
+<p class="mt-3 text-sm font-medium text-[#111418] dark:text-white">Great job! Almost perfect.</p>
+</div>
+<!-- Detailed Breakdown -->
+<div class="flex flex-col gap-3">
+<p class="text-sm font-bold text-[#637588] dark:text-[#9ba8b8] uppercase tracking-wider text-xs">Pronunciation Breakdown</p>
+<div class="bg-white dark:bg-[#1a2632] p-4 rounded-lg border border-[#e5e7eb] dark:border-[#2a3642] flex flex-wrap gap-2 justify-center">
+<!-- Green for correct, Red for issue -->
+<div class="flex flex-col items-center gap-1">
+<span class="text-xl font-bold text-green-600 dark:text-green-400">明</span>
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-xl font-bold text-green-600 dark:text-green-400">日</span>
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-xl font-bold text-green-600 dark:text-green-400">の</span>
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-xl font-bold text-red-500 dark:text-red-400 relative">
+                                    天
+                                    <!-- Accessibility underline for error -->
+<span class="absolute -bottom-1 left-0 w-full h-0.5 bg-red-500 dark:bg-red-400"></span>
+</span>
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-xl font-bold text-green-600 dark:text-green-400">気</span>
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-xl font-bold text-green-600 dark:text-green-400">は...</span>
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+</div>
+</div>
+<p class="text-xs text-[#637588] dark:text-[#9ba8b8] mt-1 italic">Tip: Pay attention to the pitch accent on "Tenki". It should start high.</p>
+</div>
+<!-- Comparison Controls -->
+<div class="mt-auto flex flex-col gap-3">
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg border border-[#e5e7eb] dark:border-[#2a3642] hover:bg-white dark:hover:bg-[#23303e] text-[#111418] dark:text-white text-sm font-medium transition-colors bg-white dark:bg-[#1a2632]">
+<span class="material-symbols-outlined text-[20px] text-primary">play_circle</span>
+                                Native
+                            </button>
+<button class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg border border-[#e5e7eb] dark:border-[#2a3642] hover:bg-white dark:hover:bg-[#23303e] text-[#111418] dark:text-white text-sm font-medium transition-colors bg-white dark:bg-[#1a2632]">
+<span class="material-symbols-outlined text-[20px] text-[#637588]">graphic_eq</span>
+                                Mine
+                            </button>
+</div>
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2">
+                            Next Sentence
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Waveform History / Footer Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-white dark:bg-[#1a2632] p-4 rounded-xl border border-[#e5e7eb] dark:border-[#2a3642] flex items-center gap-4">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm text-[#637588] dark:text-[#9ba8b8]">Daily Streak</p>
+<p class="text-lg font-bold text-[#111418] dark:text-white">12 Days</p>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2632] p-4 rounded-xl border border-[#e5e7eb] dark:border-[#2a3642] flex items-center gap-4">
+<div class="size-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="text-sm text-[#637588] dark:text-[#9ba8b8]">Sentences Mastered</p>
+<p class="text-lg font-bold text-[#111418] dark:text-white">45 / 100</p>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2632] p-4 rounded-xl border border-[#e5e7eb] dark:border-[#2a3642] flex items-center gap-4">
+<div class="size-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<p class="text-sm text-[#637588] dark:text-[#9ba8b8]">Avg. Accuracy</p>
+<p class="text-lg font-bold text-[#111418] dark:text-white">92%</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
