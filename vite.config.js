@@ -5,6 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    open: true
+    open: true,
+    allowedHosts: ['all-tools-nihongo.onrender.com']
+  },
+  preview: {
+    allowedHosts: ['all-tools-nihongo.onrender.com']
   }
 })
