@@ -13,6 +13,7 @@ function GrammarPage() {
   }))
 
   const [selectedLesson, setSelectedLesson] = useState(null)
+  const [mobileView, setMobileView] = useState('list') // 'list' | 'detail'
   const [currentExercise, setCurrentExercise] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState('')
   const [showResult, setShowResult] = useState(false)
@@ -343,7 +344,310 @@ function GrammarPage() {
           <p className="text-gray-500 dark:text-gray-400">Đang tải...</p>
         </div>
       ) : (
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <>
+      {/* Mobile: master-detail */}
+      <div className="md:hidden">
+        {mobileView === 'list' ? (
+          <div className="space-y-4">
+            <h3 className="font-bold text-gray-900 dark:text-white mb-4">Grammar Patterns</h3>
+            {grammarWithExercises.map((lesson) => (
+              <button
+                key={lesson.id}
+                onClick={() => {
+                  setSelectedLesson(lesson)
+                  setCurrentExercise(0)
+                  setSelectedAnswer('')
+                  setShowResult(false)
+                  setMobileView('detail')
+                }}
+                className="w-full text-left p-4 rounded-xl border transition-all bg-white dark:bg-surface-dark border-gray-200 dark:border-gray-700 hover:border-primary/50"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-lg font-bold japanese-text">{lesson.pattern}</span>
+                  <span className="text-xs bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded">{lesson.level}</span>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{lesson.meaning}</p>
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-6">
+            <button
+              onClick={() => setMobileView('list')}
+              className="inline-flex items-center gap-2 text-slate-500 hover:text-primary transition-colors"
+            >
+              <span className="material-symbols-outlined">arrow_back</span>
+              Quay lại danh sách
+            </button>
+
+            {/* Pattern Card */}
+            <div className="bg-white dark:bg-surface-dark rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex-1">
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white japanese-text mb-2">
+                    {selectedLesson.pattern}
+                  </h2>
+                  <p className="text-lg text-primary font-medium">{selectedLesson.romaji}</p>
+                  <p className="text-gray-600 dark:text-gray-400 mt-1">{selectedLesson.meaning}</p>
+                </div>
+                <div className="flex gap-2 shrink-0">
+                  <button 
+                    onClick={() => showDetailModal ? closeDetailModal() : fetchGrammarDetail(selectedLesson)}
+                    className="flex items-center gap-1 px-3 py-2 rounded-full bg-green-100 dark:bg-green-900/30 hover:bg-green-200 dark:hover:bg-green-900/50 text-green-700 dark:text-green-400 transition-colors font-medium text-sm"
+                    title="Xem chi tiết từ AI"
+                  >
+                    <span className="material-symbols-outlined text-lg">auto_awesome</span>
+                    {showDetailModal ? 'Ẩn' : 'Chi tiết'}
+                  </button>
+                  <button
+                    onClick={() => fetchGrammarExercises(selectedLesson)}
+                    disabled={exerciseLoading}
+                    className="flex items-center gap-1 px-3 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 hover:bg-purple-200 dark:hover:bg-purple-900/50 text-purple-700 dark:text-purple-300 transition-colors font-medium text-sm disabled:opacity-50"
+                    title="Tạo bài tập luyện tập từ AI"
+                  >
+                    <span className="material-symbols-outlined text-lg">edit_square</span>
+                    Luyện tập
+                  </button>
+                </div>
+              </div>
+
+              {/* Explanation */}
+              <div className="bg-blue-50 dark:bg-blue-900/10 rounded-xl p-4 mb-6">
+                <div className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-primary mt-0.5">lightbulb</span>
+                  <div className="flex-1">
+                    {showDetailModal && detailLoading && !detailContent && (
+                      <div className="flex items-center gap-3 text-gray-500">
+                        <div className="size-5 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                        Đang tải từ AI...
+                      </div>
+                    )}
+
+                    {showDetailModal && detailError && (
+                      <div className="text-red-600 dark:text-red-400 leading-relaxed">
+                        <span className="material-symbols-outlined text-sm mr-1">error</span>
+                        {detailError}
+                      </div>
+                    )}
+
+                    {showDetailModal && (aiDetail.meaningUsage || detailContent) ? (
+                      <div className="whitespace-pre-wrap text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {aiDetail.meaningUsage || detailContent}
+                        {detailLoading && (
+                          <span className="inline-block w-2 h-4 bg-primary animate-pulse ml-1"></span>
+                        )}
+                      </div>
+                    ) : (
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {selectedLesson.explanation}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Examples */}
+              <div className="space-y-4">
+                <h4 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary">format_quote</span>
+                  Examples
+                </h4>
+                {showDetailModal && aiDetail.examples.length > 0 ? (
+                  aiDetail.examples.map((ex, index) => (
+                    <div
+                      key={index}
+                      className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4"
+                    >
+                      {ex.japanese && (
+                        <p className="text-xl text-gray-900 dark:text-white japanese-text mb-1">
+                          {renderFurigana(ex.japanese)}
+                        </p>
+                      )}
+                      {ex.romaji && (
+                        <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">{ex.romaji}</p>
+                      )}
+                      {ex.viet && (
+                        <p className="text-gray-600 dark:text-gray-400">{ex.viet}</p>
+                      )}
+                    </div>
+                  ))
+                ) : (
+                  selectedLesson.examples.map((example, index) => (
+                    <div 
+                      key={index}
+                      className="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4"
+                    >
+                      <p className="text-xl text-gray-900 dark:text-white japanese-text mb-1">
+                        {renderFurigana(example.japanese)}
+                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">{example.romaji}</p>
+                      <p className="text-gray-600 dark:text-gray-400">{example.meaning}</p>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+
+            {/* Exercise Card */}
+            {activeExercises.length > 0 && (
+              <div className="bg-white dark:bg-surface-dark rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                    <span className="material-symbols-outlined text-purple-500">quiz</span>
+                    Practice Exercise
+                  </h3>
+                  <span className="text-sm text-gray-500">
+                    {currentExercise + 1} / {activeExercises.length}
+                  </span>
+                </div>
+
+                {exerciseError && (
+                  <div className="p-4 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-xl mb-4">
+                    <span className="material-symbols-outlined text-sm mr-1">error</span>
+                    {exerciseError}
+                  </div>
+                )}
+
+                {exerciseLoading && (
+                  <div className="flex items-center gap-3 text-gray-500 mb-4">
+                    <div className="size-5 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                    Đang tạo bài tập từ AI...
+                  </div>
+                )}
+
+                {(() => {
+                  const exercise = activeExercises[currentExercise]
+                  const instructionText = exercise?.instruction || (exercise?.type === 'fill-blank' ? 'Chọn đáp án đúng để điền vào chỗ trống (___).' : 'Chọn đáp án đúng.')
+                  
+                  if (exercise.type === 'fill-blank') {
+                    return (
+                      <div>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{instructionText}</p>
+                        <p className="text-2xl text-gray-900 dark:text-white japanese-text mb-6 text-center">
+                          {exercise.question.split('___').map((part, i) => (
+                            <span key={i}>
+                              {renderFurigana(part)}
+                              {i < exercise.question.split('___').length - 1 && (
+                                <span className={`inline-block min-w-[3rem] mx-1 px-3 py-1 rounded-lg border-2 border-dashed ${
+                                  showResult
+                                    ? isCorrect
+                                      ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-600'
+                                      : 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-600'
+                                    : selectedAnswer
+                                      ? 'border-primary bg-primary/10 text-primary'
+                                      : 'border-gray-300 dark:border-gray-600'
+                                }`}>
+                                  {selectedAnswer || '___'}
+                                </span>
+                              )}
+                            </span>
+                          ))}
+                        </p>
+
+                        <div className="grid grid-cols-2 gap-3 mb-6">
+                          {exercise.options.map((option) => (
+                            <button
+                              key={option}
+                              onClick={() => !showResult && handleAnswerSelect(option)}
+                              disabled={showResult}
+                              className={`p-4 rounded-xl border-2 text-lg japanese-text transition-all ${
+                                showResult
+                                  ? option === exercise.answer
+                                    ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-600'
+                                    : selectedAnswer === option
+                                      ? 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-600'
+                                      : 'border-gray-200 dark:border-gray-700 text-gray-400'
+                                  : selectedAnswer === option
+                                    ? 'border-primary bg-primary/10 text-primary'
+                                    : 'border-gray-200 dark:border-gray-700 hover:border-primary/50 text-gray-700 dark:text-gray-300'
+                              }`}
+                            >
+                              {renderFurigana(option)}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  } else {
+                    return (
+                      <div>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{instructionText}</p>
+                        <p className="text-lg text-gray-900 dark:text-white mb-6 japanese-text">{renderFurigana(exercise.question)}</p>
+                        <div className="space-y-3 mb-6">
+                          {exercise.options.map((option) => (
+                            <button
+                              key={option}
+                              onClick={() => !showResult && handleAnswerSelect(option)}
+                              disabled={showResult}
+                              className={`w-full text-left p-4 rounded-xl border-2 japanese-text transition-all ${
+                                showResult
+                                  ? option === exercise.answer
+                                    ? 'border-green-500 bg-green-50 dark:bg-green-900/20 text-green-600'
+                                    : selectedAnswer === option
+                                      ? 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-600'
+                                      : 'border-gray-200 dark:border-gray-700 text-gray-400'
+                                  : selectedAnswer === option
+                                    ? 'border-primary bg-primary/10 text-primary'
+                                    : 'border-gray-200 dark:border-gray-700 hover:border-primary/50 text-gray-700 dark:text-gray-300'
+                              }`}
+                            >
+                              {renderFurigana(option)}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  }
+                })()}
+
+                {showResult && (
+                  <div className={`p-4 rounded-xl mb-4 ${
+                    isCorrect 
+                      ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300'
+                      : 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300'
+                  }`}>
+                    <div className="flex items-center gap-2">
+                      <span className="material-symbols-outlined">
+                        {isCorrect ? 'check_circle' : 'cancel'}
+                      </span>
+                      <span className="font-medium">
+                        {isCorrect ? 'Correct! Great job!' : `Incorrect. The answer is: ${(activeExercises[currentExercise]?.answer || '')}`}
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex justify-end">
+                  {!showResult ? (
+                    <button
+                      onClick={checkAnswer}
+                      disabled={!selectedAnswer}
+                      className={`px-6 py-3 rounded-xl font-bold transition-all ${
+                        selectedAnswer
+                          ? 'bg-primary hover:bg-primary-hover text-white'
+                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
+                      }`}
+                    >
+                      Check Answer
+                    </button>
+                  ) : (
+                    <button
+                      onClick={nextExercise}
+                      className="px-6 py-3 rounded-xl font-bold bg-primary hover:bg-primary-hover text-white flex items-center gap-2"
+                    >
+                      {currentExercise < activeExercises.length - 1 ? 'Next Exercise' : 'Complete'}
+                      <span className="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Desktop/tablet: keep current layout */}
+      <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Lesson List */}
         <div className="lg:col-span-1 space-y-4">
           <h3 className="font-bold text-gray-900 dark:text-white mb-4">Grammar Patterns</h3>
@@ -663,6 +967,7 @@ function GrammarPage() {
           )}
         </div>
       </div>
+      </>
       )}
     </div>
   )

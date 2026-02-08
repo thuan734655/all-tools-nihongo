@@ -262,6 +262,17 @@ function ContentPage() {
       const items = Array.isArray(data) ? data : [data]
       
       if (activeTab === 'vocabulary') {
+        const normalizePos = (raw) => {
+          const s = String(raw || '').trim().toLowerCase()
+          if (!s) return ''
+
+          if (s.includes('phó từ') || s.includes('pho tu') || s === 'adverb' || s === 'adv') return 'phó từ'
+          if (s.includes('động từ') || s.includes('dong tu') || s === 'verb' || s === 'v') return 'động từ'
+          if (s.includes('tính từ') || s.includes('tinh tu') || s === 'adjective' || s === 'adj') return 'tính từ'
+          if (s.includes('danh từ') || s.includes('danh tu') || s === 'noun' || s === 'n') return 'danh từ'
+          return ''
+        }
+
         const newItems = items.map((item, i) => ({
           id: `vocab-import-${Date.now()}-${i}`,
           kanji: item.kanji || item.word || '',
@@ -272,7 +283,10 @@ function ContentPage() {
           example: item.example || '',
           exampleMeaning: item.exampleMeaning || '',
           level: item.level || 'N5',
+          // Keep existing 'type' for backward compatibility
           type: item.type || 'Noun',
+          // New POS field (VN): 'phó từ' | 'động từ' | 'tính từ' | 'danh từ'
+          pos: normalizePos(item.pos || item.partOfSpeech || item.wordType || item.loai || item.loaiTu || item.tuLoai) || 'danh từ',
           createdAt: Date.now()
         }))
         saveVocab([...customVocab, ...newItems])

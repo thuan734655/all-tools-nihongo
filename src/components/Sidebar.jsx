@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AppContext } from '../App'
 
-function Sidebar() {
+function Sidebar({ mobile = false, open = false, onClose }) {
   const { user, logout, isAuthenticated } = useContext(AppContext)
   const navigate = useNavigate()
 
@@ -26,8 +26,16 @@ function Sidebar() {
 
   if (!user) return null
 
+  const handleNavClick = () => {
+    if (mobile && onClose) onClose()
+  }
+
+  const asideClassName = mobile
+    ? `w-64 bg-surface-light dark:bg-surface-dark border-r border-gray-200 dark:border-gray-800 flex flex-col justify-between h-screen shrink-0 fixed top-0 left-0 z-50 transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`
+    : 'w-64 bg-surface-light dark:bg-surface-dark border-r border-gray-200 dark:border-gray-800 flex flex-col justify-between h-screen hidden md:flex shrink-0 sticky top-0'
+
   return (
-    <aside className="w-64 bg-surface-light dark:bg-surface-dark border-r border-gray-200 dark:border-gray-800 flex flex-col justify-between h-screen hidden md:flex shrink-0 sticky top-0">
+    <aside className={asideClassName}>
       <div className="p-6">
         {/* User Profile */}
         <div className="flex items-center gap-3 mb-8">
@@ -54,6 +62,7 @@ function Sidebar() {
               key={item.path}
               to={item.path}
               end={item.path === '/'}
+              onClick={handleNavClick}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
                   isActive

@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { AppContext } from '../App'
 
-function Header() {
+function Header({ onMenuClick }) {
   const { darkMode, toggleDarkMode, user } = useContext(AppContext)
 
   return (
@@ -32,7 +32,11 @@ function Header() {
         </div>
 
         {/* Menu Button */}
-        <button className="p-2 text-gray-600 dark:text-gray-300">
+        <button
+          onClick={onMenuClick}
+          aria-label="Open menu"
+          className="p-2 text-gray-600 dark:text-gray-300"
+        >
           <span className="material-symbols-outlined">menu</span>
         </button>
       </div>

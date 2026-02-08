@@ -15,6 +15,9 @@ function FlashcardPage() {
   const { vocabulary, loading: contentLoading, updateItem } = useContentContext()
   
   const [cards, setCards] = useState([])
+  const [selectedCardIds, setSelectedCardIds] = useState(() => new Set())
+  const [showSelection, setShowSelection] = useState(false)
+  const [selectionQuery, setSelectionQuery] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
@@ -25,26 +28,46 @@ function FlashcardPage() {
   const [assistLoading, setAssistLoading] = useState(false)
   const [assistError, setAssistError] = useState('')
   
-  // Answer input states
-  const [userAnswer, setUserAnswer] = useState('')
+  // Review input states
+  const [userReading, setUserReading] = useState('')
+  const [userMeaning, setUserMeaning] = useState('')
   const [answerResult, setAnswerResult] = useState(null) // null, 'correct', 'incorrect'
-  const [showInputMode, setShowInputMode] = useState(true) // Toggle between input mode and flip mode
 
   // Update cards when vocabulary data changes
   useEffect(() => {
     if (vocabulary.length > 0) {
-      setCards(vocabulary.map(v => ({
+      const mapped = vocabulary.map(v => ({
         ...v,
         srsLevel: v.srsLevel || 1,
         nextReview: v.nextReview || new Date()
-      })))
+      }))
+
+      setCards(mapped)
+
+      // Default: select all cards once when vocabulary is loaded
+      setSelectedCardIds(prev => {
+        if (prev && prev.size > 0) return prev
+        return new Set(mapped.map(c => c.id).filter(Boolean))
+      })
     } else {
       setCards([])
+      setSelectedCardIds(new Set())
     }
   }, [vocabulary])
 
-  const currentCard = cards[currentIndex]
-  const progress = cards.length > 0 ? ((currentIndex + 1) / cards.length) * 100 : 0
+  const studyCards = cards.filter(c => selectedCardIds.has(c.id))
+  const currentCard = studyCards[currentIndex]
+  const progress = studyCards.length > 0 ? ((currentIndex + 1) / studyCards.length) * 100 : 0
+
+  useEffect(() => {
+    if (studyCards.length === 0) {
+      setCurrentIndex(0)
+      return
+    }
+    if (currentIndex >= studyCards.length) {
+      setCurrentIndex(0)
+    }
+  }, [studyCards.length, currentIndex])
 
   const hasCachedAssist = (card) => {
     if (!card) return false
@@ -126,10 +149,11 @@ function FlashcardPage() {
   const nextCard = () => {
     setIsFlipped(false)
     setShowAnswer(false)
-    setUserAnswer('')
+    setUserReading('')
+    setUserMeaning('')
     setAnswerResult(null)
     setAssistError('')
-    if (currentIndex < cards.length - 1) {
+    if (currentIndex < studyCards.length - 1) {
       setCurrentIndex(currentIndex + 1)
     } else {
       // Session complete - cycle back
@@ -147,31 +171,24 @@ function FlashcardPage() {
 
   // Check user answer
   const checkAnswer = () => {
-    if (!userAnswer.trim()) return
-    
-    const card = currentCard
-    const normalizedUserAnswer = normalizeText(userAnswer)
-    
-    // Check against multiple possible correct answers
-    const correctAnswers = [
-      card.reading,      // Hiragana reading
-      card.romaji,       // Romaji
-      card.meaning,      // English meaning
-      card.meaningVi,    // Vietnamese meaning
-      card.kanji         // Kanji itself
-    ].filter(Boolean).map(normalizeText)
-    
-    const isCorrect = correctAnswers.some(answer => 
-      answer === normalizedUserAnswer || 
-      answer.includes(normalizedUserAnswer) ||
-      normalizedUserAnswer.includes(answer)
-    )
-    
+    if (!currentCard) return
+    if (!userReading.trim() && !userMeaning.trim()) return
+
+    const readingOk = userReading.trim()
+      ? normalizeText(userReading) === normalizeText(currentCard.reading)
+      : false
+
+    const meaningTargets = [currentCard.meaningVi, currentCard.meaning].filter(Boolean).map(normalizeText)
+    const meaningOk = userMeaning.trim()
+      ? meaningTargets.some(t => normalizeText(userMeaning) === t || t.includes(normalizeText(userMeaning)))
+      : false
+
+    const isCorrect = readingOk && meaningOk
+
     setAnswerResult(isCorrect ? 'correct' : 'incorrect')
     setShowAnswer(true)
     setIsFlipped(true)
-    
-    // Update streak for correct answers
+
     if (isCorrect) {
       setStreak(prev => prev + 1)
     } else {
@@ -183,7 +200,7 @@ function FlashcardPage() {
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !showAnswer) {
       e.preventDefault()
-      if (userAnswer.trim()) {
+      if (userReading.trim() || userMeaning.trim()) {
         checkAnswer()
       }
     }
@@ -226,6 +243,27 @@ function FlashcardPage() {
         <div className="text-center">
           <div className="size-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-500 dark:text-gray-400">Đang tải từ vựng...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Empty selection state
+  if (studyCards.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background-light dark:bg-background-dark p-4">
+        <div className="text-center max-w-md">
+          <div className="size-24 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span className="material-symbols-outlined text-5xl text-blue-500">style</span>
+          </div>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Chưa chọn từ vựng để ôn tập</h2>
+          <p className="text-gray-500 dark:text-gray-400 mb-6">Hãy chọn ít nhất 1 từ vựng từ danh sách để bắt đầu.</p>
+          <button
+            onClick={() => setShowSelection(true)}
+            className="px-6 py-3 bg-primary hover:bg-primary-hover text-white font-bold rounded-xl transition-colors"
+          >
+            Chọn từ vựng
+          </button>
         </div>
       </div>
     )
@@ -291,19 +329,95 @@ function FlashcardPage() {
             </div>
           </div>
 
+          <div className="flex items-center justify-between gap-3">
+            <button
+              onClick={() => setShowSelection(s => !s)}
+              className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            >
+              Chọn từ vựng ({studyCards.length})
+            </button>
+            <div className="text-xs text-slate-500 dark:text-slate-400">
+              Đúng liên tiếp: <span className="font-bold">{streak}</span>
+            </div>
+          </div>
+
+          {showSelection && (
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark p-4 space-y-3">
+              <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+                <input
+                  value={selectionQuery}
+                  onChange={(e) => setSelectionQuery(e.target.value)}
+                  placeholder="Tìm từ vựng..."
+                  className="w-full sm:max-w-sm px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
+                />
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setSelectedCardIds(new Set(cards.map(c => c.id).filter(Boolean)))}
+                    className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  >
+                    Chọn tất cả
+                  </button>
+                  <button
+                    onClick={() => setSelectedCardIds(new Set())}
+                    className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  >
+                    Bỏ chọn
+                  </button>
+                </div>
+              </div>
+
+              <div className="max-h-56 overflow-y-auto rounded-xl border border-slate-100 dark:border-slate-700">
+                {cards
+                  .filter(c => {
+                    const q = selectionQuery.trim().toLowerCase()
+                    if (!q) return true
+                    const hay = `${c.kanji || ''} ${c.reading || ''} ${c.meaningVi || ''} ${c.meaning || ''}`.toLowerCase()
+                    return hay.includes(q)
+                  })
+                  .map(c => (
+                    <label
+                      key={c.id}
+                      className="flex items-center gap-3 px-3 py-2 border-b border-slate-100 dark:border-slate-700 last:border-b-0 cursor-pointer"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selectedCardIds.has(c.id)}
+                        onChange={(e) => {
+                          setSelectedCardIds(prev => {
+                            const next = new Set(prev)
+                            if (e.target.checked) next.add(c.id)
+                            else next.delete(c.id)
+                            return next
+                          })
+                          setCurrentIndex(0)
+                        }}
+                      />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="font-bold japanese-text truncate">{c.kanji}</span>
+                          <span className="text-xs text-slate-400">{c.level}</span>
+                        </div>
+                        <div className="text-xs text-slate-500 dark:text-slate-400 truncate">{c.reading} · {c.meaningVi || c.meaning}</div>
+                      </div>
+                    </label>
+                  ))}
+              </div>
+            </div>
+          )}
+
           {/* Progress Bar */}
           <div className="flex items-center gap-4 w-full">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 w-10">
-              {currentIndex + 1}/{cards.length}
+              {currentIndex + 1}/{studyCards.length}
             </span>
             <div className="h-2 flex-1 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
               <div 
                 className="h-full bg-primary rounded-full transition-all duration-500 ease-out"
-                style={{ width: `${progress}%` }}
+                style={{ width: `${studyCards.length > 0 ? ((currentIndex + 1) / studyCards.length) * 100 : 0}%` }}
               ></div>
             </div>
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 w-10 text-right">
-              {Math.round(progress)}%
+              {Math.round(studyCards.length > 0 ? ((currentIndex + 1) / studyCards.length) * 100 : 0)}%
             </span>
           </div>
         </div>
@@ -333,19 +447,27 @@ function FlashcardPage() {
                   {currentCard.kanji}
                 </div>
                 
-                {/* Answer Input Field */}
-                {!showAnswer && showInputMode && (
-                  <div className="mt-6 max-w-md mx-auto">
+                {/* Review Input Fields */}
+                {!showAnswer && (
+                  <div className="mt-6 w-full max-w-md mx-auto space-y-3">
                     <input
                       type="text"
-                      value={userAnswer}
-                      onChange={(e) => setUserAnswer(e.target.value)}
+                      value={userReading}
+                      onChange={(e) => setUserReading(e.target.value)}
                       onKeyPress={handleKeyPress}
-                      placeholder="Nhập hiragana hoặc nghĩa tiếng Việt..."
+                      placeholder="Nhập cách đọc (kana)..."
                       className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-center text-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400"
                       autoFocus
                     />
-                    <p className="text-xs text-slate-400 mt-2">Nhấn Enter để kiểm tra</p>
+                    <input
+                      type="text"
+                      value={userMeaning}
+                      onChange={(e) => setUserMeaning(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      placeholder="Nhập nghĩa (tiếng Việt)..."
+                      className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-center text-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400"
+                    />
+                    <p className="text-xs text-slate-400">Nhấn Enter để kiểm tra</p>
                   </div>
                 )}
                 
@@ -359,13 +481,13 @@ function FlashcardPage() {
                     <span className="material-symbols-outlined text-lg">
                       {answerResult === 'correct' ? 'check_circle' : 'cancel'}
                     </span>
-                    {answerResult === 'correct' ? 'Đúng rồi!' : `Sai rồi! Câu trả lời: ${currentCard.reading}`}
+                    {answerResult === 'correct' ? 'Đúng rồi!' : 'Sai rồi!'}
                   </div>
                 )}
                 
-                {!showAnswer && !showInputMode && (
+                {!showAnswer && (
                   <p className="text-slate-400 dark:text-slate-500 text-sm font-medium tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Click to flip
+                    Nhập đáp án để ôn tập
                   </p>
                 )}
               </div>
@@ -499,55 +621,28 @@ function FlashcardPage() {
       <footer className="fixed bottom-0 left-0 w-full bg-white dark:bg-surface-dark border-t border-slate-100 dark:border-slate-800 p-3 sm:p-4 z-20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
         <div className="max-w-4xl mx-auto">
           {!showAnswer ? (
-            /* Input Mode or Show Answer Button */
             <div className="flex flex-col items-center gap-4 w-full">
-              {/* Toggle Mode Button */}
-              <div className="flex items-center gap-2 text-sm">
-                <button
-                  onClick={() => setShowInputMode(!showInputMode)}
-                  className={`px-3 py-1.5 rounded-lg transition-colors ${
-                    showInputMode 
-                      ? 'bg-primary text-white' 
-                      : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
-                  }`}
-                >
-                  Nhập câu trả lời
-                </button>
-                <button
-                  onClick={() => setShowInputMode(!showInputMode)}
-                  className={`px-3 py-1.5 rounded-lg transition-colors ${
-                    !showInputMode 
-                      ? 'bg-primary text-white' 
-                      : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
-                  }`}
-                >
-                  Lật thẻ
-                </button>
-              </div>
-              
-              {showInputMode ? (
+              <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
                 <button 
                   onClick={checkAnswer}
-                  disabled={!userAnswer.trim()}
-                  className={`w-full max-w-sm h-14 text-lg font-bold rounded-xl shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 ${
-                    userAnswer.trim()
+                  disabled={!userReading.trim() || !userMeaning.trim()}
+                  className={`h-14 text-lg font-bold rounded-xl shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 ${
+                    userReading.trim() && userMeaning.trim()
                       ? 'bg-primary hover:bg-primary-hover text-white shadow-blue-500/30'
                       : 'bg-slate-200 dark:bg-slate-700 text-slate-400 cursor-not-allowed'
                   }`}
                 >
                   <span className="material-symbols-outlined">check</span>
-                  <span>Kiểm tra đáp án</span>
-                  <span className="bg-white/20 text-xs px-2 py-0.5 rounded font-medium">Enter</span>
+                  <span>Kiểm tra</span>
                 </button>
-              ) : (
                 <button 
                   onClick={flipCard}
-                  className="w-full max-w-sm h-14 bg-primary hover:bg-primary-hover text-white text-lg font-bold rounded-xl shadow-lg shadow-blue-500/30 transition-all active:scale-95 flex items-center justify-center gap-2"
+                  className="h-14 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-100 text-lg font-bold rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2"
                 >
-                  <span>Hiển đáp án</span>
-                  <span className="bg-white/20 text-xs px-2 py-0.5 rounded text-white font-medium">Space</span>
+                  <span>Đáp án</span>
+                  <span className="bg-black/10 dark:bg-white/10 text-xs px-2 py-0.5 rounded font-medium">Space</span>
                 </button>
-              )}
+              </div>
             </div>
           ) : (
             /* Grading Buttons */
