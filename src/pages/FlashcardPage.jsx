@@ -16,8 +16,11 @@ function FlashcardPage() {
   
   const [cards, setCards] = useState([])
   const [selectedCardIds, setSelectedCardIds] = useState(() => new Set())
+  const [sessionStarted, setSessionStarted] = useState(false)
   const [showSelection, setShowSelection] = useState(false)
   const [selectionQuery, setSelectionQuery] = useState('')
+  const [selectionCategory, setSelectionCategory] = useState('all')
+  const [selectionLevel, setSelectionLevel] = useState('all')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
   const [showAnswer, setShowAnswer] = useState(false)
@@ -36,26 +39,109 @@ function FlashcardPage() {
   // Update cards when vocabulary data changes
   useEffect(() => {
     if (vocabulary.length > 0) {
-      const mapped = vocabulary.map(v => ({
+      const mapped = vocabulary.map((v, idx) => ({
         ...v,
+        _localId: v?.id ? undefined : `local-${idx}-${v?.kanji || ''}-${v?.reading || ''}`,
         srsLevel: v.srsLevel || 1,
         nextReview: v.nextReview || new Date()
       }))
 
       setCards(mapped)
-
-      // Default: select all cards once when vocabulary is loaded
-      setSelectedCardIds(prev => {
-        if (prev && prev.size > 0) return prev
-        return new Set(mapped.map(c => c.id).filter(Boolean))
-      })
     } else {
       setCards([])
       setSelectedCardIds(new Set())
+      setSessionStarted(false)
     }
   }, [vocabulary])
 
-  const studyCards = cards.filter(c => selectedCardIds.has(c.id))
+  const cardId = (c) => c?.id || c?._localId
+
+  const normalizeCategory = (v) => String(v || '').trim().toLowerCase()
+
+  const getItemCategory = (item) => {
+    if (!item) return ''
+    return item.category || item.topic || item.type || item.pos || ''
+  }
+
+  const isCategoryMatch = (itemCategory, filterCategory) => {
+    const item = normalizeCategory(itemCategory)
+    const filter = normalizeCategory(filterCategory)
+    if (!filter || filter === 'all') return true
+    if (item === filter) return true
+
+    const adjectiveAliases = new Set(['adjective', 'tính từ'])
+    if (adjectiveAliases.has(filter)) {
+      return adjectiveAliases.has(item)
+    }
+
+    return false
+  }
+
+  const categories = Array.from(
+    new Set(
+      cards
+        .map(c => normalizeCategory(getItemCategory(c)))
+        .filter((x) => Boolean(x) && x !== 'tính từ')
+    )
+  )
+    .map((norm) => {
+      const found = cards.find(c => normalizeCategory(getItemCategory(c)) === norm)
+      return String(getItemCategory(found) || norm).trim()
+    })
+    .sort((a, b) => a.localeCompare(b))
+
+  const levels = Array.from(
+    new Set(
+      cards
+        .map((c) => String(c?.level || '').trim().toUpperCase())
+        .filter(Boolean)
+    )
+  ).sort((a, b) => {
+    const order = ['N5', 'N4', 'N3', 'N2', 'N1']
+    const ai = order.indexOf(a)
+    const bi = order.indexOf(b)
+    if (ai === -1 && bi === -1) return a.localeCompare(b)
+    if (ai === -1) return 1
+    if (bi === -1) return -1
+    return ai - bi
+  })
+
+  useEffect(() => {
+    console.log('[FlashcardPage] selectionCategory=', selectionCategory)
+    console.log('[FlashcardPage] selectionLevel=', selectionLevel)
+    console.log('[FlashcardPage] selectionQuery=', selectionQuery)
+    console.log('[FlashcardPage] cards count=', cards?.length || 0)
+    console.log('[FlashcardPage] cards all=', cards)
+  }, [selectionCategory, selectionLevel, selectionQuery, cards])
+
+  const selectionFilteredCards = cards
+    .filter((c) => {
+      const q = selectionQuery.trim().toLowerCase()
+      if (!q) return true
+      const hay = `${c.kanji || ''} ${c.reading || ''} ${c.meaningVi || ''} ${c.meaning || ''}`.toLowerCase()
+      return hay.includes(q)
+    })
+    .filter((c) => {
+      if (selectionCategory === 'all') return true
+      return isCategoryMatch(getItemCategory(c), selectionCategory)
+    })
+    .filter((c) => {
+      if (selectionLevel === 'all') return true
+      return String(c?.level || '').trim().toUpperCase() === String(selectionLevel || '').trim().toUpperCase()
+    })
+
+  useEffect(() => {
+    const dist = {}
+    for (const c of cards) {
+      const k = normalizeCategory(getItemCategory(c)) || '(empty)'
+      dist[k] = (dist[k] || 0) + 1
+    }
+    console.log('[FlashcardPage] selectionFilteredCards count=', selectionFilteredCards.length)
+    console.log('[FlashcardPage] selectionFilteredCards all=', selectionFilteredCards)
+    console.log('[FlashcardPage] category distribution=', dist)
+  }, [cards, selectionCategory, selectionLevel, selectionQuery, selectionFilteredCards.length])
+
+  const studyCards = cards.filter(c => selectedCardIds.has(cardId(c)))
   const currentCard = studyCards[currentIndex]
   const progress = studyCards.length > 0 ? ((currentIndex + 1) / studyCards.length) * 100 : 0
 
@@ -214,6 +300,9 @@ function FlashcardPage() {
         if (!showAnswer) {
           flipCard()
         }
+      } else if (e.key === 'ArrowRight' || e.key === 'n' || e.key === 'N') {
+        e.preventDefault()
+        nextCard()
       } else if (showAnswer) {
         switch (e.key) {
           case '1':
@@ -234,7 +323,7 @@ function FlashcardPage() {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [showAnswer, flipCard])
+  }, [showAnswer, flipCard, nextCard])
 
   // Loading state
   if (contentLoading) {
@@ -243,27 +332,6 @@ function FlashcardPage() {
         <div className="text-center">
           <div className="size-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-500 dark:text-gray-400">Đang tải từ vựng...</p>
-        </div>
-      </div>
-    )
-  }
-
-  // Empty selection state
-  if (studyCards.length === 0) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background-light dark:bg-background-dark p-4">
-        <div className="text-center max-w-md">
-          <div className="size-24 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
-            <span className="material-symbols-outlined text-5xl text-blue-500">style</span>
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Chưa chọn từ vựng để ôn tập</h2>
-          <p className="text-gray-500 dark:text-gray-400 mb-6">Hãy chọn ít nhất 1 từ vựng từ danh sách để bắt đầu.</p>
-          <button
-            onClick={() => setShowSelection(true)}
-            className="px-6 py-3 bg-primary hover:bg-primary-hover text-white font-bold rounded-xl transition-colors"
-          >
-            Chọn từ vựng
-          </button>
         </div>
       </div>
     )
@@ -301,6 +369,159 @@ function FlashcardPage() {
     )
   }
 
+  // Empty selection state (have vocabulary but none selected)
+  if (!sessionStarted || studyCards.length === 0) {
+    return (
+      <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
+        <header className="w-full px-6 py-4 flex items-center justify-center bg-white dark:bg-surface-dark shadow-sm">
+          <div className="max-w-4xl w-full flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Link to="/" className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg text-slate-500 dark:text-slate-400 transition-colors">
+                <span className="material-symbols-outlined">close</span>
+              </Link>
+              <div>
+                <h2 className="text-sm font-bold text-slate-900 dark:text-white tracking-wide uppercase opacity-70">Vocab Deck</h2>
+                <p className="text-xs text-slate-500 dark:text-slate-400">Chọn từ vựng để bắt đầu</p>
+              </div>
+            </div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">
+              Đã chọn: <span className="font-bold">{selectedCardIds.size}</span>
+            </div>
+          </div>
+        </header>
+
+        <main className="flex-1 w-full max-w-4xl mx-auto p-4 sm:p-6">
+          <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark p-4 space-y-3">
+            <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+              <div className="w-full sm:max-w-sm space-y-2">
+                <input
+                  value={selectionQuery}
+                  onChange={(e) => setSelectionQuery(e.target.value)}
+                  placeholder="Tìm từ vựng..."
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
+                />
+                <select
+                  value={selectionCategory}
+                  onChange={(e) => setSelectionCategory(e.target.value)}
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-sm"
+                >
+                  <option value="all">Tất cả chủ đề</option>
+                  {categories.map((c) => (
+                    <option key={c} value={c}>{c}</option>
+                  ))}
+                </select>
+                <select
+                  value={selectionLevel}
+                  onChange={(e) => setSelectionLevel(e.target.value)}
+                  className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-sm"
+                >
+                  <option value="all">Tất cả level</option>
+                  {levels.map((l) => (
+                    <option key={l} value={l}>{l}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setSelectedCardIds(new Set(cards.map(c => cardId(c)).filter(Boolean)))}
+                  className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                >
+                  Chọn tất cả
+                </button>
+                <button
+                  onClick={() => {
+                    const ids = selectionFilteredCards.map((c) => cardId(c)).filter(Boolean)
+                    setSelectedCardIds(new Set(ids))
+                    setCurrentIndex(0)
+                    setIsFlipped(false)
+                    setShowAnswer(false)
+                    setSessionStarted(true)
+                  }}
+                  disabled={selectionFilteredCards.length === 0}
+                  className={`px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
+                    selectionFilteredCards.length > 0
+                      ? 'bg-primary hover:bg-primary-hover text-white'
+                      : 'bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
+                  }`}
+                >
+                  Học tất cả (đang lọc)
+                </button>
+                <button
+                  onClick={() => setSelectedCardIds(new Set())}
+                  className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                >
+                  Bỏ chọn
+                </button>
+              </div>
+            </div>
+
+            <div className="text-xs text-slate-400">
+              Đang hiển thị: <span className="font-medium">{selectionFilteredCards.length}</span>/{cards.length}
+            </div>
+
+            <div className="max-h-[65vh] overflow-y-auto rounded-xl border border-slate-100 dark:border-slate-700">
+              {selectionFilteredCards.map((c, idx) => (
+                  <label
+                    key={c.id || `${idx}-${c.kanji || ''}-${c.reading || ''}`}
+                    className="flex items-center gap-3 px-3 py-2 border-b border-slate-100 dark:border-slate-700 last:border-b-0 cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={selectedCardIds.has(cardId(c))}
+                      onChange={(e) => {
+                        setSelectedCardIds(prev => {
+                          const next = new Set(prev)
+                          const id = cardId(c)
+                          if (!id) return next
+                          if (e.target.checked) next.add(id)
+                          else next.delete(id)
+                          return next
+                        })
+                      }}
+                    />
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-bold japanese-text truncate">{c.kanji}</span>
+                        <span className="text-xs text-slate-400">{c.level}</span>
+                      </div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400 truncate">{c.reading} · {c.meaningVi || c.meaning}</div>
+                      {c.category && (
+                        <div className="mt-1">
+                          <span className="inline-flex px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[11px]">
+                            {c.category}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </label>
+                ))}
+            </div>
+
+            <div className="pt-2 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+              <div className="text-sm text-slate-500 dark:text-slate-400">Chọn ít nhất 1 từ để bắt đầu.</div>
+              <button
+                onClick={() => {
+                  setCurrentIndex(0)
+                  setIsFlipped(false)
+                  setShowAnswer(false)
+                  setSessionStarted(true)
+                }}
+                disabled={selectedCardIds.size === 0}
+                className={`px-5 py-2.5 rounded-xl font-bold transition-colors ${
+                  selectedCardIds.size > 0
+                    ? 'bg-primary hover:bg-primary-hover text-white'
+                    : 'bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
+                }`}
+              >
+                Bắt đầu ôn tập
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
       {/* Header */}
@@ -313,7 +534,7 @@ function FlashcardPage() {
               </Link>
               <div>
                 <h2 className="text-sm font-bold text-slate-900 dark:text-white tracking-wide uppercase opacity-70">
-                  {currentCard.level} Vocab Deck
+                  {currentCard?.level || 'N5'} Vocab Deck
                 </h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Daily Review</p>
               </div>
@@ -344,18 +565,55 @@ function FlashcardPage() {
           {showSelection && (
             <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark p-4 space-y-3">
               <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-                <input
-                  value={selectionQuery}
-                  onChange={(e) => setSelectionQuery(e.target.value)}
-                  placeholder="Tìm từ vựng..."
-                  className="w-full sm:max-w-sm px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
-                />
+                <div className="w-full sm:max-w-sm space-y-2">
+                  <input
+                    value={selectionQuery}
+                    onChange={(e) => setSelectionQuery(e.target.value)}
+                    placeholder="Tìm từ vựng..."
+                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
+                  />
+                  <select
+                    value={selectionCategory}
+                    onChange={(e) => setSelectionCategory(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-sm"
+                  >
+                    <option value="all">Tất cả chủ đề</option>
+                    {categories.map((c) => (
+                      <option key={c} value={c}>{c}</option>
+                    ))}
+                  </select>
+                  <select
+                    value={selectionLevel}
+                    onChange={(e) => setSelectionLevel(e.target.value)}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-sm"
+                  >
+                    <option value="all">Tất cả level</option>
+                    {levels.map((l) => (
+                      <option key={l} value={l}>{l}</option>
+                    ))}
+                  </select>
+                </div>
                 <div className="flex items-center gap-2">
                   <button
-                    onClick={() => setSelectedCardIds(new Set(cards.map(c => c.id).filter(Boolean)))}
+                    onClick={() => setSelectedCardIds(new Set(cards.map(c => cardId(c)).filter(Boolean)))}
                     className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                   >
                     Chọn tất cả
+                  </button>
+                  <button
+                    onClick={() => {
+                      const ids = selectionFilteredCards.map((c) => cardId(c)).filter(Boolean)
+                      setSelectedCardIds(new Set(ids))
+                      setCurrentIndex(0)
+                    }}
+                    disabled={selectionFilteredCards.length === 0}
+                    className={`px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
+                      selectionFilteredCards.length > 0
+                        ? 'bg-primary hover:bg-primary-hover text-white'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed'
+                    }`}
+                  >
+                    Chọn theo bộ lọc
                   </button>
                   <button
                     onClick={() => setSelectedCardIds(new Set())}
@@ -366,27 +624,26 @@ function FlashcardPage() {
                 </div>
               </div>
 
+              <div className="text-xs text-slate-400">
+                Đang hiển thị: <span className="font-medium">{selectionFilteredCards.length}</span>/{cards.length}
+              </div>
+
               <div className="max-h-56 overflow-y-auto rounded-xl border border-slate-100 dark:border-slate-700">
-                {cards
-                  .filter(c => {
-                    const q = selectionQuery.trim().toLowerCase()
-                    if (!q) return true
-                    const hay = `${c.kanji || ''} ${c.reading || ''} ${c.meaningVi || ''} ${c.meaning || ''}`.toLowerCase()
-                    return hay.includes(q)
-                  })
-                  .map(c => (
+                {selectionFilteredCards.map((c, idx) => (
                     <label
-                      key={c.id}
+                      key={c.id || `${idx}-${c.kanji || ''}-${c.reading || ''}`}
                       className="flex items-center gap-3 px-3 py-2 border-b border-slate-100 dark:border-slate-700 last:border-b-0 cursor-pointer"
                     >
                       <input
                         type="checkbox"
-                        checked={selectedCardIds.has(c.id)}
+                        checked={selectedCardIds.has(cardId(c))}
                         onChange={(e) => {
                           setSelectedCardIds(prev => {
                             const next = new Set(prev)
-                            if (e.target.checked) next.add(c.id)
-                            else next.delete(c.id)
+                            const id = cardId(c)
+                            if (!id) return next
+                            if (e.target.checked) next.add(id)
+                            else next.delete(id)
                             return next
                           })
                           setCurrentIndex(0)
@@ -398,6 +655,13 @@ function FlashcardPage() {
                           <span className="text-xs text-slate-400">{c.level}</span>
                         </div>
                         <div className="text-xs text-slate-500 dark:text-slate-400 truncate">{c.reading} · {c.meaningVi || c.meaning}</div>
+                        {c.category && (
+                          <div className="mt-1">
+                            <span className="inline-flex px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[11px]">
+                              {c.category}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </label>
                   ))}
@@ -435,10 +699,10 @@ function FlashcardPage() {
               {/* Tags */}
               <div className="absolute top-6 left-6 flex flex-wrap gap-2">
                 <span className="px-2.5 py-1 rounded-md bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider">
-                  {currentCard.level}
+                  {currentCard?.level || 'N5'}
                 </span>
                 <span className="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">
-                  {currentCard.type}
+                  {currentCard?.type || 'Noun'}
                 </span>
               </div>
 
@@ -622,11 +886,11 @@ function FlashcardPage() {
         <div className="max-w-4xl mx-auto">
           {!showAnswer ? (
             <div className="flex flex-col items-center gap-4 w-full">
-              <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
+              <div className="grid grid-cols-3 gap-3 w-full max-w-sm">
                 <button 
                   onClick={checkAnswer}
                   disabled={!userReading.trim() || !userMeaning.trim()}
-                  className={`h-14 text-lg font-bold rounded-xl shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 ${
+                  className={`h-11 text-base font-bold rounded-xl shadow-lg transition-all active:scale-95 flex items-center justify-center gap-2 ${
                     userReading.trim() && userMeaning.trim()
                       ? 'bg-primary hover:bg-primary-hover text-white shadow-blue-500/30'
                       : 'bg-slate-200 dark:bg-slate-700 text-slate-400 cursor-not-allowed'
@@ -637,11 +901,21 @@ function FlashcardPage() {
                 </button>
                 <button 
                   onClick={flipCard}
-                  className="h-14 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-100 text-lg font-bold rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2"
+                  className="h-11 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-100 text-base font-bold rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2"
                 >
                   <span>Đáp án</span>
                   <span className="bg-black/10 dark:bg-white/10 text-xs px-2 py-0.5 rounded font-medium">Space</span>
                 </button>
+                <button
+                  onClick={nextCard}
+                  className="h-11 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-100 text-base font-bold rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2"
+                >
+                  <span className="material-symbols-outlined">skip_next</span>
+                  <span>Next</span>
+                </button>
+              </div>
+              <div className="text-xs text-slate-400">
+                Next: <span className="font-medium">N</span> / <span className="font-medium">→</span>
               </div>
             </div>
           ) : (
@@ -678,6 +952,16 @@ function FlashcardPage() {
                 >
                   <span className="text-xs font-semibold text-blue-400 dark:text-blue-400 mb-1">4d</span>
                   <span className="text-base sm:text-lg font-bold text-primary dark:text-blue-400">Easy</span>
+                </button>
+              </div>
+
+              <div className="mt-3 flex justify-center">
+                <button
+                  onClick={nextCard}
+                  className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-100 text-sm font-bold transition-all active:scale-95 flex items-center gap-2"
+                >
+                  <span className="material-symbols-outlined">skip_next</span>
+                  Next
                 </button>
               </div>
 

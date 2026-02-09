@@ -1,0 +1,4861 @@
+{
+  "users": {
+    "onksQm9D4GQFrB6GSuyq3isHEXU2": {
+      "content": {
+        "grammar": {
+          "grammar-import-1770558992866-0": {
+            "aiExercises": [
+              {
+                "answer": "うちに",
+                "options": [
+                  "うちに",
+                  "うちで",
+                  "うちより",
+                  "うちから"
+                ],
+                "question": "私は毎日、友達と電話で話をする___。",
+                "type": "multiple-choice"
+              },
+              {
+                "answer": "うちに",
+                "options": [
+                  "うちに",
+                  "うちで",
+                  "うちより",
+                  "うちから"
+                ],
+                "question": "彼は毎晩、___帰ってきます。",
+                "type": "fill-blank"
+              },
+              {
+                "answer": "うちに",
+                "options": [
+                  "うちに",
+                  "うちで",
+                  "うちより",
+                  "うちから"
+                ],
+                "question": "私は毎朝、___出かける前に、家族と朝食を食べます。",
+                "type": "multiple-choice"
+              },
+              {
+                "answer": "うちに",
+                "options": [
+                  "うちに",
+                  "うちで",
+                  "うちより",
+                  "うちから"
+                ],
+                "question": "私は友達と約束して、___待ち合わせました。",
+                "type": "fill-blank"
+              },
+              {
+                "answer": "うちに",
+                "options": [
+                  "うちに",
+                  "うちで",
+                  "うちより",
+                  "うちから"
+                ],
+                "question": "彼は毎日、___帰る前に、公園で散歩します。",
+                "type": "multiple-choice"
+              },
+              {
+                "answer": "うちに",
+                "options": [
+                  "うちに",
+                  "うちで",
+                  "うちより",
+                  "うちから"
+                ],
+                "question": "私はいつも、___帰ってくる前に、食事を準備します。",
+                "type": "fill-blank"
+              }
+            ],
+            "aiExercisesFetched": true,
+            "aiExercisesUpdatedAt": 1770563735716,
+            "aiExplanation": "1. **Ý nghĩa**: Ngữ pháp \"うちに\" thường được sử dụng để chỉ thời gian hoặc khoảng thời gian xảy ra một hành động nào đó. Nó thường dịch sang tiếng Việt là \"trong khi\" hoặc \"trong lúc\".\n\n2. **Cách dùng**: Cấu trúc ngữ pháp này thường được sử dụng sau một động từ ở dạng thể từ (て形) và trước một động từ khác chỉ hành động xảy ra đồng thời hoặc sau đó. Ví dụ: [động từ thể từ]うちに [động từ].\n\n3. **Ví dụ**:\n   - 日本語: 家に帰るうちに雨が降り出した。\n   - Việt: Trên đường về nhà, trời bắt đầu mưa.\n   - Romaji: Ie ni kaeru uchi ni ame ga furidashita.\n   - 日本語: 起きるうちに朝日を浴びる。\n   - Việt: Tỉnh dậy và đón nhận ánh nắng ban mai.\n   - Romaji: Okiru uchi ni chōbi o abiru.\n   - 日本語: 仕事を終えるうちに夕方になっていた。\n   - Việt: Trước khi tôi kết thúc công việc, trời đã tối.\n   - Romaji: Shigoto o oeru uchi ni yūgata ni natteita.",
+            "aiExplanationFetched": true,
+            "aiExplanationUpdatedAt": 1770564008889,
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "毎日話しているうちに、好きになりました。",
+                "meaning": ""
+              },
+              {
+                "japanese": "熱いうちに食べてください。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-0",
+            "level": "N3",
+            "meaning": "",
+            "order": 1,
+            "pattern": "うちに",
+            "updatedAt": 1770564008889
+          },
+          "grammar-import-1770558992866-1": {
+            "aiExplanation": "1. **Ý nghĩa**: Ngữ pháp 間・間に dùng để chỉ khoảng thời gian hoặc khoảng không gian giữa hai điểm, hai sự kiện. Nó thường được sử dụng để mô tả một thời điểm hoặc vị trí cụ thể trong một khoảng thời gian hoặc không gian nhất định.\n\n2. **Cách dùng**: Cấu trúc của ngữ pháp thường là「名詞 + の + 間/間に」. Trong đó,「間」thường được sử dụng để chỉ khoảng thời gian hoặc không gian, trong khi「間に」thường được sử dụng để chỉ thời điểm hoặc vị trí cụ thể trong khoảng thời gian hoặc không gian đó.\n\n3. **Ví dụ**:\n   - 日本語: 昼休みの間に本を読みます。\n     - Việt: Tôi đọc sách trong thời gian nghỉ trưa.\n     - Romaji: Kyūyu no aida ni hon o yomimasu.\n   - 日本語: 会議の間、誰も話をしなかった。\n     - Việt: Trong cuộc họp, không ai nói gì.\n     - Romaji: Kaigi no aida, dare mo hanashi o shinakatta.\n   - 日本語: 休日の間に旅行に行きます。\n     - Việt: Tôi sẽ đi du lịch trong kỳ nghỉ.\n     - Romaji: Kyūjitsu no aida ni ryokō ni ikimasu.",
+            "aiExplanationFetched": true,
+            "aiExplanationUpdatedAt": 1770561225992,
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "留守の間にどろぼうが入った\n彼は会議の間ずっと眠りをしていた。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-1",
+            "level": "N3",
+            "meaning": "",
+            "order": 2,
+            "pattern": "間・間に",
+            "updatedAt": 1770561225992
+          },
+          "grammar-import-1770558992866-10": {
+            "aiExplanation": "1. **Ý nghĩa**: Ngữ pháp ぐらい (gurai) chỉ mức độ xấp xỉ hoặc gần giống về số lượng, thời gian, khoảng cách, v.v. Nó thường được sử dụng để chỉ sự ước lượng hoặc gần đúng. \n\n2. **Cách dùng**: Cấu trúc của ngữ pháp này thường là [số lượng/thời gian] + ぐらい. Ví dụ, nếu bạn muốn nói \"khoảng 5 giờ\" thì sẽ là \"5じぐらい\" (5 ji gurai).\n\n3. **Ví dụ**:\n   - 日本語: 5じぐらいに起きます\n   - Việt: Tôi thức dậy vào khoảng 5 giờ\n   - Romaji: 5 ji gurai ni okimasu\n   - \n   - 日本語: 1000円ぐらいかかります\n   - Việt: Nó sẽ tốn vào khoảng 1000 yên\n   - Romaji: 1000 en gurai ga karimasu\n   - \n   - 日本語: 10分ぐらいで着きます\n   - Việt: Sẽ đến trong khoảng 10 phút\n   - Romaji: 10 fun gurai de tsukimasu",
+            "aiExplanationFetched": true,
+            "aiExplanationUpdatedAt": 1770561600110,
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "日曜日ぐらい休ませてください",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-10",
+            "level": "N3",
+            "meaning": "",
+            "order": 11,
+            "pattern": "ぐらい",
+            "updatedAt": 1770561600110
+          },
+          "grammar-import-1770558992866-11": {
+            "aiExplanation": "Tôi sẵn sàng giúp bạn hiểu về ngữ pháp くらい・ほど trong tiếng Nhật.\n\n1. **Ý nghĩa**: くらい và ほど đều được sử dụng để chỉ mức độ hoặc khoảng mức của một hành động, trạng thái, hoặc cảm xúc. Tuy nhiên, chúng có cách sử dụng và ý nghĩa hơi khác nhau.\n\n2. **Cách dùng**: \n   - くらい thường được sử dụng để chỉ mức độ mà người nói cảm nhận hoặc ước lượng về một hành động, trạng thái, hoặc cảm xúc.\n   - ほど thường được sử dụng để chỉ mức độ mà đạt đến một giới hạn nhất định, và thường đi kèm với ý nghĩa \"đến mức độ\" hoặc \"tới mức\".\n\n3. **Ví dụ**:\n   - 日本語: 私は日本語を勉強することが好きです。日本語の本を１日１時間くらい読みます。\n     - Việt: Tôi thích học tiếng Nhật. Tôi đọc sách tiếng Nhật khoảng 1 giờ mỗi ngày.\n     - Romaji: Watashi wa nihongo o benkyou suru koto ga suki desu. Nihongo no hon o 1 nichi 1 jikan kurai yomimasu.\n   - 日本語: この本は難しいので、学生にはほどほどの本がよいと思います。\n     - Việt: Cuốn sách này khó, tôi nghĩ cuốn sách vừa phải sẽ tốt cho học sinh.\n     - Romaji: Kono hon wa muzukashii no de, gakusei ni wa hodo hodo no hon ga yoi to omoimasu.\n   - 日本語: あなたの国の食事はおいしいほどです。\n     - Việt: Món ăn của nước bạn thật là ngon.\n     - Romaji: Anata no kuni no shokuji wa oishii hodo desu.",
+            "aiExplanationFetched": true,
+            "aiExplanationUpdatedAt": 1770561606518,
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "口から火が出るくらい辛いです。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-11",
+            "level": "N3",
+            "meaning": "",
+            "order": 12,
+            "pattern": "くらい・ほど",
+            "updatedAt": 1770561606518
+          },
+          "grammar-import-1770558992866-12": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "彼女ほどきれいな女の子がいない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-12",
+            "level": "N3",
+            "meaning": "",
+            "order": 13,
+            "pattern": "〜くらい〜はない\n〜ほど〜はない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-13": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "あいつに助けてもらうくらいなら、死んだほうがました。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-13",
+            "level": "N3",
+            "meaning": "",
+            "order": 14,
+            "pattern": "くらいなら",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-14": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "やっぱり映画は映画館で見るに限る",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-14",
+            "level": "N3",
+            "meaning": "",
+            "order": 15,
+            "pattern": "〜にかぎる",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-15": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "お店の人はお客さんに対して親切です。",
+                "meaning": ""
+              },
+              {
+                "japanese": "大阪は大雨なのに対して、京都は晴れている。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-15",
+            "level": "N3",
+            "meaning": "",
+            "order": 16,
+            "pattern": "〜に対して",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-16": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "このテストは学生にとって難しいですが、先生にとって簡単です。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-16",
+            "level": "N3",
+            "meaning": "",
+            "order": 17,
+            "pattern": "〜にとって",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-17": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "都会の生活は面白いことが多い反面、ストレスも多い",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-17",
+            "level": "N3",
+            "meaning": "",
+            "order": 18,
+            "pattern": "〜反面",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-18": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "会議では自分の意見を言う一方で、他の人の話もよく聞いてください。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-18",
+            "level": "N3",
+            "meaning": "",
+            "order": 19,
+            "pattern": "〜一方で",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-19": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "みちこは歩くのが速い。歩くというより走るという感じだ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-19",
+            "level": "N3",
+            "meaning": "",
+            "order": 20,
+            "pattern": "〜というより",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-2": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "面接の最中におなかが鳴ってしまった。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-2",
+            "level": "N3",
+            "meaning": "",
+            "order": 3,
+            "pattern": "最中に",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-20": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "車で来たので、ビールのかわりにジュースをください。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-20",
+            "level": "N3",
+            "meaning": "",
+            "order": 21,
+            "pattern": "〜かわりに",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-21": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "合格するために、一所懸命勉強しています。",
+                "meaning": ""
+              },
+              {
+                "japanese": "大雨のため、試合は中止された。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-21",
+            "level": "N3",
+            "meaning": "",
+            "order": 22,
+            "pattern": "〜ため",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-22": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "顔がよく似ていることから、二人は親子だとすぐに分かった。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-22",
+            "level": "N3",
+            "meaning": "",
+            "order": 23,
+            "pattern": "〜から・〜ことから",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-23": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "薬を飲んだおかげで頭痛が治った。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-23",
+            "level": "N3",
+            "meaning": "",
+            "order": 24,
+            "pattern": "〜おかげで",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-24": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "薬を飲んだせいで眠くなってきた。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-24",
+            "level": "N3",
+            "meaning": "",
+            "order": 25,
+            "pattern": "〜せいで",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-25": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "真相を知っているのなら、私に教えてほしい。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-25",
+            "level": "N3",
+            "meaning": "",
+            "order": 26,
+            "pattern": "〜なら",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-26": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "冷蔵庫には卵さえ入っていない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-26",
+            "level": "N3",
+            "meaning": "",
+            "order": 27,
+            "pattern": "〜さえ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-27": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "謝ってさえすれば、許してあげるよ。\n君さえいれば、何もいらないよ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-27",
+            "level": "N3",
+            "meaning": "",
+            "order": 28,
+            "pattern": "〜さえ〜ば・〜さえ〜なら",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-28": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "例え、周りの人がどんなに反対されても、僕はプロの歌手になりたい。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-28",
+            "level": "N3",
+            "meaning": "",
+            "order": 29,
+            "pattern": "たとえ〜ても",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-29": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "新聞によると、先日起きた事件の犯人が捕まったということだ。",
+                "meaning": ""
+              },
+              {
+                "japanese": "「禁煙」と言うのはたばこを吸うなと言うことだ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-29",
+            "level": "N3",
+            "meaning": "",
+            "order": 30,
+            "pattern": "〜ということだ・〜とのことだ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-3": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "娘を渡してもらってからでないと、お金は渡さない！",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-3",
+            "level": "N3",
+            "meaning": "",
+            "order": 4,
+            "pattern": "〜てからでないと・〜てからでなければ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-30": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "この泉の水を飲めば、若返ると言われている。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-30",
+            "level": "N3",
+            "meaning": "",
+            "order": 31,
+            "pattern": "〜と言われている",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-31": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "隣の娘さんは来月結婚式をあげるとか。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-31",
+            "level": "N3",
+            "meaning": "",
+            "order": 32,
+            "pattern": "〜とか",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-32": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "きららって日本語センターで日本語を勉強しています。",
+                "meaning": ""
+              },
+              {
+                "japanese": "N2の文法って難しい。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-32",
+            "level": "N3",
+            "meaning": "",
+            "order": 33,
+            "pattern": "って",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-33": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "ここから東京駅まで1時半だ。じゃ、今から出れば9時に着くわけだ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-33",
+            "level": "N3",
+            "meaning": "",
+            "order": 34,
+            "pattern": "〜わけだ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-34": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "こんなに高いところから落ちて、死なないわけがないだろう。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-34",
+            "level": "N3",
+            "meaning": "",
+            "order": 35,
+            "pattern": "〜わけがない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-35": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "このレストランはいつも客が一杯いたが、だからと言って特別においしいわけではない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-35",
+            "level": "N3",
+            "meaning": "",
+            "order": 36,
+            "pattern": "〜わけではない・というわけではない・〜のではない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-36": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "ちょっと熱があるが、今日は大事な会議があるので、仕事を休むわけにはいかない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-36",
+            "level": "N3",
+            "meaning": "",
+            "order": 37,
+            "pattern": "〜わけにはいかない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-37": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "この町では自転車がないとやはり困る。買わないわけにはいかない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-37",
+            "level": "N3",
+            "meaning": "",
+            "order": 38,
+            "pattern": "〜ないわけにはいかない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-38": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "高いものが、いいものとは限らない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-38",
+            "level": "N3",
+            "meaning": "",
+            "order": 39,
+            "pattern": "〜とは限らない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-39": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "これから駅まで歩かないことはないが、かなり時間がかかりますよ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-39",
+            "level": "N3",
+            "meaning": "",
+            "order": 40,
+            "pattern": "〜ないことはない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-4": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "部長はお客さんと話をしているところに声をかけて、あとで注意されてしまった。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-4",
+            "level": "N3",
+            "meaning": "",
+            "order": 5,
+            "pattern": "〜ところ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-40": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "読んだことは読んだが、全然分からない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-40",
+            "level": "N3",
+            "meaning": "",
+            "order": 40,
+            "pattern": "〜ことは〜が〜",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-41": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "この資料をちょっと見っていただきたいんですが、",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-41",
+            "level": "N3",
+            "meaning": "",
+            "order": 41,
+            "pattern": "〜てもらいたい・〜ていただきたい・〜てほしい",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-42": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "私にいかせて欲しいんです。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-42",
+            "level": "N3",
+            "meaning": "",
+            "order": 41,
+            "pattern": "〜させてもらいたい・〜させていただきたい・〜させてほしい",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-43": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "生まれていく子が男の子だったらいいのだが。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-43",
+            "level": "N3",
+            "meaning": "",
+            "order": 42,
+            "pattern": "〜といい・〜ばいい・〜たらいい",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-44": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "休む時、必ず学校に連絡すること。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-44",
+            "level": "N3",
+            "meaning": "",
+            "order": 42,
+            "pattern": "〜こと",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-45": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "電車の中では、若者はお年寄りに席を譲るべきです",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-45",
+            "level": "N3",
+            "meaning": "",
+            "order": 43,
+            "pattern": "〜べきだ・〜べきではない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-46": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "体のことが心配なら、一度健康診断を受けたらどうですか。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-46",
+            "level": "N3",
+            "meaning": "",
+            "order": 43,
+            "pattern": "〜たらどうか",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-47": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "冷蔵庫が壊れたので、新しいのを買うことにした。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-47",
+            "level": "N3",
+            "meaning": "",
+            "order": 44,
+            "pattern": "〜ことにする・〜ことにしている",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-48": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "私はなるべく自分で料理を作って食べるようにしている。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-48",
+            "level": "N3",
+            "meaning": "",
+            "order": 44,
+            "pattern": "〜ようにする・〜ようにしている",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-49": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "昔の友達の名前を思い出そうとしたが、どうしても思い出せない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-49",
+            "level": "N3",
+            "meaning": "",
+            "order": 45,
+            "pattern": "V（よう）とする",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-5": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "天気情報の通りに、今日はとても暑い。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-5",
+            "level": "N3",
+            "meaning": "",
+            "order": 6,
+            "pattern": "〜とおりに・〜とおりだ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-50": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "私は今年77歳ですが、まだまだ若いつもりです。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-50",
+            "level": "N3",
+            "meaning": "",
+            "order": 45,
+            "pattern": "〜つもりだ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-51": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "友達だからこそ、相手の悪いところは悪いと伝えなければならない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-51",
+            "level": "N3",
+            "meaning": "",
+            "order": 46,
+            "pattern": "〜からこそ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-52": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "りんごやバナナなどのフルーツが好きです。",
+                "meaning": ""
+              },
+              {
+                "japanese": "彼女などに負けてしまった",
+                "meaning": ""
+              },
+              {
+                "japanese": "私なんか上手じゃないよ〜",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-52",
+            "level": "N3",
+            "meaning": "",
+            "order": 47,
+            "pattern": "など・なんか・なんて",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-53": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "兄は大学院で、アジアの経済について研究しています",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-53",
+            "level": "N3",
+            "meaning": "",
+            "order": 48,
+            "pattern": "〜について",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-54": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "私はコーヒーカップを花瓶として使っています。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-54",
+            "level": "N3",
+            "meaning": "",
+            "order": 49,
+            "pattern": "〜として",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-55": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "N3に合格できて、うれしくてしょうがない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-55",
+            "level": "N3",
+            "meaning": "",
+            "order": 49,
+            "pattern": "〜ことがある・〜こともある",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-56": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "面接の質問は簡単です。そんなに心配することはありません。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-56",
+            "level": "N3",
+            "meaning": "",
+            "order": 50,
+            "pattern": "〜ことはない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-57": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "今日は暖かくて、まるで春が来たかのようだ。",
+                "meaning": ""
+              },
+              {
+                "japanese": "私たちはあなたが想像しているような関係ではありませんよ。",
+                "meaning": ""
+              },
+              {
+                "japanese": "とうもろこしのような形をしている建物は、ダナン市役所のビルです。",
+                "meaning": ""
+              },
+              {
+                "japanese": "インフルエンザのような他の人にうつる病気になったら、治るまで学校へ来てはいけない。",
+                "meaning": ""
+              },
+              {
+                "japanese": "どうもかぜをひいたようだ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-57",
+            "level": "N3",
+            "meaning": "",
+            "order": 51,
+            "pattern": "〜よう",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-58": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "よく眠れるようにワインを少しのんだ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-58",
+            "level": "N3",
+            "meaning": "",
+            "order": 52,
+            "pattern": "〜ように",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-59": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "先生に授業中にしゃべらないように注意された。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-59",
+            "level": "N3",
+            "meaning": "",
+            "order": 53,
+            "pattern": "〜ようにいう・注意する・・・",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-6": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "日本は地震により大きな被害を受けました。",
+                "meaning": ""
+              },
+              {
+                "japanese": "アメリカ大陸はコロンブスによって発見されました",
+                "meaning": ""
+              },
+              {
+                "japanese": "日本は選挙によって首相を決める。",
+                "meaning": ""
+              },
+              {
+                "japanese": "行くかどうかは、明日の天気によって決めるつもりだ。",
+                "meaning": ""
+              },
+              {
+                "japanese": "人によって考え方が違う。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-6",
+            "level": "N3",
+            "meaning": "",
+            "order": 7,
+            "pattern": "〜によって",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-60": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "最近雨ばかりで、洗濯物が乾かなくて困っています。",
+                "meaning": ""
+              },
+              {
+                "japanese": "彼は寝てばかりいる。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-60",
+            "level": "N3",
+            "meaning": "",
+            "order": 54,
+            "pattern": "〜ばかり",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-61": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "山田さんは英語ばかりでなく、中国語も話せる。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-61",
+            "level": "N3",
+            "meaning": "",
+            "order": 55,
+            "pattern": "〜ばかりか・〜ばかりでなく",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-62": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "さっき着いたばかりだ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-62",
+            "level": "N3",
+            "meaning": "",
+            "order": 56,
+            "pattern": "〜ばかりだ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-63": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "手術は終わってからも、父の病気は悪くなるばかりでした。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-63",
+            "level": "N3",
+            "meaning": "",
+            "order": 57,
+            "pattern": "〜ばかりだ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-64": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "家の鍵を掛けたっけ？",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-64",
+            "level": "N3",
+            "meaning": "",
+            "order": 58,
+            "pattern": "っけ？",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-65": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "寒い日は猫も外へ出たがらない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-65",
+            "level": "N3",
+            "meaning": "",
+            "order": 59,
+            "pattern": "〜がる・〜たがる",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-66": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "エアコン使えないと暑くてたまらない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-66",
+            "level": "N3",
+            "meaning": "",
+            "order": 60,
+            "pattern": "〜てたまらない・〜てならない・〜てしょうがない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-67": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "窓を開けたとたん、風が入ってきた。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-67",
+            "level": "N3",
+            "meaning": "",
+            "order": 61,
+            "pattern": "〜とたん",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-68": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "このブドウは8月から9月にかけて収穫されます。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-68",
+            "level": "N3",
+            "meaning": "",
+            "order": 62,
+            "pattern": "〜から〜にかけて",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-69": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "今日の試験できなかった。勉強しなかったんだもん。仕方がない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-69",
+            "level": "N3",
+            "meaning": "",
+            "order": 63,
+            "pattern": "〜（んだ）もの・もん",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-7": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "父は出張のたびにお土産を買ってきてくれる。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-7",
+            "level": "N3",
+            "meaning": "",
+            "order": 8,
+            "pattern": "〜たびに",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-70": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "私の頭じゃどんなに頑張ってもハーバード大学には入れないに決まっているよ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-70",
+            "level": "N3",
+            "meaning": "",
+            "order": 64,
+            "pattern": "〜に決まっている",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-71": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "黒い服の男がうちのドアを開けようとしていた。あの男は泥棒に違いいない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-71",
+            "level": "N3",
+            "meaning": "",
+            "order": 65,
+            "pattern": "〜に違いない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-72": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "大きい地震が起きたから、この建物が倒れる恐れがある。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-72",
+            "level": "N3",
+            "meaning": "",
+            "order": 66,
+            "pattern": "〜おそれがある",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-73": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "彼はただ子供にすぎないから、一人で暮らすことができないよ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-73",
+            "level": "N3",
+            "meaning": "",
+            "order": 67,
+            "pattern": "〜にすぎない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-74": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "合格できたら、どんなに嬉しいことか。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-74",
+            "level": "N3",
+            "meaning": "",
+            "order": 68,
+            "pattern": "〜ことか",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-75": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "こんなにたくさんの仕事、明日までに終わるものか。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-75",
+            "level": "N3",
+            "meaning": "",
+            "order": 69,
+            "pattern": "〜ものか",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-76": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "その話が本当だとしたら、嬉しいです。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-76",
+            "level": "N3",
+            "meaning": "",
+            "order": 70,
+            "pattern": "〜としたら・〜とすれば",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-77": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "１ヶ月を通して、暑い日が続く。",
+                "meaning": ""
+              },
+              {
+                "japanese": "現在はインターネットを通して、すぐに世界中にニュースが広まる。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-77",
+            "level": "N3",
+            "meaning": "",
+            "order": 71,
+            "pattern": "〜を通じて・〜を通して",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-78": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "エレベーターが壊れているから、階段で行くしかない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-78",
+            "level": "N3",
+            "meaning": "",
+            "order": 72,
+            "pattern": "〜しかない・〜ほか（は）ない",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-79": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "平和へのお願いを込めて、この歌を作りました。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-79",
+            "level": "N3",
+            "meaning": "",
+            "order": 73,
+            "pattern": "〜をこめて",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-8": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "言葉を勉強すればするほどその国への理解も深まると言われている。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-8",
+            "level": "N3",
+            "meaning": "",
+            "order": 9,
+            "pattern": "〜ば〜ほど",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-80": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "すぐに戻ってきますから、机の上はこのままにしておいてください。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-80",
+            "level": "N3",
+            "meaning": "",
+            "order": 74,
+            "pattern": "〜まま",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-81": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "水を出しっぱなしにしないでください。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-81",
+            "level": "N3",
+            "meaning": "",
+            "order": 75,
+            "pattern": "〜っぱなし",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-82": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "二人きりで話たいです。",
+                "meaning": ""
+              },
+              {
+                "japanese": "ひろしさんは本屋に行ったきり、まだ戻ってこない。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-82",
+            "level": "N3",
+            "meaning": "",
+            "order": 76,
+            "pattern": "〜きり",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-83": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "彼は政治についてよく知っているふりをするが、本当は知らないと思う。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-83",
+            "level": "N3",
+            "meaning": "",
+            "order": 77,
+            "pattern": "〜ふりをする",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-84": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "山田って、本当は彼女が好きなくせに、いつも彼女に意地悪を言うんだよ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-84",
+            "level": "N3",
+            "meaning": "",
+            "order": 78,
+            "pattern": "〜くせに",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-85": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "父はゴルフが趣味で、週末はもちろん平日も仕事の後で練習しています。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-85",
+            "level": "N3",
+            "meaning": "",
+            "order": 79,
+            "pattern": "〜はもちろん、〜も",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-86": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "日本語を習い始めたのは半年前です。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-86",
+            "level": "N3",
+            "meaning": "",
+            "order": 80,
+            "pattern": "〜はじめる",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-87": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "一人暮らしをして初めて、家族の大切さを分かってきた。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-87",
+            "level": "N3",
+            "meaning": "",
+            "order": 81,
+            "pattern": "〜てはじめて",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-88": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "焼きたてのパンは美味しいですね。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-88",
+            "level": "N3",
+            "meaning": "",
+            "order": 82,
+            "pattern": "〜たて",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-89": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "今年は富士山をはじめ、各地の有名な山に登りましょう。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-89",
+            "level": "N3",
+            "meaning": "",
+            "order": 83,
+            "pattern": "〜をはじめ（として）",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-9": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "買い物のついでに、前から一度行ってみたかったカフェに寄った。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-9",
+            "level": "N3",
+            "meaning": "",
+            "order": 10,
+            "pattern": "ついでに〜",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-90": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "図書館で借りた本、まだ読みかけだったのに返却日になってしまった。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-90",
+            "level": "N3",
+            "meaning": "",
+            "order": 84,
+            "pattern": "〜かけ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-91": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "やっとレポートを書き上げました。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-91",
+            "level": "N3",
+            "meaning": "",
+            "order": 85,
+            "pattern": "〜上がる・あげる",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-92": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "彼女の部屋はゴミだらけだ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-92",
+            "level": "N3",
+            "meaning": "",
+            "order": 86,
+            "pattern": "〜だらけ",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-93": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "こんなたくさんの荷物、寮の部屋に入りきらないよ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-93",
+            "level": "N3",
+            "meaning": "",
+            "order": 87,
+            "pattern": "〜きる・きれる",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-94": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "さっきまで笑っていた赤ちゃんが急に泣き出した。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-94",
+            "level": "N3",
+            "meaning": "",
+            "order": 88,
+            "pattern": "〜出す",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-95": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "彼は何を聞かれても、黙り通した。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-95",
+            "level": "N3",
+            "meaning": "",
+            "order": 89,
+            "pattern": "〜通す",
+            "updatedAt": 1770558992866
+          },
+          "grammar-import-1770558992866-96": {
+            "createdAt": 1770558992866,
+            "examples": [
+              {
+                "japanese": "最近忘れがちだ。",
+                "meaning": ""
+              }
+            ],
+            "explanation": "",
+            "id": "grammar-import-1770558992866-96",
+            "level": "N3",
+            "meaning": "",
+            "order": 90,
+            "pattern": "〜がち",
+            "updatedAt": 1770558992866
+          }
+        },
+        "vocabulary": {
+          "vocab-import-1770610018516-0": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-0",
+            "kanji": "いい",
+            "level": "N5",
+            "meaning": "good",
+            "meaningVi": "tốt/ổn",
+            "pos": "tính từ",
+            "reading": "いい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-1": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-1",
+            "kanji": "わるい",
+            "level": "N5",
+            "meaning": "bad",
+            "meaningVi": "xấu/tệ",
+            "pos": "tính từ",
+            "reading": "わるい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-10": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-10",
+            "kanji": "おそい",
+            "level": "N5",
+            "meaning": "slow/late",
+            "meaningVi": "chậm/muộn",
+            "pos": "tính từ",
+            "reading": "おそい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-11": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-11",
+            "kanji": "あつい",
+            "level": "N5",
+            "meaning": "hot",
+            "meaningVi": "nóng",
+            "pos": "tính từ",
+            "reading": "あつい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-12": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-12",
+            "kanji": "さむい",
+            "level": "N5",
+            "meaning": "cold (weather)",
+            "meaningVi": "lạnh (thời tiết)",
+            "pos": "tính từ",
+            "reading": "さむい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-13": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-13",
+            "kanji": "あたたかい",
+            "level": "N5",
+            "meaning": "warm",
+            "meaningVi": "ấm",
+            "pos": "tính từ",
+            "reading": "あたたかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-14": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-14",
+            "kanji": "すずしい",
+            "level": "N5",
+            "meaning": "cool",
+            "meaningVi": "mát",
+            "pos": "tính từ",
+            "reading": "すずしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-15": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-15",
+            "kanji": "つめたい",
+            "level": "N5",
+            "meaning": "cold (to touch)",
+            "meaningVi": "lạnh (chạm vào)",
+            "pos": "tính từ",
+            "reading": "つめたい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-16": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-16",
+            "kanji": "おもい",
+            "level": "N5",
+            "meaning": "heavy",
+            "meaningVi": "nặng",
+            "pos": "tính từ",
+            "reading": "おもい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-17": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-17",
+            "kanji": "かるい",
+            "level": "N5",
+            "meaning": "light (weight)",
+            "meaningVi": "nhẹ",
+            "pos": "tính từ",
+            "reading": "かるい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-18": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-18",
+            "kanji": "ひろい",
+            "level": "N5",
+            "meaning": "wide",
+            "meaningVi": "rộng",
+            "pos": "tính từ",
+            "reading": "ひろい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-19": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-19",
+            "kanji": "せまい",
+            "level": "N5",
+            "meaning": "narrow",
+            "meaningVi": "hẹp",
+            "pos": "tính từ",
+            "reading": "せまい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-2": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-2",
+            "kanji": "おおきい",
+            "level": "N5",
+            "meaning": "big",
+            "meaningVi": "to",
+            "pos": "tính từ",
+            "reading": "おおきい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-20": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-20",
+            "kanji": "ちかい",
+            "level": "N5",
+            "meaning": "near",
+            "meaningVi": "gần",
+            "pos": "tính từ",
+            "reading": "ちかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-21": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-21",
+            "kanji": "とおい",
+            "level": "N5",
+            "meaning": "far",
+            "meaningVi": "xa",
+            "pos": "tính từ",
+            "reading": "とおい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-22": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-22",
+            "kanji": "おいしい",
+            "level": "N5",
+            "meaning": "delicious",
+            "meaningVi": "ngon",
+            "pos": "tính từ",
+            "reading": "おいしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-23": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-23",
+            "kanji": "まずい",
+            "level": "N5",
+            "meaning": "bad-tasting",
+            "meaningVi": "dở",
+            "pos": "tính từ",
+            "reading": "まずい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-24": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-24",
+            "kanji": "たのしい",
+            "level": "N5",
+            "meaning": "fun",
+            "meaningVi": "vui",
+            "pos": "tính từ",
+            "reading": "たのしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-25": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-25",
+            "kanji": "おもしろい",
+            "level": "N5",
+            "meaning": "interesting",
+            "meaningVi": "thú vị",
+            "pos": "tính từ",
+            "reading": "おもしろい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-26": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-26",
+            "kanji": "つまらない",
+            "level": "N5",
+            "meaning": "boring",
+            "meaningVi": "chán",
+            "pos": "tính từ",
+            "reading": "つまらない",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-27": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-27",
+            "kanji": "むずかしい",
+            "level": "N5",
+            "meaning": "difficult",
+            "meaningVi": "khó",
+            "pos": "tính từ",
+            "reading": "むずかしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-28": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-28",
+            "kanji": "やさしい",
+            "level": "N5",
+            "meaning": "easy/kind",
+            "meaningVi": "dễ/hiền",
+            "pos": "tính từ",
+            "reading": "やさしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-29": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-29",
+            "kanji": "ねむい",
+            "level": "N5",
+            "meaning": "sleepy",
+            "meaningVi": "buồn ngủ",
+            "pos": "tính từ",
+            "reading": "ねむい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-3": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-3",
+            "kanji": "ちいさい",
+            "level": "N5",
+            "meaning": "small",
+            "meaningVi": "nhỏ",
+            "pos": "tính từ",
+            "reading": "ちいさい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-30": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-30",
+            "kanji": "いたい",
+            "level": "N5",
+            "meaning": "painful",
+            "meaningVi": "đau",
+            "pos": "tính từ",
+            "reading": "いたい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-31": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-31",
+            "kanji": "ほしい",
+            "level": "N5",
+            "meaning": "want",
+            "meaningVi": "muốn (có)",
+            "pos": "tính từ",
+            "reading": "ほしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-32": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-32",
+            "kanji": "いそがしい",
+            "level": "N5",
+            "meaning": "busy",
+            "meaningVi": "bận",
+            "pos": "tính từ",
+            "reading": "いそがしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-33": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-33",
+            "kanji": "たのしみ(な)",
+            "level": "N4",
+            "meaning": "looking forward to",
+            "meaningVi": "mong chờ",
+            "pos": "tính từ",
+            "reading": "たのしみ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-34": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-34",
+            "kanji": "あぶない",
+            "level": "N5",
+            "meaning": "dangerous",
+            "meaningVi": "nguy hiểm",
+            "pos": "tính từ",
+            "reading": "あぶない",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-35": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-35",
+            "kanji": "うるさい",
+            "level": "N5",
+            "meaning": "noisy",
+            "meaningVi": "ồn",
+            "pos": "tính từ",
+            "reading": "うるさい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-36": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-36",
+            "kanji": "くらい",
+            "level": "N5",
+            "meaning": "dark/gloomy",
+            "meaningVi": "tối; u ám",
+            "pos": "tính từ",
+            "reading": "くらい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-37": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-37",
+            "kanji": "あかるい",
+            "level": "N5",
+            "meaning": "bright/cheerful",
+            "meaningVi": "sáng; vui vẻ",
+            "pos": "tính từ",
+            "reading": "あかるい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-38": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-38",
+            "kanji": "こわい",
+            "level": "N5",
+            "meaning": "scary",
+            "meaningVi": "đáng sợ",
+            "pos": "tính từ",
+            "reading": "こわい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-39": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-39",
+            "kanji": "すごい",
+            "level": "N4",
+            "meaning": "amazing",
+            "meaningVi": "ghê/quá đỉnh",
+            "pos": "tính từ",
+            "reading": "すごい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-4": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-4",
+            "kanji": "たかい",
+            "level": "N5",
+            "meaning": "high/expensive",
+            "meaningVi": "cao/đắt",
+            "pos": "tính từ",
+            "reading": "たかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-40": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-40",
+            "kanji": "おなじ",
+            "level": "N5",
+            "meaning": "same",
+            "meaningVi": "giống nhau",
+            "pos": "tính từ",
+            "reading": "おなじ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-41": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-41",
+            "kanji": "ちがう",
+            "level": "N5",
+            "meaning": "different",
+            "meaningVi": "khác",
+            "pos": "tính từ",
+            "reading": "ちがう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-42": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-42",
+            "kanji": "きたない",
+            "level": "N5",
+            "meaning": "dirty",
+            "meaningVi": "bẩn",
+            "pos": "tính từ",
+            "reading": "きたない",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-43": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-43",
+            "kanji": "きれい",
+            "level": "N5",
+            "meaning": "clean/pretty",
+            "meaningVi": "đẹp/sạch",
+            "pos": "tính từ",
+            "reading": "きれい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-44": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-44",
+            "kanji": "しずか",
+            "level": "N5",
+            "meaning": "quiet",
+            "meaningVi": "yên tĩnh",
+            "pos": "tính từ",
+            "reading": "しずか",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-45": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-45",
+            "kanji": "にぎやか",
+            "level": "N5",
+            "meaning": "lively",
+            "meaningVi": "nhộn nhịp",
+            "pos": "tính từ",
+            "reading": "にぎやか",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-46": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-46",
+            "kanji": "べんり",
+            "level": "N5",
+            "meaning": "convenient",
+            "meaningVi": "tiện lợi",
+            "pos": "tính từ",
+            "reading": "べんり",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-47": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-47",
+            "kanji": "ふべん",
+            "level": "N4",
+            "meaning": "inconvenient",
+            "meaningVi": "bất tiện",
+            "pos": "tính từ",
+            "reading": "ふべん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-48": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-48",
+            "kanji": "だいじょうぶ",
+            "level": "N5",
+            "meaning": "okay",
+            "meaningVi": "ổn/không sao",
+            "pos": "tính từ",
+            "reading": "だいじょうぶ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-49": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-49",
+            "kanji": "たいへん",
+            "level": "N5",
+            "meaning": "tough/serious",
+            "meaningVi": "vất vả/nghiêm trọng",
+            "pos": "tính từ",
+            "reading": "たいへん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-5": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-5",
+            "kanji": "やすい",
+            "level": "N5",
+            "meaning": "cheap",
+            "meaningVi": "rẻ",
+            "pos": "tính từ",
+            "reading": "やすい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-50": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-50",
+            "kanji": "ひま",
+            "level": "N5",
+            "meaning": "free (time)",
+            "meaningVi": "rảnh",
+            "pos": "tính từ",
+            "reading": "ひま",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-51": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-51",
+            "kanji": "すき",
+            "level": "N5",
+            "meaning": "like",
+            "meaningVi": "thích",
+            "pos": "tính từ",
+            "reading": "すき",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-52": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-52",
+            "kanji": "きらい",
+            "level": "N5",
+            "meaning": "dislike",
+            "meaningVi": "ghét/không thích",
+            "pos": "tính từ",
+            "reading": "きらい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-53": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-53",
+            "kanji": "じょうず",
+            "level": "N5",
+            "meaning": "good at",
+            "meaningVi": "giỏi",
+            "pos": "tính từ",
+            "reading": "じょうず",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-54": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-54",
+            "kanji": "へた",
+            "level": "N5",
+            "meaning": "poor at",
+            "meaningVi": "dở",
+            "pos": "tính từ",
+            "reading": "へた",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-55": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-55",
+            "kanji": "げんき",
+            "level": "N5",
+            "meaning": "healthy/energetic",
+            "meaningVi": "khỏe/năng lượng",
+            "pos": "tính từ",
+            "reading": "げんき",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-56": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-56",
+            "kanji": "しんせつ",
+            "level": "N5",
+            "meaning": "kind",
+            "meaningVi": "tử tế",
+            "pos": "tính từ",
+            "reading": "しんせつ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-57": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-57",
+            "kanji": "ていねい",
+            "level": "N5",
+            "meaning": "polite",
+            "meaningVi": "lịch sự/cẩn thận",
+            "pos": "tính từ",
+            "reading": "ていねい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-58": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-58",
+            "kanji": "まじめ",
+            "level": "N4",
+            "meaning": "serious",
+            "meaningVi": "nghiêm túc",
+            "pos": "tính từ",
+            "reading": "まじめ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-59": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-59",
+            "kanji": "へん",
+            "level": "N4",
+            "meaning": "strange",
+            "meaningVi": "lạ/kỳ",
+            "pos": "tính từ",
+            "reading": "へん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-6": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-6",
+            "kanji": "ひくい",
+            "level": "N5",
+            "meaning": "low",
+            "meaningVi": "thấp",
+            "pos": "tính từ",
+            "reading": "ひくい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-60": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-60",
+            "kanji": "おかしい",
+            "level": "N4",
+            "meaning": "strange/funny",
+            "meaningVi": "kỳ/quái; buồn cười",
+            "pos": "tính từ",
+            "reading": "おかしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-61": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-61",
+            "kanji": "ざんねん",
+            "level": "N4",
+            "meaning": "regrettable",
+            "meaningVi": "tiếc/quá đáng tiếc",
+            "pos": "tính từ",
+            "reading": "ざんねん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-62": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-62",
+            "kanji": "しあわせ",
+            "level": "N4",
+            "meaning": "happy (state)",
+            "meaningVi": "hạnh phúc",
+            "pos": "tính từ",
+            "reading": "しあわせ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-63": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-63",
+            "kanji": "ふあん",
+            "level": "N4",
+            "meaning": "anxious",
+            "meaningVi": "bất an/lo",
+            "pos": "tính từ",
+            "reading": "ふあん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-64": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-64",
+            "kanji": "あんしん",
+            "level": "N4",
+            "meaning": "relieved",
+            "meaningVi": "yên tâm",
+            "pos": "tính từ",
+            "reading": "あんしん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-65": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-65",
+            "kanji": "たいせつ",
+            "level": "N5",
+            "meaning": "important",
+            "meaningVi": "quan trọng",
+            "pos": "tính từ",
+            "reading": "たいせつ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-66": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-66",
+            "kanji": "ひつよう",
+            "level": "N4",
+            "meaning": "necessary",
+            "meaningVi": "cần thiết",
+            "pos": "tính từ",
+            "reading": "ひつよう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-67": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-67",
+            "kanji": "ふつう",
+            "level": "N4",
+            "meaning": "normal",
+            "meaningVi": "bình thường",
+            "pos": "tính từ",
+            "reading": "ふつう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-68": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-68",
+            "kanji": "とくべつ",
+            "level": "N4",
+            "meaning": "special",
+            "meaningVi": "đặc biệt",
+            "pos": "tính từ",
+            "reading": "とくべつ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-69": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-69",
+            "kanji": "たいくつ",
+            "level": "N4",
+            "meaning": "dull",
+            "meaningVi": "chán",
+            "pos": "tính từ",
+            "reading": "たいくつ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-7": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-7",
+            "kanji": "ながい",
+            "level": "N5",
+            "meaning": "long",
+            "meaningVi": "dài",
+            "pos": "tính từ",
+            "reading": "ながい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-70": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-70",
+            "kanji": "めんどう",
+            "level": "N4",
+            "meaning": "troublesome",
+            "meaningVi": "phiền/phức",
+            "pos": "tính từ",
+            "reading": "めんどう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-71": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-71",
+            "kanji": "らく",
+            "level": "N4",
+            "meaning": "easy/comfortable",
+            "meaningVi": "nhàn/dễ chịu",
+            "pos": "tính từ",
+            "reading": "らく",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-72": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-72",
+            "kanji": "だめ",
+            "level": "N4",
+            "meaning": "no good",
+            "meaningVi": "không được/tệ",
+            "pos": "tính từ",
+            "reading": "だめ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-73": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-73",
+            "kanji": "むり",
+            "level": "N4",
+            "meaning": "impossible",
+            "meaningVi": "không thể/quá sức",
+            "pos": "tính từ",
+            "reading": "むり",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-74": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-74",
+            "kanji": "かっこいい",
+            "level": "N4",
+            "meaning": "cool",
+            "meaningVi": "ngầu/đẹp",
+            "pos": "tính từ",
+            "reading": "かっこいい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-75": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-75",
+            "kanji": "すてき",
+            "level": "N4",
+            "meaning": "lovely",
+            "meaningVi": "tuyệt/đẹp",
+            "pos": "tính từ",
+            "reading": "すてき",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-76": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-76",
+            "kanji": "ゆうめい",
+            "level": "N5",
+            "meaning": "famous",
+            "meaningVi": "nổi tiếng",
+            "pos": "tính từ",
+            "reading": "ゆうめい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-77": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-77",
+            "kanji": "ゆたか",
+            "level": "N4",
+            "meaning": "rich/abundant",
+            "meaningVi": "phong phú/giàu có",
+            "pos": "tính từ",
+            "reading": "ゆたか",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-78": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-78",
+            "kanji": "たいせい",
+            "level": "N3",
+            "meaning": "ready/prepared",
+            "meaningVi": "đã sẵn sàng/đầy đủ (trạng thái)",
+            "pos": "tính từ",
+            "reading": "たいせい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-79": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-79",
+            "kanji": "きゅう",
+            "level": "N4",
+            "meaning": "urgent",
+            "meaningVi": "gấp",
+            "pos": "tính từ",
+            "reading": "きゅう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-8": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-8",
+            "kanji": "みじかい",
+            "level": "N5",
+            "meaning": "short",
+            "meaningVi": "ngắn",
+            "pos": "tính từ",
+            "reading": "みじかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-80": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-80",
+            "kanji": "じゅうよう",
+            "level": "N3",
+            "meaning": "important",
+            "meaningVi": "quan trọng",
+            "pos": "tính từ",
+            "reading": "じゅうよう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-81": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-81",
+            "kanji": "ふくざつ",
+            "level": "N3",
+            "meaning": "complex",
+            "meaningVi": "phức tạp",
+            "pos": "tính từ",
+            "reading": "ふくざつ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-82": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-82",
+            "kanji": "かのう",
+            "level": "N3",
+            "meaning": "possible",
+            "meaningVi": "có thể",
+            "pos": "tính từ",
+            "reading": "かのう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-83": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-83",
+            "kanji": "ふかのう",
+            "level": "N3",
+            "meaning": "impossible",
+            "meaningVi": "không thể",
+            "pos": "tính từ",
+            "reading": "ふかのう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-84": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-84",
+            "kanji": "しょうじき",
+            "level": "N4",
+            "meaning": "honest",
+            "meaningVi": "trung thực",
+            "pos": "tính từ",
+            "reading": "しょうじき",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-85": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-85",
+            "kanji": "すなお",
+            "level": "N3",
+            "meaning": "honest/obedient",
+            "meaningVi": "thẳng thắn/ngoan",
+            "pos": "tính từ",
+            "reading": "すなお",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-86": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-86",
+            "kanji": "がんこ",
+            "level": "N3",
+            "meaning": "stubborn",
+            "meaningVi": "bướng",
+            "pos": "tính từ",
+            "reading": "がんこ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-87": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-87",
+            "kanji": "さびしい",
+            "level": "N4",
+            "meaning": "lonely",
+            "meaningVi": "cô đơn",
+            "pos": "tính từ",
+            "reading": "さびしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-88": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-88",
+            "kanji": "うれしい",
+            "level": "N5",
+            "meaning": "happy",
+            "meaningVi": "vui",
+            "pos": "tính từ",
+            "reading": "うれしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-89": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-89",
+            "kanji": "かなしい",
+            "level": "N5",
+            "meaning": "sad",
+            "meaningVi": "buồn",
+            "pos": "tính từ",
+            "reading": "かなしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610018516-9": {
+            "createdAt": 1770610018516,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610018516-9",
+            "kanji": "はやい",
+            "level": "N5",
+            "meaning": "fast/early",
+            "meaningVi": "nhanh/sớm",
+            "pos": "tính từ",
+            "reading": "はやい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610018516
+          },
+          "vocab-import-1770610446076-0": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-0",
+            "kanji": "あたらしい",
+            "level": "N5",
+            "meaning": "new",
+            "meaningVi": "mới",
+            "pos": "tính từ",
+            "reading": "あたらしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-1": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-1",
+            "kanji": "ふるい",
+            "level": "N5",
+            "meaning": "old",
+            "meaningVi": "cũ",
+            "pos": "tính từ",
+            "reading": "ふるい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-10": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-10",
+            "kanji": "おもしろい",
+            "level": "N5",
+            "meaning": "interesting",
+            "meaningVi": "thú vị (sắc thái khác)",
+            "pos": "tính từ",
+            "reading": "おもしろい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-100": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-100",
+            "kanji": "のろい",
+            "level": "N3",
+            "meaning": "slow",
+            "meaningVi": "chậm chạp",
+            "pos": "tính từ",
+            "reading": "のろい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-101": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-101",
+            "kanji": "あぶない",
+            "level": "N5",
+            "meaning": "dangerous",
+            "meaningVi": "nguy hiểm (trong list bạn có -> bỏ)",
+            "pos": "tính từ",
+            "reading": "あぶない",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-102": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-102",
+            "kanji": "かしこまった",
+            "level": "N3",
+            "meaning": "formal",
+            "meaningVi": "trang trọng",
+            "pos": "tính từ",
+            "reading": "かしこまった",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-103": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-103",
+            "kanji": "くだけた",
+            "level": "N3",
+            "meaning": "casual",
+            "meaningVi": "suồng sã/thân mật",
+            "pos": "tính từ",
+            "reading": "くだけた",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-104": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-104",
+            "kanji": "あぶらっこい",
+            "level": "N3",
+            "meaning": "greasy",
+            "meaningVi": "nhiều dầu mỡ",
+            "pos": "tính từ",
+            "reading": "あぶらっこい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-105": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-105",
+            "kanji": "さわやか",
+            "level": "N3",
+            "meaning": "refreshing",
+            "meaningVi": "sảng khoái",
+            "pos": "tính từ",
+            "reading": "さわやか",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-106": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-106",
+            "kanji": "うっとうしい",
+            "level": "N3",
+            "meaning": "gloomy/irritating",
+            "meaningVi": "khó chịu (thời tiết/tâm trạng)",
+            "pos": "tính từ",
+            "reading": "うっとうしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-107": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-107",
+            "kanji": "あやしい",
+            "level": "N3",
+            "meaning": "suspicious",
+            "meaningVi": "đáng ngờ (đã có ở trên nhưng không trùng trong DB bạn gửi)",
+            "pos": "tính từ",
+            "reading": "あやしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-108": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-108",
+            "kanji": "きもちいい",
+            "level": "N4",
+            "meaning": "pleasant",
+            "meaningVi": "dễ chịu",
+            "pos": "tính từ",
+            "reading": "きもちいい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-109": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-109",
+            "kanji": "きもちわるい",
+            "level": "N4",
+            "meaning": "disgusting",
+            "meaningVi": "ghê/khó chịu",
+            "pos": "tính từ",
+            "reading": "きもちわるい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-11": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-11",
+            "kanji": "こまかい",
+            "level": "N4",
+            "meaning": "detailed/fine",
+            "meaningVi": "nhỏ/chi tiết",
+            "pos": "tính từ",
+            "reading": "こまかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-110": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-110",
+            "kanji": "むなしい",
+            "level": "N3",
+            "meaning": "empty/vain",
+            "meaningVi": "trống rỗng/ảo não",
+            "pos": "tính từ",
+            "reading": "むなしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-111": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-111",
+            "kanji": "かなしい",
+            "level": "N5",
+            "meaning": "sad",
+            "meaningVi": "buồn (trong list bạn có -> bỏ)",
+            "pos": "tính từ",
+            "reading": "かなしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-112": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-112",
+            "kanji": "ありがち",
+            "level": "N3",
+            "meaning": "common/typical",
+            "meaningVi": "thường hay xảy ra",
+            "pos": "tính từ",
+            "reading": "ありがち",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-113": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-113",
+            "kanji": "たいくつな",
+            "level": "N4",
+            "meaning": "boring",
+            "meaningVi": "tẻ nhạt (trong list bạn có たいくつ -> bỏ)",
+            "pos": "tính từ",
+            "reading": "たいくつ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-114": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-114",
+            "kanji": "ふしぜん",
+            "level": "N3",
+            "meaning": "unnatural",
+            "meaningVi": "không tự nhiên",
+            "pos": "tính từ",
+            "reading": "ふしぜん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-12": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-12",
+            "kanji": "おおざっぱ",
+            "level": "N3",
+            "meaning": "rough/careless",
+            "meaningVi": "đại khái/cẩu thả",
+            "pos": "tính từ",
+            "reading": "おおざっぱ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-13": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-13",
+            "kanji": "くわしい",
+            "level": "N3",
+            "meaning": "detailed/knowledgeable",
+            "meaningVi": "chi tiết/rành",
+            "pos": "tính từ",
+            "reading": "くわしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-14": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-14",
+            "kanji": "あさい",
+            "level": "N4",
+            "meaning": "shallow",
+            "meaningVi": "nông",
+            "pos": "tính từ",
+            "reading": "あさい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-15": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-15",
+            "kanji": "ふかい",
+            "level": "N4",
+            "meaning": "deep",
+            "meaningVi": "sâu",
+            "pos": "tính từ",
+            "reading": "ふかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-16": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-16",
+            "kanji": "たのもしい",
+            "level": "N3",
+            "meaning": "reliable",
+            "meaningVi": "đáng tin/cậy",
+            "pos": "tính từ",
+            "reading": "たのもしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-17": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-17",
+            "kanji": "こころづよい",
+            "level": "N3",
+            "meaning": "reassuring",
+            "meaningVi": "vững tâm/đáng yên tâm",
+            "pos": "tính từ",
+            "reading": "こころづよい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-18": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-18",
+            "kanji": "こころぼそい",
+            "level": "N3",
+            "meaning": "helpless/insecure",
+            "meaningVi": "bơ vơ/thiếu tự tin",
+            "pos": "tính từ",
+            "reading": "こころぼそい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-19": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-19",
+            "kanji": "くるしい",
+            "level": "N4",
+            "meaning": "painful",
+            "meaningVi": "đau khổ/khó thở",
+            "pos": "tính từ",
+            "reading": "くるしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-2": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-2",
+            "kanji": "あつい",
+            "level": "N5",
+            "meaning": "thick",
+            "meaningVi": "dày (sách/áo)",
+            "pos": "tính từ",
+            "reading": "あつい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-20": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-20",
+            "kanji": "はずかしい",
+            "level": "N4",
+            "meaning": "embarrassed",
+            "meaningVi": "xấu hổ",
+            "pos": "tính từ",
+            "reading": "はずかしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-21": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-21",
+            "kanji": "うらやましい",
+            "level": "N3",
+            "meaning": "envious",
+            "meaningVi": "ghen tị",
+            "pos": "tính từ",
+            "reading": "うらやましい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-22": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-22",
+            "kanji": "なつかしい",
+            "level": "N3",
+            "meaning": "nostalgic",
+            "meaningVi": "hoài niệm",
+            "pos": "tính từ",
+            "reading": "なつかしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-23": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-23",
+            "kanji": "ありがたい",
+            "level": "N3",
+            "meaning": "grateful/thankful",
+            "meaningVi": "biết ơn/đáng quý",
+            "pos": "tính từ",
+            "reading": "ありがたい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-24": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-24",
+            "kanji": "もうしわけない",
+            "level": "N3",
+            "meaning": "sorry/inexcusable",
+            "meaningVi": "xin lỗi/không có lời bào chữa",
+            "pos": "tính từ",
+            "reading": "もうしわけない",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-25": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-25",
+            "kanji": "くやしい",
+            "level": "N3",
+            "meaning": "frustrating",
+            "meaningVi": "cay cú/tiếc",
+            "pos": "tính từ",
+            "reading": "くやしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-26": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-26",
+            "kanji": "こまった",
+            "level": "N4",
+            "meaning": "troubled",
+            "meaningVi": "khó xử/rắc rối",
+            "pos": "tính từ",
+            "reading": "こまった",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-27": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-27",
+            "kanji": "だるい",
+            "level": "N4",
+            "meaning": "sluggish",
+            "meaningVi": "mệt rã rời/đờ đẫn",
+            "pos": "tính từ",
+            "reading": "だるい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-28": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-28",
+            "kanji": "しんどい",
+            "level": "N3",
+            "meaning": "exhausting",
+            "meaningVi": "mệt/đuối",
+            "pos": "tính từ",
+            "reading": "しんどい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-29": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-29",
+            "kanji": "めずらしい",
+            "level": "N4",
+            "meaning": "rare",
+            "meaningVi": "hiếm/lạ",
+            "pos": "tính từ",
+            "reading": "めずらしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-3": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-3",
+            "kanji": "うすい",
+            "level": "N5",
+            "meaning": "thin/light",
+            "meaningVi": "mỏng/nhạt",
+            "pos": "tính từ",
+            "reading": "うすい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-30": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-30",
+            "kanji": "すくない",
+            "level": "N5",
+            "meaning": "few",
+            "meaningVi": "hiếm (ít về số lượng)",
+            "pos": "tính từ",
+            "reading": "すくない",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-31": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-31",
+            "kanji": "はっきりした",
+            "level": "N3",
+            "meaning": "clear",
+            "meaningVi": "rõ ràng",
+            "pos": "tính từ",
+            "reading": "はっきりした",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-32": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-32",
+            "kanji": "あいまい",
+            "level": "N3",
+            "meaning": "vague",
+            "meaningVi": "mơ hồ",
+            "pos": "tính từ",
+            "reading": "あいまい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-33": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-33",
+            "kanji": "あやしい",
+            "level": "N3",
+            "meaning": "suspicious",
+            "meaningVi": "đáng ngờ",
+            "pos": "tính từ",
+            "reading": "あやしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-34": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-34",
+            "kanji": "きびしい",
+            "level": "N4",
+            "meaning": "strict/harsh",
+            "meaningVi": "nghiêm khắc; khắc nghiệt",
+            "pos": "tính từ",
+            "reading": "きびしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-35": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-35",
+            "kanji": "やわらかい",
+            "level": "N4",
+            "meaning": "soft",
+            "meaningVi": "mềm",
+            "pos": "tính từ",
+            "reading": "やわらかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-36": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-36",
+            "kanji": "かたい",
+            "level": "N4",
+            "meaning": "hard",
+            "meaningVi": "cứng",
+            "pos": "tính từ",
+            "reading": "かたい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-37": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-37",
+            "kanji": "からい",
+            "level": "N5",
+            "meaning": "spicy",
+            "meaningVi": "cay",
+            "pos": "tính từ",
+            "reading": "からい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-38": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-38",
+            "kanji": "あまい",
+            "level": "N5",
+            "meaning": "sweet",
+            "meaningVi": "ngọt",
+            "pos": "tính từ",
+            "reading": "あまい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-39": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-39",
+            "kanji": "にがい",
+            "level": "N5",
+            "meaning": "bitter",
+            "meaningVi": "đắng",
+            "pos": "tính từ",
+            "reading": "にがい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-4": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-4",
+            "kanji": "つよい",
+            "level": "N5",
+            "meaning": "strong",
+            "meaningVi": "mạnh",
+            "pos": "tính từ",
+            "reading": "つよい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-40": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-40",
+            "kanji": "すっぱい",
+            "level": "N5",
+            "meaning": "sour",
+            "meaningVi": "chua",
+            "pos": "tính từ",
+            "reading": "すっぱい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-41": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-41",
+            "kanji": "しょっぱい",
+            "level": "N5",
+            "meaning": "salty",
+            "meaningVi": "mặn",
+            "pos": "tính từ",
+            "reading": "しょっぱい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-42": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-42",
+            "kanji": "こい",
+            "level": "N4",
+            "meaning": "strong (flavor/color)",
+            "meaningVi": "đậm (vị/màu)",
+            "pos": "tính từ",
+            "reading": "こい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-43": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-43",
+            "kanji": "うすい",
+            "level": "N4",
+            "meaning": "light (flavor/color)",
+            "meaningVi": "nhạt (vị/màu)",
+            "pos": "tính từ",
+            "reading": "うすい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-44": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-44",
+            "kanji": "くさい",
+            "level": "N4",
+            "meaning": "smelly",
+            "meaningVi": "hôi",
+            "pos": "tính từ",
+            "reading": "くさい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-45": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-45",
+            "kanji": "うまい",
+            "level": "N4",
+            "meaning": "tasty/skilled",
+            "meaningVi": "ngon/giỏi (khẩu ngữ)",
+            "pos": "tính từ",
+            "reading": "うまい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-46": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-46",
+            "kanji": "まずしい",
+            "level": "N3",
+            "meaning": "poor",
+            "meaningVi": "nghèo",
+            "pos": "tính từ",
+            "reading": "まずしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-47": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-47",
+            "kanji": "ぜいたく",
+            "level": "N3",
+            "meaning": "luxurious",
+            "meaningVi": "xa xỉ",
+            "pos": "tính từ",
+            "reading": "ぜいたく",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-48": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-48",
+            "kanji": "あぶなっかしい",
+            "level": "N3",
+            "meaning": "risky/unsafe-looking",
+            "meaningVi": "nguy hiểm (trông có vẻ)",
+            "pos": "tính từ",
+            "reading": "あぶなっかしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-49": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-49",
+            "kanji": "あやうい",
+            "level": "N3",
+            "meaning": "dangerous/uncertain",
+            "meaningVi": "nguy cấp",
+            "pos": "tính từ",
+            "reading": "あやうい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-5": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-5",
+            "kanji": "よわい",
+            "level": "N5",
+            "meaning": "weak",
+            "meaningVi": "yếu",
+            "pos": "tính từ",
+            "reading": "よわい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-50": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-50",
+            "kanji": "うるわしい",
+            "level": "N3",
+            "meaning": "beautiful",
+            "meaningVi": "đẹp trang nhã",
+            "pos": "tính từ",
+            "reading": "うるわしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-51": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-51",
+            "kanji": "みにくい",
+            "level": "N3",
+            "meaning": "ugly",
+            "meaningVi": "xấu xí",
+            "pos": "tính từ",
+            "reading": "みにくい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-52": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-52",
+            "kanji": "かわいい",
+            "level": "N5",
+            "meaning": "cute",
+            "meaningVi": "dễ thương",
+            "pos": "tính từ",
+            "reading": "かわいい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-53": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-53",
+            "kanji": "にくい",
+            "level": "N3",
+            "meaning": "hateful",
+            "meaningVi": "đáng ghét",
+            "pos": "tính từ",
+            "reading": "にくい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-54": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-54",
+            "kanji": "こわもて",
+            "level": "N3",
+            "meaning": "stern-looking",
+            "meaningVi": "trông dữ (gương mặt)",
+            "pos": "tính từ",
+            "reading": "こわもて",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-55": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-55",
+            "kanji": "やさしげ",
+            "level": "N3",
+            "meaning": "kind-looking",
+            "meaningVi": "có vẻ hiền",
+            "pos": "tính từ",
+            "reading": "やさしげ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-56": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-56",
+            "kanji": "ふしぎ",
+            "level": "N4",
+            "meaning": "mysterious",
+            "meaningVi": "kỳ lạ",
+            "pos": "tính từ",
+            "reading": "ふしぎ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-57": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-57",
+            "kanji": "たいした",
+            "level": "N3",
+            "meaning": "great/considerable",
+            "meaningVi": "đáng kể",
+            "pos": "tính từ",
+            "reading": "たいした",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-58": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-58",
+            "kanji": "たいしたことない",
+            "level": "N3",
+            "meaning": "not a big deal",
+            "meaningVi": "không có gì ghê gớm",
+            "pos": "tính từ",
+            "reading": "たいしたことない",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-59": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-59",
+            "kanji": "めんどくさい",
+            "level": "N4",
+            "meaning": "annoying/troublesome",
+            "meaningVi": "phiền",
+            "pos": "tính từ",
+            "reading": "めんどくさい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-6": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-6",
+            "kanji": "おおい",
+            "level": "N5",
+            "meaning": "many",
+            "meaningVi": "nhiều",
+            "pos": "tính từ",
+            "reading": "おおい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-60": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-60",
+            "kanji": "しつこい",
+            "level": "N3",
+            "meaning": "persistent",
+            "meaningVi": "dai/đeo bám",
+            "pos": "tính từ",
+            "reading": "しつこい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-61": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-61",
+            "kanji": "あわただしい",
+            "level": "N3",
+            "meaning": "busy/hectic",
+            "meaningVi": "tất bật",
+            "pos": "tính từ",
+            "reading": "あわただしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-62": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-62",
+            "kanji": "おだやか",
+            "level": "N3",
+            "meaning": "calm",
+            "meaningVi": "ôn hòa/êm đềm",
+            "pos": "tính từ",
+            "reading": "おだやか",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-63": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-63",
+            "kanji": "しんけん",
+            "level": "N3",
+            "meaning": "serious",
+            "meaningVi": "nghiêm túc",
+            "pos": "tính từ",
+            "reading": "しんけん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-64": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-64",
+            "kanji": "てきとう",
+            "level": "N3",
+            "meaning": "careless/appropriate",
+            "meaningVi": "qua loa; phù hợp",
+            "pos": "tính từ",
+            "reading": "てきとう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-65": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-65",
+            "kanji": "しんぱい",
+            "level": "N4",
+            "meaning": "worried",
+            "meaningVi": "lo lắng",
+            "pos": "tính từ",
+            "reading": "しんぱい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-66": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-66",
+            "kanji": "らんぼう",
+            "level": "N3",
+            "meaning": "rough/violent",
+            "meaningVi": "thô bạo",
+            "pos": "tính từ",
+            "reading": "らんぼう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-67": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-67",
+            "kanji": "ていきょうてき",
+            "level": "N3",
+            "meaning": "providing (rare)",
+            "meaningVi": "mang tính cung cấp (ít dùng) / (bỏ qua nếu muốn)",
+            "pos": "tính từ",
+            "reading": "ていきょうてき",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-68": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-68",
+            "kanji": "しっかりした",
+            "level": "N3",
+            "meaning": "reliable/solid",
+            "meaningVi": "vững/đàng hoàng",
+            "pos": "tính từ",
+            "reading": "しっかりした",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-69": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-69",
+            "kanji": "いいかげん",
+            "level": "N3",
+            "meaning": "irresponsible/half-hearted",
+            "meaningVi": "qua loa/tuỳ tiện",
+            "pos": "tính từ",
+            "reading": "いいかげん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-7": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-7",
+            "kanji": "すくない",
+            "level": "N5",
+            "meaning": "few",
+            "meaningVi": "ít",
+            "pos": "tính từ",
+            "reading": "すくない",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-70": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-70",
+            "kanji": "せっきょくてき",
+            "level": "N3",
+            "meaning": "positive/proactive",
+            "meaningVi": "tích cực/chủ động",
+            "pos": "tính từ",
+            "reading": "せっきょくてき",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-71": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-71",
+            "kanji": "しょうきょくてき",
+            "level": "N3",
+            "meaning": "passive/negative",
+            "meaningVi": "tiêu cực/thụ động",
+            "pos": "tính từ",
+            "reading": "しょうきょくてき",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-72": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-72",
+            "kanji": "りこう",
+            "level": "N3",
+            "meaning": "clever/well-behaved",
+            "meaningVi": "ngoan/khôn",
+            "pos": "tính từ",
+            "reading": "りこう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-73": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-73",
+            "kanji": "ずるい",
+            "level": "N3",
+            "meaning": "sly",
+            "meaningVi": "xảo quyệt",
+            "pos": "tính từ",
+            "reading": "ずるい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-74": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-74",
+            "kanji": "しょうじき",
+            "level": "N4",
+            "meaning": "honest",
+            "meaningVi": "thật thà (trong list bạn có rồi -> bỏ)",
+            "pos": "tính từ",
+            "reading": "しょうじき",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-75": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-75",
+            "kanji": "てまひま",
+            "level": "N3",
+            "meaning": "time-consuming",
+            "meaningVi": "tốn công",
+            "pos": "tính từ",
+            "reading": "てまひま",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-76": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-76",
+            "kanji": "やっかい",
+            "level": "N3",
+            "meaning": "troublesome",
+            "meaningVi": "phiền phức",
+            "pos": "tính từ",
+            "reading": "やっかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-77": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-77",
+            "kanji": "あまくち",
+            "level": "N3",
+            "meaning": "sweet-tasting",
+            "meaningVi": "vị ngọt (khẩu vị)",
+            "pos": "tính từ",
+            "reading": "あまくち",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-78": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-78",
+            "kanji": "からくち",
+            "level": "N3",
+            "meaning": "dry/spicy",
+            "meaningVi": "vị cay/khô (rượu)",
+            "pos": "tính từ",
+            "reading": "からくち",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-79": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-79",
+            "kanji": "あつかましい",
+            "level": "N3",
+            "meaning": "shameless",
+            "meaningVi": "trơ trẽn",
+            "pos": "tính từ",
+            "reading": "あつかましい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-8": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-8",
+            "kanji": "はやい",
+            "level": "N5",
+            "meaning": "early",
+            "meaningVi": "sớm (thời gian)",
+            "pos": "tính từ",
+            "reading": "はやい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-80": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-80",
+            "kanji": "ずうずうしい",
+            "level": "N3",
+            "meaning": "impudent",
+            "meaningVi": "trơ trẽn/lì",
+            "pos": "tính từ",
+            "reading": "ずうずうしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-81": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-81",
+            "kanji": "あかんぼうっぽい",
+            "level": "N3",
+            "meaning": "childish",
+            "meaningVi": "trẻ con (tính)",
+            "pos": "tính từ",
+            "reading": "あかんぼうっぽい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-82": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-82",
+            "kanji": "おとなしい",
+            "level": "N4",
+            "meaning": "quiet/gentle",
+            "meaningVi": "ngoan/hiền (ít nói)",
+            "pos": "tính từ",
+            "reading": "おとなしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-83": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-83",
+            "kanji": "しょうじき者",
+            "level": "N3",
+            "meaning": "honest person",
+            "meaningVi": "người thật thà (không nên import dạng tính từ)",
+            "pos": "tính từ",
+            "reading": "しょうじきもの",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-84": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-84",
+            "kanji": "かしこい",
+            "level": "N4",
+            "meaning": "smart",
+            "meaningVi": "thông minh",
+            "pos": "tính từ",
+            "reading": "かしこい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-85": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-85",
+            "kanji": "ばか",
+            "level": "N4",
+            "meaning": "stupid",
+            "meaningVi": "ngốc",
+            "pos": "tính từ",
+            "reading": "ばか",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-86": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-86",
+            "kanji": "すばらしい",
+            "level": "N4",
+            "meaning": "wonderful",
+            "meaningVi": "tuyệt vời",
+            "pos": "tính từ",
+            "reading": "すばらしい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-87": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-87",
+            "kanji": "けっこう",
+            "level": "N4",
+            "meaning": "quite/fine",
+            "meaningVi": "khá/đủ tốt",
+            "pos": "tính từ",
+            "reading": "けっこう",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-88": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-88",
+            "kanji": "ふしん",
+            "level": "N3",
+            "meaning": "suspicious",
+            "meaningVi": "đáng ngờ",
+            "pos": "tính từ",
+            "reading": "ふしん",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-89": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-89",
+            "kanji": "たいちょうがいい",
+            "level": "N3",
+            "meaning": "feel well",
+            "meaningVi": "sức khoẻ tốt",
+            "pos": "tính từ",
+            "reading": "たいちょうがいい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-9": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-9",
+            "kanji": "おそい",
+            "level": "N5",
+            "meaning": "late",
+            "meaningVi": "muộn (thời gian)",
+            "pos": "tính từ",
+            "reading": "おそい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-90": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-90",
+            "kanji": "たいちょうがわるい",
+            "level": "N3",
+            "meaning": "feel sick",
+            "meaningVi": "sức khoẻ không tốt",
+            "pos": "tính từ",
+            "reading": "たいちょうがわるい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-91": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-91",
+            "kanji": "やばい",
+            "level": "N3",
+            "meaning": "dangerous/awful (slang)",
+            "meaningVi": "nguy/toang (khẩu ngữ)",
+            "pos": "tính từ",
+            "reading": "やばい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-92": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-92",
+            "kanji": "えらい",
+            "level": "N3",
+            "meaning": "great/terrible",
+            "meaningVi": "vĩ đại; mệt bở hơi tai",
+            "pos": "tính từ",
+            "reading": "えらい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-93": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-93",
+            "kanji": "たいへんだ",
+            "level": "N5",
+            "meaning": "tough",
+            "meaningVi": "rất vất vả (trong list bạn có たいへん -> bỏ)",
+            "pos": "tính từ",
+            "reading": "たいへんだ",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-94": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-94",
+            "kanji": "ふくよか",
+            "level": "N3",
+            "meaning": "plump",
+            "meaningVi": "mập mạp (lịch sự)",
+            "pos": "tính từ",
+            "reading": "ふくよか",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-95": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-95",
+            "kanji": "やせている",
+            "level": "N3",
+            "meaning": "thin (person)",
+            "meaningVi": "gầy",
+            "pos": "tính từ",
+            "reading": "やせている",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-96": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-96",
+            "kanji": "あたまがいい",
+            "level": "N4",
+            "meaning": "smart",
+            "meaningVi": "thông minh",
+            "pos": "tính từ",
+            "reading": "あたまがいい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-97": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-97",
+            "kanji": "せがたかい",
+            "level": "N4",
+            "meaning": "tall",
+            "meaningVi": "cao (chiều cao)",
+            "pos": "tính từ",
+            "reading": "せがたかい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-98": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-98",
+            "kanji": "せがひくい",
+            "level": "N4",
+            "meaning": "short (height)",
+            "meaningVi": "thấp (chiều cao)",
+            "pos": "tính từ",
+            "reading": "せがひくい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocab-import-1770610446076-99": {
+            "createdAt": 1770610446076,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocab-import-1770610446076-99",
+            "kanji": "すばやい",
+            "level": "N3",
+            "meaning": "quick",
+            "meaningVi": "nhanh nhẹn",
+            "pos": "tính từ",
+            "reading": "すばやい",
+            "romaji": "",
+            "type": "Adjective",
+            "updatedAt": 1770610446076
+          },
+          "vocabulary-1770553433044": {
+            "aiAssistFetched": true,
+            "aiAssistUpdatedAt": 1770564836266,
+            "aiExamples": [
+              {
+                "japanese": "私(わたし)は学生です",
+                "vietnamese": "Tôi là sinh viên"
+              },
+              {
+                "japanese": "私(わたし)の名前はNguyễn Văn Aです",
+                "vietnamese": "Tên của tôi là Nguyễn Văn A"
+              }
+            ],
+            "aiHintVi": "Dùng để chỉ bản thân mình",
+            "category": "tính từ",
+            "createdAt": 1770553433044,
+            "example": "",
+            "exampleMeaning": "",
+            "id": "vocabulary-1770553433044",
+            "kanji": "私",
+            "level": "N5",
+            "meaning": "me/ I",
+            "meaningVi": "tôi",
+            "reading": "わたし",
+            "romaji": "",
+            "srsLevel": 1,
+            "type": "Noun",
+            "updatedAt": 1770612169035
+          }
+        }
+      },
+      "profile": {
+        "createdAt": 1770549715141,
+        "displayName": "Thuận Vương",
+        "email": "vanthuan678310@gmail.com",
+        "level": "N5",
+        "streak": 0,
+        "totalStudyTime": 0,
+        "updatedAt": 1770549715141,
+        "xp": 0
+      },
+      "progress": {
+        "grammar": {
+          "correctAnswers": 0,
+          "exercisesCompleted": 0
+        },
+        "kanji": {
+          "strokeAccuracy": 0,
+          "totalPractice": 0
+        },
+        "reading": {
+          "quizScore": 0
+        },
+        "speaking": {
+          "avgScore": 0,
+          "totalSessions": 0
+        },
+        "stats": {
+          "totalSessions": 0,
+          "totalStudyTime": 0
+        },
+        "streak": {
+          "current": 0,
+          "longest": 0
+        },
+        "vocabulary": {
+          "accuracy": 0,
+          "totalReviews": 0
+        }
+      }
+    }
+  }
+}

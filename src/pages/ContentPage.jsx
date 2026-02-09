@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useContentContext } from '../context/ContentContext'
 
@@ -40,6 +40,9 @@ function ContentPage() {
   const [editingItem, setEditingItem] = useState(null)
   const [saveStatus, setSaveStatus] = useState('')
   const [importingN3, setImportingN3] = useState(false)
+  const [categoryFilter, setCategoryFilter] = useState('all')
+  const [levelFilter, setLevelFilter] = useState('all')
+  const [bulkUpdating, setBulkUpdating] = useState(false)
 
   // Import N3 Grammar from pre-parsed JSON
   const handleImportN3Grammar = async () => {
@@ -78,6 +81,50 @@ function ContentPage() {
       setSaveStatus('Lỗi khi import: ' + error.message)
     } finally {
       setImportingN3(false)
+    }
+  }
+
+  const getLevels = (arr) => {
+    const set = new Set()
+    ;(arr || []).forEach((x) => {
+      const l = String(x?.level || '').trim().toUpperCase()
+      if (!l) return
+      set.add(l)
+    })
+    const order = ['N5', 'N4', 'N3', 'N2', 'N1']
+    return Array.from(set).sort((a, b) => {
+      const ai = order.indexOf(a)
+      const bi = order.indexOf(b)
+      if (ai === -1 && bi === -1) return a.localeCompare(b)
+      if (ai === -1) return 1
+      if (bi === -1) return -1
+      return ai - bi
+    })
+  }
+
+  const handleAssignAllVocabCategory = async () => {
+    if (bulkUpdating) return
+    if (!customVocab || customVocab.length === 0) return
+
+    const ok = window.confirm('Gán chủ đề "tính từ" cho TẤT CẢ từ vựng hiện có?')
+    if (!ok) return
+
+    setBulkUpdating(true)
+    setSaveStatus('Đang gán chủ đề cho từ vựng...')
+    try {
+      let count = 0
+      for (const item of customVocab) {
+        if (!item?.id) continue
+        await updateItem('vocabulary', item.id, { ...item, category: 'tính từ' })
+        count += 1
+      }
+      setSaveStatus(`Đã gán chủ đề "tính từ" cho ${count} từ vựng!`)
+      setTimeout(() => setSaveStatus(''), 3000)
+    } catch (error) {
+      console.error('Error bulk updating vocabulary category:', error)
+      setSaveStatus('Lỗi khi gán chủ đề: ' + (error?.message || 'Unknown error'))
+    } finally {
+      setBulkUpdating(false)
     }
   }
 
@@ -256,9 +303,38 @@ function ContentPage() {
   }
 
   // Import JSON
-  const handleImport = () => {
+  const handleImport = async () => {
     try {
-      const data = JSON.parse(importText)
+      const extractJsonFromText = (text) => {
+        const raw = String(text || '').trim()
+        if (!raw) return raw
+
+        // Remove markdown code fences if present
+        const withoutFences = raw
+          .replace(/^```(?:json)?\s*/i, '')
+          .replace(/\s*```\s*$/i, '')
+          .trim()
+
+        const firstObj = withoutFences.indexOf('{')
+        const firstArr = withoutFences.indexOf('[')
+        let start = -1
+        if (firstObj === -1) start = firstArr
+        else if (firstArr === -1) start = firstObj
+        else start = Math.min(firstObj, firstArr)
+
+        const lastObj = withoutFences.lastIndexOf('}')
+        const lastArr = withoutFences.lastIndexOf(']')
+        let end = -1
+        if (lastObj === -1) end = lastArr
+        else if (lastArr === -1) end = lastObj
+        else end = Math.max(lastObj, lastArr)
+
+        if (start === -1 || end === -1 || end <= start) return withoutFences
+        return withoutFences.slice(start, end + 1).trim()
+      }
+
+      const jsonText = extractJsonFromText(importText)
+      const data = JSON.parse(jsonText)
       const items = Array.isArray(data) ? data : [data]
       
       if (activeTab === 'vocabulary') {
@@ -287,10 +363,12 @@ function ContentPage() {
           type: item.type || 'Noun',
           // New POS field (VN): 'phó từ' | 'động từ' | 'tính từ' | 'danh từ'
           pos: normalizePos(item.pos || item.partOfSpeech || item.wordType || item.loai || item.loaiTu || item.tuLoai) || 'danh từ',
+          category: item.category || item.topic || item.chuDe || item.chude || item.subject || item.theme || '',
           createdAt: Date.now()
         }))
-        saveVocab([...customVocab, ...newItems])
-        alert(`Đã import ${newItems.length} từ vựng!`)
+        const result = await importItems('vocabulary', newItems)
+        if (result.success) alert(`Đã import ${result.count} từ vựng!`)
+        else alert('Lỗi khi import!')
       } else if (activeTab === 'grammar') {
         const newItems = items.map((item, i) => ({
           id: `grammar-import-${Date.now()}-${i}`,
@@ -300,10 +378,12 @@ function ContentPage() {
           level: item.level || 'N5',
           explanation: item.explanation || '',
           examples: item.examples || [],
+          category: item.category || item.topic || item.chuDe || item.chude || item.subject || item.theme || '',
           createdAt: Date.now()
         }))
-        saveGrammar([...customGrammar, ...newItems])
-        alert(`Đã import ${newItems.length} mẫu ngữ pháp!`)
+        const result = await importItems('grammar', newItems)
+        if (result.success) alert(`Đã import ${result.count} mẫu ngữ pháp!`)
+        else alert('Lỗi khi import!')
       } else if (activeTab === 'exercises') {
         const newItems = items.map((item, i) => ({
           id: `exercise-import-${Date.now()}-${i}`,
@@ -315,13 +395,14 @@ function ContentPage() {
           category: item.category || 'grammar',
           createdAt: Date.now()
         }))
-        saveExercises([...customExercises, ...newItems])
-        alert(`Đã import ${newItems.length} bài tập!`)
+        const result = await importItems('exercises', newItems)
+        if (result.success) alert(`Đã import ${result.count} bài tập!`)
+        else alert('Lỗi khi import!')
       }
       
       setImportText('')
     } catch (e) {
-      alert('Lỗi: Format JSON không hợp lệ')
+      alert(`Lỗi: Format JSON không hợp lệ${e?.message ? `\n${e.message}` : ''}`)
     }
   }
 
@@ -341,6 +422,88 @@ function ContentPage() {
     { id: 'exercises', label: 'Bài tập', icon: 'quiz', count: customExercises.length }
   ]
 
+  const normalizeCategory = (v) => String(v || '').trim().toLowerCase()
+
+  const getItemCategory = (item) => {
+    if (!item) return ''
+    return item.category || item.topic || item.type || item.pos || ''
+  }
+
+  const isCategoryMatch = (itemCategory, filterCategory) => {
+    const item = normalizeCategory(itemCategory)
+    const filter = normalizeCategory(filterCategory)
+    if (!filter || filter === 'all') return true
+    if (filter === item) return true
+
+    const adjectiveAliases = new Set(['adjective', 'tính từ'])
+    if (adjectiveAliases.has(filter)) {
+      return adjectiveAliases.has(item)
+    }
+
+    return false
+  }
+
+  const getCategories = (arr) => {
+    const byNorm = new Map()
+    ;(arr || []).forEach((x) => {
+      const raw = String(getItemCategory(x) || '').trim()
+      const norm = normalizeCategory(raw)
+      if (!norm) return
+      if (norm === 'tính từ') return
+      if (!byNorm.has(norm)) byNorm.set(norm, raw)
+    })
+    return Array.from(byNorm.values()).sort((a, b) => a.localeCompare(b))
+  }
+
+  const vocabCategories = getCategories(customVocab)
+  const grammarCategories = getCategories(customGrammar)
+
+  const vocabLevels = getLevels(customVocab)
+  const grammarLevels = getLevels(customGrammar)
+
+  const filteredVocab = customVocab
+    .filter((x) => {
+      if (categoryFilter === 'all') return true
+      return isCategoryMatch(getItemCategory(x), categoryFilter)
+    })
+    .filter((x) => {
+      if (levelFilter === 'all') return true
+      return String(x?.level || '').trim().toUpperCase() === String(levelFilter || '').trim().toUpperCase()
+    })
+
+  const filteredGrammar = customGrammar
+    .filter((x) => {
+      if (categoryFilter === 'all') return true
+      return isCategoryMatch(getItemCategory(x), categoryFilter)
+    })
+    .filter((x) => {
+      if (levelFilter === 'all') return true
+      return String(x?.level || '').trim().toUpperCase() === String(levelFilter || '').trim().toUpperCase()
+    })
+
+  useEffect(() => {
+    if (activeTab === 'vocabulary') {
+      console.log('[ContentPage] categoryFilter=', categoryFilter)
+      console.log('[ContentPage] levelFilter=', levelFilter)
+      console.log('[ContentPage] customVocab count=', customVocab?.length || 0)
+      console.log('[ContentPage] customVocab all=', customVocab)
+      console.log('[ContentPage] filteredVocab count=', filteredVocab?.length || 0)
+      console.log('[ContentPage] filteredVocab all=', filteredVocab)
+      console.log('[ContentPage] vocabCategories=', vocabCategories)
+      console.log('[ContentPage] vocabLevels=', vocabLevels)
+    }
+    if (activeTab === 'grammar') {
+      console.log('[ContentPage] categoryFilter=', categoryFilter)
+      console.log('[ContentPage] levelFilter=', levelFilter)
+      console.log('[ContentPage] customGrammar count=', customGrammar?.length || 0)
+      console.log('[ContentPage] customGrammar all=', customGrammar)
+      console.log('[ContentPage] filteredGrammar count=', filteredGrammar?.length || 0)
+      console.log('[ContentPage] filteredGrammar all=', filteredGrammar)
+      console.log('[ContentPage] grammarCategories=', grammarCategories)
+      console.log('[ContentPage] grammarLevels=', grammarLevels)
+    }
+  }, [activeTab, categoryFilter, levelFilter, customVocab, customGrammar, filteredVocab, filteredGrammar, vocabCategories, grammarCategories, vocabLevels, grammarLevels])
+
   return (
     <div className="p-4 md:p-8 lg:p-10 max-w-6xl mx-auto">
       {/* Header */}
@@ -353,6 +516,7 @@ function ContentPage() {
           )}
         </div>
         <div className="flex gap-2">
+    
           {activeTab === 'grammar' && (
             <button 
               onClick={handleImportN3Grammar}
@@ -380,7 +544,11 @@ function ContentPage() {
         {tabs.map((tab) => (
           <button
             key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => {
+              setActiveTab(tab.id)
+              setCategoryFilter('all')
+              setLevelFilter('all')
+            }}
             className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium text-sm transition-all whitespace-nowrap ${
               activeTab === tab.id
                 ? 'bg-primary text-white shadow-lg shadow-primary/30'
@@ -404,11 +572,40 @@ function ContentPage() {
           {/* Vocabulary Tab */}
           {activeTab === 'vocabulary' && (
             <>
-              {customVocab.length === 0 ? (
+              <div className="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+                <div className="flex flex-col gap-3">
+                  <div className="font-medium text-gray-900 dark:text-white">Bộ lọc</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <select
+                      value={categoryFilter}
+                      onChange={(e) => setCategoryFilter(e.target.value)}
+                      className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 text-sm"
+                    >
+                      <option value="all">Tất cả chủ đề</option>
+                      {vocabCategories.map((c) => (
+                        <option key={c} value={c}>{c}</option>
+                      ))}
+                    </select>
+
+                    <select
+                      value={levelFilter}
+                      onChange={(e) => setLevelFilter(e.target.value)}
+                      className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 text-sm"
+                    >
+                      <option value="all">Tất cả level</option>
+                      {vocabLevels.map((l) => (
+                        <option key={l} value={l}>{l}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {filteredVocab.length === 0 ? (
                 <EmptyState icon="translate" message="Chưa có từ vựng nào" onAdd={() => openAddModal('vocabulary')} />
               ) : (
-                customVocab.map((item) => (
-                  <div key={item.id} className="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+                filteredVocab.map((item, idx) => (
+                  <div key={item.id || `vocab-${idx}-${item.kanji || ''}-${item.reading || ''}`} className="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 p-4">
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
@@ -416,6 +613,11 @@ function ContentPage() {
                           <span className="text-lg text-gray-500 dark:text-gray-400">{item.reading}</span>
                           <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 text-xs rounded-full">{item.level}</span>
                         </div>
+                        {item.category && (
+                          <div className="mb-2">
+                            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full">{item.category}</span>
+                          </div>
+                        )}
                         <p className="text-gray-700 dark:text-gray-300">{item.meaning}</p>
                         {item.meaningVi && <p className="text-primary text-sm mt-1">{item.meaningVi}</p>}
                         {item.example && (
@@ -440,17 +642,51 @@ function ContentPage() {
           {/* Grammar Tab */}
           {activeTab === 'grammar' && (
             <>
-              {customGrammar.length === 0 ? (
+              <div className="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+                <div className="flex flex-col gap-3">
+                  <div className="font-medium text-gray-900 dark:text-white">Bộ lọc</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <select
+                      value={categoryFilter}
+                      onChange={(e) => setCategoryFilter(e.target.value)}
+                      className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 text-sm"
+                    >
+                      <option value="all">Tất cả chủ đề</option>
+                      {grammarCategories.map((c) => (
+                        <option key={c} value={c}>{c}</option>
+                      ))}
+                    </select>
+
+                    <select
+                      value={levelFilter}
+                      onChange={(e) => setLevelFilter(e.target.value)}
+                      className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-800 text-sm"
+                    >
+                      <option value="all">Tất cả level</option>
+                      {grammarLevels.map((l) => (
+                        <option key={l} value={l}>{l}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {filteredGrammar.length === 0 ? (
                 <EmptyState icon="menu_book" message="Chưa có mẫu ngữ pháp nào" onAdd={() => openAddModal('grammar')} />
               ) : (
-                customGrammar.map((item) => (
-                  <div key={item.id} className="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+                filteredGrammar.map((item, idx) => (
+                  <div key={item.id || `grammar-${idx}-${item.pattern || ''}`} className="bg-white dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700 p-4">
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
                           <span className="text-xl font-bold text-purple-600 dark:text-purple-400">{item.pattern}</span>
                           <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-600 text-xs rounded-full">{item.level}</span>
                         </div>
+                        {item.category && (
+                          <div className="mb-2">
+                            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full">{item.category}</span>
+                          </div>
+                        )}
                         <p className="text-gray-700 dark:text-gray-300 font-medium">{item.meaning}</p>
                         {item.explanation && (
                           <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">{item.explanation}</p>
