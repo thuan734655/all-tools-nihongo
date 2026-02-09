@@ -533,9 +533,14 @@ function FlashcardPage() {
                 <span className="material-symbols-outlined">close</span>
               </Link>
               <div>
-                <h2 className="text-sm font-bold text-slate-900 dark:text-white tracking-wide uppercase opacity-70">
-                  {currentCard?.level || 'N5'} Vocab Deck
-                </h2>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 text-[11px] font-bold uppercase tracking-wider">
+                    {currentCard?.level || 'N5'}
+                  </span>
+                  <span className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[11px] font-bold uppercase tracking-wider">
+                    {currentCard?.type || 'Noun'}
+                  </span>
+                </div>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Daily Review</p>
               </div>
             </div>
@@ -696,18 +701,8 @@ function FlashcardPage() {
           <div className="bg-white dark:bg-surface-dark rounded-2xl shadow-xl dark:shadow-black/20 overflow-hidden flex flex-col min-h-[400px] border border-slate-100 dark:border-slate-700/50">
             {/* Card Front */}
             <div className="flex-1 flex flex-col items-center justify-center p-8 sm:p-12 relative">
-              {/* Tags */}
-              <div className="absolute top-6 left-6 flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 rounded-md bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-300 text-xs font-bold uppercase tracking-wider">
-                  {currentCard?.level || 'N5'}
-                </span>
-                <span className="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-bold uppercase tracking-wider">
-                  {currentCard?.type || 'Noun'}
-                </span>
-              </div>
-
               <div className="text-center group">
-                <div className="text-[8rem] sm:text-[10rem] leading-none font-bold text-slate-900 dark:text-white japanese-text mb-2 transition-transform duration-300 group-hover:scale-105">
+                <div className="text-[5rem] sm:text-[8rem] md:text-[10rem] leading-none font-bold text-slate-900 dark:text-white japanese-text mb-2 transition-transform duration-300 group-hover:scale-105">
                   {currentCard.kanji}
                 </div>
                 
@@ -720,7 +715,7 @@ function FlashcardPage() {
                       onChange={(e) => setUserReading(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder="Nhập cách đọc (kana)..."
-                      className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-center text-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-center text-base sm:text-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400"
                       autoFocus
                     />
                     <input
@@ -729,7 +724,7 @@ function FlashcardPage() {
                       onChange={(e) => setUserMeaning(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder="Nhập nghĩa (tiếng Việt)..."
-                      className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-center text-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white text-center text-base sm:text-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400"
                     />
                     <p className="text-xs text-slate-400">Nhấn Enter để kiểm tra</p>
                   </div>
@@ -764,10 +759,10 @@ function FlashcardPage() {
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                   <div>
                     <div className="flex items-baseline gap-3 mb-1">
-                      <span className="text-2xl font-bold text-primary japanese-text">{currentCard.reading}</span>
+                      <span className="text-xl sm:text-2xl font-bold text-primary japanese-text">{currentCard.reading}</span>
                       <span className="text-slate-400 text-sm">({currentCard.romaji})</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-slate-800 dark:text-slate-100">{currentCard.meaning}</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100">{currentCard.meaning}</h3>
                     <p className="text-slate-500 dark:text-slate-400 mt-1 italic">{currentCard.meaningVi}</p>
                   </div>
                   <button className="flex items-center justify-center size-12 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors shrink-0">
@@ -810,7 +805,7 @@ function FlashcardPage() {
                       <div className="flex-1 space-y-3">
                         {currentCard.aiExamples.map((ex, idx) => (
                           <div key={idx}>
-                            <p className="text-lg text-slate-800 dark:text-slate-200 japanese-text font-medium mb-1">
+                            <p className="text-base sm:text-lg text-slate-800 dark:text-slate-200 japanese-text font-medium mb-1">
                               {ex.japanese}
                             </p>
                             {ex.vietnamese && (
@@ -828,7 +823,7 @@ function FlashcardPage() {
                         <span className="material-symbols-outlined text-[20px]">format_quote</span>
                       </div>
                       <div className="flex-1">
-                        <p className="text-lg text-slate-800 dark:text-slate-200 japanese-text font-medium mb-1">
+                        <p className="text-base sm:text-lg text-slate-800 dark:text-slate-200 japanese-text font-medium mb-1">
                           {currentCard.example}
                         </p>
                         <p className="text-slate-500 dark:text-slate-400 text-sm">{currentCard.exampleMeaning}</p>
@@ -919,43 +914,8 @@ function FlashcardPage() {
               </div>
             </div>
           ) : (
-            /* Grading Buttons */
-            <>
-              <div className="grid grid-cols-4 gap-3 sm:gap-4">
-                <button 
-                  onClick={() => gradeCard('again')}
-                  className="flex flex-col items-center justify-center h-16 sm:h-20 rounded-xl bg-red-50 dark:bg-red-900/10 border-2 border-transparent hover:border-red-200 dark:hover:border-red-800 group transition-all active:scale-95"
-                >
-                  <span className="text-xs font-semibold text-red-400 dark:text-red-400 mb-1">{'< 1m'}</span>
-                  <span className="text-base sm:text-lg font-bold text-red-600 dark:text-red-500">Again</span>
-                </button>
-
-                <button 
-                  onClick={() => gradeCard('hard')}
-                  className="flex flex-col items-center justify-center h-16 sm:h-20 rounded-xl bg-orange-50 dark:bg-orange-900/10 border-2 border-transparent hover:border-orange-200 dark:hover:border-orange-800 group transition-all active:scale-95"
-                >
-                  <span className="text-xs font-semibold text-orange-400 dark:text-orange-400 mb-1">10m</span>
-                  <span className="text-base sm:text-lg font-bold text-orange-600 dark:text-orange-500">Hard</span>
-                </button>
-
-                <button 
-                  onClick={() => gradeCard('good')}
-                  className="flex flex-col items-center justify-center h-16 sm:h-20 rounded-xl bg-emerald-50 dark:bg-emerald-900/10 border-2 border-transparent hover:border-emerald-200 dark:hover:border-emerald-800 group transition-all active:scale-95"
-                >
-                  <span className="text-xs font-semibold text-emerald-400 dark:text-emerald-400 mb-1">1d</span>
-                  <span className="text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-500">Good</span>
-                </button>
-
-                <button 
-                  onClick={() => gradeCard('easy')}
-                  className="flex flex-col items-center justify-center h-16 sm:h-20 rounded-xl bg-blue-50 dark:bg-blue-900/10 border-2 border-transparent hover:border-blue-200 dark:hover:border-blue-800 group transition-all active:scale-95"
-                >
-                  <span className="text-xs font-semibold text-blue-400 dark:text-blue-400 mb-1">4d</span>
-                  <span className="text-base sm:text-lg font-bold text-primary dark:text-blue-400">Easy</span>
-                </button>
-              </div>
-
-              <div className="mt-3 flex justify-center">
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex justify-center">
                 <button
                   onClick={nextCard}
                   className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-100 text-sm font-bold transition-all active:scale-95 flex items-center gap-2"
@@ -964,19 +924,10 @@ function FlashcardPage() {
                   Next
                 </button>
               </div>
-
-              {/* Shortcuts Legend */}
-              <div className="mt-4 flex justify-center gap-6 opacity-40 hover:opacity-100 transition-opacity">
-                <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
-                  <span className="bg-slate-200 dark:bg-slate-700 px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-600">Space</span>
-                  <span>Flip Card</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
-                  <span className="bg-slate-200 dark:bg-slate-700 px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-600">1-4</span>
-                  <span>Grade</span>
-                </div>
+              <div className="text-xs text-slate-400">
+                Next: <span className="font-medium">N</span> / <span className="font-medium">→</span>
               </div>
-            </>
+            </div>
           )}
         </div>
       </footer>
