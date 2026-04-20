@@ -130,7 +130,7 @@ function ContentPage() {
 
   // Add vocabulary
   const handleAddVocab = async () => {
-    if (!vocabForm.kanji || !vocabForm.meaning) return
+    if (!vocabForm.kanji) return
     
     setSaveStatus('Đang lưu...')
     

@@ -47,10 +47,12 @@ export function useContent(userId = null) {
               if (snapshot.exists()) {
                 const data = snapshot.val()
                 const items = Object.keys(data).map(key => ({ id: key, ...data[key] }))
+                console.log(`[useContent] Loaded from Firebase: users/${userId}/content/${path}`, items)
                 setter(items)
                 // Also save to localStorage as backup
                 localStorage.setItem(storageKey, JSON.stringify(items))
               } else {
+                console.log(`[useContent] No Firebase data at: users/${userId}/content/${path}`)
                 // Try to load from localStorage
                 const stored = localStorage.getItem(storageKey)
                 if (stored) {

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { ref, get, set, update, onValue } from 'firebase/database'
-import { db } from '../config/firebase'
+import { auth, db } from '../config/firebase'
 
 // Local storage keys
 const STORAGE_KEYS = {
@@ -54,6 +54,7 @@ const DEFAULT_PROGRESS = {
 export function useProgress(userId = null) {
   const [progress, setProgress] = useState(null)
   const [loading, setLoading] = useState(true)
+  const canUseFirebase = Boolean(userId && auth.currentUser?.uid === userId)
 
   // Load progress from localStorage or Firebase Realtime Database
   useEffect(() => {
@@ -62,7 +63,7 @@ export function useProgress(userId = null) {
     const loadProgress = async () => {
       setLoading(true)
       
-      if (userId) {
+      if (canUseFirebase) {
         // Subscribe to Firebase Realtime Database
         try {
           const progressRef = ref(db, `users/${userId}/progress`)
@@ -88,6 +89,11 @@ export function useProgress(userId = null) {
           setLoading(false)
         }
       } else {
+        if (userId && !canUseFirebase) {
+          console.warn(
+            `[useProgress] Skip Firebase read for users/${userId}/progress because auth.currentUser is missing or does not match userId`
+          )
+        }
         loadFromLocalStorage()
         setLoading(false)
       }
@@ -101,7 +107,7 @@ export function useProgress(userId = null) {
         unsubscribe()
       }
     }
-  }, [userId])
+  }, [userId, canUseFirebase])
 
   const loadFromLocalStorage = () => {
     const stored = localStorage.getItem(STORAGE_KEYS.PROGRESS)
@@ -118,7 +124,7 @@ export function useProgress(userId = null) {
     setProgress(newProgress)
     localStorage.setItem(STORAGE_KEYS.PROGRESS, JSON.stringify(newProgress))
     
-    if (userId) {
+    if (canUseFirebase) {
       try {
         const progressRef = ref(db, `users/${userId}/progress`)
         await update(progressRef, {
@@ -128,8 +134,12 @@ export function useProgress(userId = null) {
       } catch (error) {
         console.error('Error saving progress to Firebase:', error)
       }
+    } else if (userId && !canUseFirebase) {
+      console.warn(
+        `[useProgress] Skip Firebase write for users/${userId}/progress because auth.currentUser is missing or does not match userId`
+      )
     }
-  }, [userId])
+  }, [userId, canUseFirebase])
 
   // Update streak
   const updateStreak = useCallback(async () => {
