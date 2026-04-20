@@ -17,6 +17,7 @@ export const AppContext = createContext()
 
 // Default avatar
 const DEFAULT_AVATAR = 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8dJPeC9o8eo2D17kXPfKIHWdzrmqMAIKubSoCiZyCu2rSyWmp48B0PYAkc5CkArtt6o0BaM75zmtIThtSkFsftH9BmbO6vFRsU1qCzQxDIpe9mjI5NFpHlJSHWQ6zl0eFEC4Oo-WYrOE7rxkuH6VH5A233fyUYrm5BEvLPVELcpVeed7P_aiah3k5Un2pD5MQmfaOTtNiImespNlRluwMwpUDiLcq6aXkhg4At2J1kg4foxHnHa1tYsh9UoBWuKc-Jrn7Cy3qSQ'
+const FORCED_USER_ID = 'onksQm9D4GQFrB6GSuyq3isHEXU2'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -74,7 +75,7 @@ function App() {
 
   // Local user (login removed)
   const appUser = {
-    uid: null,
+    uid: FORCED_USER_ID,
     email: 'local@nihongo.app',
     displayName: userStats.displayName || 'Learner',
     ...userStats,
@@ -94,8 +95,8 @@ function App() {
         logout: async () => {}
       }}
     >
-      <ContentProvider userId={null}>
-        <ProgressProvider userId={null}>
+      <ContentProvider userId={FORCED_USER_ID}>
+        <ProgressProvider userId={FORCED_USER_ID}>
           <div className={`min-h-screen ${darkMode ? 'dark' : ''}`}>
             <Routes>
               <Route path="/login" element={<Navigate to="/" replace />} />
