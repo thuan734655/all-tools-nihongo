@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useContentContext } from '../context/ContentContext'
 
@@ -22,7 +22,7 @@ function ContentPage() {
   // Form states
   const [vocabForm, setVocabForm] = useState({
     kanji: '', reading: '', romaji: '', meaning: '', meaningVi: '',
-    example: '', exampleMeaning: '', level: 'N5', type: 'Noun'
+    example: '', exampleMeaning: '', level: 'N5', type: 'Noun', category: ''
   })
   
   const [grammarForm, setGrammarForm] = useState({
@@ -228,7 +228,7 @@ function ContentPage() {
   const resetVocabForm = () => {
     setVocabForm({
       kanji: '', reading: '', romaji: '', meaning: '', meaningVi: '',
-      example: '', exampleMeaning: '', level: 'N5', type: 'Noun'
+      example: '', exampleMeaning: '', level: 'N5', type: 'Noun', category: ''
     })
   }
   
@@ -248,19 +248,17 @@ function ContentPage() {
   }
 
   // Delete item
-  const handleDelete = (type, id) => {
+  const handleDelete = async (type, id) => {
     if (!window.confirm('Bạn có chắc muốn xóa?')) return
-    
-    switch (type) {
-      case 'vocabulary':
-        saveVocab(customVocab.filter(v => v.id !== id))
-        break
-      case 'grammar':
-        saveGrammar(customGrammar.filter(g => g.id !== id))
-        break
-      case 'exercises':
-        saveExercises(customExercises.filter(e => e.id !== id))
-        break
+
+    setSaveStatus('Đang xóa...')
+    try {
+      await deleteItem(type, id)
+      setSaveStatus('Đã xóa!')
+      setTimeout(() => setSaveStatus(''), 2000)
+    } catch (error) {
+      console.error(`Error deleting ${type}:`, error)
+      setSaveStatus('Lỗi khi xóa!')
     }
   }
 
@@ -270,7 +268,18 @@ function ContentPage() {
     setEditingItem(item)
     
     if (type === 'vocabulary') {
-      setVocabForm(item)
+      setVocabForm({
+        kanji: item.kanji || '',
+        reading: item.reading || '',
+        romaji: item.romaji || '',
+        meaning: item.meaning || '',
+        meaningVi: item.meaningVi || '',
+        example: item.example || '',
+        exampleMeaning: item.exampleMeaning || '',
+        level: item.level || 'N5',
+        type: item.type || 'Noun',
+        category: item.category || ''
+      })
     } else if (type === 'grammar') {
       setGrammarForm({
         pattern: item.pattern,
@@ -865,6 +874,7 @@ function ContentPage() {
                     <InputField label="Romaji" value={vocabForm.romaji} onChange={(v) => setVocabForm({...vocabForm, romaji: v})} placeholder="neko" />
                     <SelectField label="Level" value={vocabForm.level} onChange={(v) => setVocabForm({...vocabForm, level: v})} options={['N5', 'N4', 'N3', 'N2', 'N1']} />
                   </div>
+                  <InputField label="Chủ đề" value={vocabForm.category} onChange={(v) => setVocabForm({...vocabForm, category: v})} placeholder="ví dụ: gia đình, công việc, du lịch..." />
                   <InputField label="Nghĩa tiếng Anh *" value={vocabForm.meaning} onChange={(v) => setVocabForm({...vocabForm, meaning: v})} placeholder="cat" />
                   <InputField label="Nghĩa tiếng Việt" value={vocabForm.meaningVi} onChange={(v) => setVocabForm({...vocabForm, meaningVi: v})} placeholder="con mèo" />
                   <InputField label="Ví dụ" value={vocabForm.example} onChange={(v) => setVocabForm({...vocabForm, example: v})} placeholder="猫が好きです。" />

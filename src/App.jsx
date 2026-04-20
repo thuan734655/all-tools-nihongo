@@ -9,10 +9,8 @@ import KanjiPage from './pages/KanjiPage'
 import ReadingPage from './pages/ReadingPage'
 import ContentPage from './pages/ContentPage'
 import SettingsPage from './pages/SettingsPage'
-import LoginPage from './pages/LoginPage'
 import { ProgressProvider } from './context/ProgressContext'
 import { ContentProvider } from './context/ContentContext'
-import { AuthProvider, useAuth } from './hooks/useAuth'
 
 // Create context for app-wide state
 export const AppContext = createContext()
@@ -20,9 +18,7 @@ export const AppContext = createContext()
 // Default avatar
 const DEFAULT_AVATAR = 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8dJPeC9o8eo2D17kXPfKIHWdzrmqMAIKubSoCiZyCu2rSyWmp48B0PYAkc5CkArtt6o0BaM75zmtIThtSkFsftH9BmbO6vFRsU1qCzQxDIpe9mjI5NFpHlJSHWQ6zl0eFEC4Oo-WYrOE7rxkuH6VH5A233fyUYrm5BEvLPVELcpVeed7P_aiah3k5Un2pD5MQmfaOTtNiImespNlRluwMwpUDiLcq6aXkhg4At2J1kg4foxHnHa1tYsh9UoBWuKc-Jrn7Cy3qSQ'
 
-function AppContent() {
-  const { user, loading, signOut } = useAuth()
-  
+function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('nihongo_darkMode')
     return saved === 'true'
@@ -45,13 +41,15 @@ function AppContent() {
   // User stats functions
   const [userStats, setUserStats] = useState(() => {
     const saved = localStorage.getItem('nihongo_userStats')
-    return saved ? JSON.parse(saved) : {
-      xp: 0,
-      streak: 0,
-      dailyGoal: 20,
-      dailyProgress: 0,
-      level: 'JLPT N5'
-    }
+    return saved
+      ? JSON.parse(saved)
+      : {
+          xp: 0,
+          streak: 0,
+          dailyGoal: 20,
+          dailyProgress: 0,
+          level: 'JLPT N5'
+        }
   })
 
   useEffect(() => {
@@ -59,11 +57,11 @@ function AppContent() {
   }, [userStats])
 
   const updateUserStats = (updates) => {
-    setUserStats(prev => ({ ...prev, ...updates }))
+    setUserStats((prev) => ({ ...prev, ...updates }))
   }
 
   const addXP = (amount) => {
-    setUserStats(prev => ({
+    setUserStats((prev) => ({
       ...prev,
       xp: prev.xp + amount,
       dailyProgress: prev.dailyProgress + 1
@@ -71,56 +69,37 @@ function AppContent() {
   }
 
   const updateStreak = (newStreak) => {
-    setUserStats(prev => ({ ...prev, streak: newStreak }))
+    setUserStats((prev) => ({ ...prev, streak: newStreak }))
   }
 
-  const handleLogout = async () => {
-    await signOut()
-  }
-
-  // Combined user object for context
-  const appUser = user ? {
-    ...user,
+  // Local user (login removed)
+  const appUser = {
+    uid: null,
+    email: 'local@nihongo.app',
+    displayName: userStats.displayName || 'Learner',
     ...userStats,
-    avatar: user.avatar || DEFAULT_AVATAR
-  } : null
-
-  // Show loading while checking auth
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background dark:bg-background-dark">
-        <div className="text-center">
-          <div className="size-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-500 dark:text-gray-400">Đang tải...</p>
-        </div>
-      </div>
-    )
+    avatar: DEFAULT_AVATAR
   }
 
   return (
-    <AppContext.Provider value={{ 
-      darkMode, 
-      toggleDarkMode, 
-      user: appUser,
-      isAuthenticated: !!user,
-      updateUserStats,
-      addXP,
-      updateStreak,
-      logout: handleLogout
-    }}>
-      <ContentProvider userId={user?.uid || null}>
-        <ProgressProvider userId={user?.uid || null}>
+    <AppContext.Provider
+      value={{
+        darkMode,
+        toggleDarkMode,
+        user: appUser,
+        isAuthenticated: true,
+        updateUserStats,
+        addXP,
+        updateStreak,
+        logout: async () => {}
+      }}
+    >
+      <ContentProvider userId={null}>
+        <ProgressProvider userId={null}>
           <div className={`min-h-screen ${darkMode ? 'dark' : ''}`}>
             <Routes>
-              {/* Public route */}
-              <Route path="/login" element={
-                user ? <Navigate to="/" replace /> : <LoginPage />
-              } />
-              
-              {/* Protected routes */}
-              <Route path="/" element={
-                user ? <Layout /> : <Navigate to="/login" replace />
-              }>
+              <Route path="/login" element={<Navigate to="/" replace />} />
+              <Route path="/" element={<Layout />}>
                 <Route index element={<DashboardPage />} />
                 <Route path="flashcard" element={<FlashcardPage />} />
                 <Route path="grammar" element={<GrammarPage />} />
@@ -135,14 +114,6 @@ function AppContent() {
         </ProgressProvider>
       </ContentProvider>
     </AppContext.Provider>
-  )
-}
-
-function App() {
-  return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
   )
 }
 

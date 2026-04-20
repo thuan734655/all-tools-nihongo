@@ -1,10 +1,9 @@
 import { useContext } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { AppContext } from '../App'
 
 function Sidebar({ mobile = false, open = false, onClose }) {
-  const { user, logout, isAuthenticated } = useContext(AppContext)
-  const navigate = useNavigate()
+  const { user } = useContext(AppContext)
 
   const navItems = [
     { path: '/', icon: 'dashboard', label: 'Dashboard' },
@@ -14,15 +13,8 @@ function Sidebar({ mobile = false, open = false, onClose }) {
     { path: '/kanji', icon: 'edit', label: 'Viết Kanji' },
     { path: '/reading', icon: 'auto_stories', label: 'Đọc hiểu' },
     { path: '/content', icon: 'add_circle', label: 'Thêm nội dung' },
-    { path: '/settings', icon: 'settings', label: 'Cài đặt' },
+    { path: '/settings', icon: 'settings', label: 'Cài đặt' }
   ]
-
-  const handleLogout = async () => {
-    if (logout) {
-      await logout()
-      navigate('/login')
-    }
-  }
 
   if (!user) return null
 
@@ -37,14 +29,9 @@ function Sidebar({ mobile = false, open = false, onClose }) {
   return (
     <aside className={asideClassName}>
       <div className="p-6">
-        {/* User Profile */}
         <div className="flex items-center gap-3 mb-8">
           <div className="relative size-10 rounded-full overflow-hidden border-2 border-primary/20">
-            <img 
-              alt="User profile" 
-              className="w-full h-full object-cover" 
-              src={user.avatar}
-            />
+            <img alt="User profile" className="w-full h-full object-cover" src={user.avatar} />
             <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
           </div>
           <div className="flex-1 min-w-0">
@@ -55,7 +42,6 @@ function Sidebar({ mobile = false, open = false, onClose }) {
           </div>
         </div>
 
-        {/* Navigation */}
         <nav className="flex flex-col gap-2">
           {navItems.map((item) => (
             <NavLink
@@ -78,23 +64,10 @@ function Sidebar({ mobile = false, open = false, onClose }) {
         </nav>
       </div>
 
-      {/* Bottom Section */}
       <div className="p-4 border-t border-gray-100 dark:border-gray-800">
-        {/* User email */}
-        <div className="px-3 py-2 mb-2">
-          <p className="text-xs text-gray-400 dark:text-gray-500 truncate">
-            {user.email}
-          </p>
+        <div className="px-3 py-2">
+          <p className="text-xs text-gray-400 dark:text-gray-500 truncate">{user.email}</p>
         </div>
-        
-        {/* Logout Button */}
-        <button 
-          onClick={handleLogout}
-          className="flex items-center gap-3 px-3 py-2.5 w-full rounded-lg text-gray-500 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
-        >
-          <span className="material-symbols-outlined text-[20px]">logout</span>
-          <span className="text-sm font-medium">Đăng xuất</span>
-        </button>
       </div>
     </aside>
   )
